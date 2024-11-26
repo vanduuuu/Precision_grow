@@ -1,0 +1,248 @@
+/* Base styles for the navbar */
+nav {
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2), 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Container for logo and icons */
+  .brand-logo {
+    width: 19%;
+    padding-left: 4%;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Styling for navbar items */
+  nav ul li {
+    font-weight: 500;
+  }
+  
+  /* Navbar link styling */
+  .navbar-expand-lg .navbar-nav .nav-link {
+    margin-left: 25px !important;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+  }
+  
+  /* Active link styles */
+  .navbar-nav .nav-link.active,
+  .navbar-nav .nav-link.show {
+    color: #6f8313 !important;
+  }
+  
+  /* Underline effect for links on hover */
+  .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #6f8313;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover {
+    color: #6f8313 !important;
+  }
+  
+  .nav-link:hover::before {
+    width: 100%;
+  }
+  
+  /* Styling for dropdown menu */
+  .dropdown-item {
+    font-size: 16px;
+    font-weight: 500;
+    color: #4f4f4f;
+    margin: 5px 0;
+  }
+  
+  /* Extra link styling */
+  a.nav-link.ex-link1 {
+    background: #153700;
+    color: white;
+  }
+  
+  a.nav-link.ex-link1:hover {
+    background-color: #6f8313;
+    color: white !important;
+    border: 1px solid #153700;
+  }
+  
+  /* Styling for sticky icons */
+  .icon-fixed {
+    position: fixed;
+    top: 0px;
+    right: 10px;
+    z-index: 1000;
+  }
+  
+  /* Navbar dropdown styling */
+  .dropdown-menu {
+    display: none;
+    padding: 10px;
+    border: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .dropdown-item:hover {
+    color: #f8f9fa;
+    background-color: #1d3838;
+  }
+  
+  .dropdown-submenu {
+    position: relative;
+  }
+  
+  .dropdown-submenu .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: 0;
+    min-width: 150px;
+  }
+  
+  .dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1025px) {
+    .navbar-nav .nav-link {
+      margin-left: 10px !important;
+      font-size: 14px !important;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .navbar-nav .nav-link {
+      margin-left: 0px !important;
+      font-size: 16px;
+      display: inline-block;
+      margin-bottom: 6px;
+      padding: 10px;
+    }
+  
+    .logo {
+      width: 16%;
+    }
+  
+    .navbar-toggler {
+      position: absolute;
+      top: 0px;
+      right: 15%;
+    }
+  
+    .dropdown-menu {
+      position: static;
+      display: none;
+      width: 100%;
+      box-shadow: none;
+    }
+  
+    .dropdown-menu.show {
+      display: block;
+    }
+  
+    .dropdown-submenu .dropdown-menu {
+      position: static;
+      top: auto;
+      left: auto;
+      margin-left: 0;
+      width: 100%;
+    }
+  
+    .marquee-bar {
+      padding: 0 !important;
+    }
+  
+    .marquee-bar h5 {
+      margin: 0;
+      font-size: 16px;
+      padding: 8px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .logo {
+      width: 100%;
+      margin: auto;
+    }
+  
+    .navbar-toggler {
+      right: 19%;
+    }
+  
+    .carousel-indicators {
+      display: none;
+    }
+  
+    .dropdown-menu {
+      position: static;
+      display: none;
+      width: 100%;
+      box-shadow: none;
+    }
+  
+    .dropdown-menu.show {
+      display: block;
+    }
+  
+    .dropdown-submenu .dropdown-menu {
+      position: static;
+      top: auto;
+      left: auto;
+      margin-left: 0;
+      width: 100%;
+    }
+  
+    .marquee-bar {
+      padding: 0 !important;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .logo {
+      width: 82%;
+    }
+  
+    .brand-logo {
+      width: 57%;
+      margin-bottom: 5px;
+    }
+  
+    .brand-logo p {
+      margin-left: 22%;
+    }
+  
+    .icon-fixed {
+      top: 0px;
+      width: 56px;
+      right: 13px;
+    }
+  
+    .navbar-toggler {
+      right: 19%;
+    }
+  
+    .top-bar-area {
+      display: none !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .brand-logo p {
+      text-align: right;
+      margin-left: 0;
+      font-size: 9px;
+    }
+  }
+  
+  

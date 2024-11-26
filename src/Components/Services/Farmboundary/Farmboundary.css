@@ -1,0 +1,300 @@
+.quote-container {
+    position: relative;
+    padding: 20px 35px;
+    background: #6f831347;
+    /* border-left: 5px solid #007BFF; */
+    margin: 20px 0;
+    color: white;
+}
+.quote-container::before {
+    content: "\f10d";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 2em;
+    position: absolute;
+    left: -10px;
+    top: 14px;
+    color: #6f850b;
+    line-height: 0;
+}
+.quote-container::after {
+    content: "\f10e"; /* Font Awesome right quote icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 2em; /* Adjust size as needed */
+    position: absolute;
+    right: -10px; /* Adjust positioning as needed */
+    bottom: 14px; /* Adjust to align with the text */
+    color: #6f850b; /* Color for the right icon */
+    line-height: 0; /* Adjusts positioning */
+}
+.para11 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #2c3e3e; /* Text color */
+}
+.farmbounday1{
+    background: url(../../../assets/farmboundary.jpg);
+    background-size: cover;
+}
+
+.farmbounday1 .card {
+  padding: 20px 25px;
+  border: 4px solid #260b00;
+  background: #1e0c03b2;
+    height: 100%;
+}
+.farmbounday1 .card p{
+    text-align: justify;padding: 0px;
+}
+.farmbounday1 .card:hover {
+  background-color: #1e0c03c9;    
+}
+.farmB3 {
+    position: relative; /* Establish a positioning context for the child elements */
+}
+.farmbounday1 .card-body h4 {
+  color: #fff58f;
+  margin-bottom: 26px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+.overlay-contentF {
+    position: absolute;
+    bottom: 29%;
+    left: 25%;
+    transform: translateX(-50%);
+    width: 40%;
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+}
+.farmoB3{
+    padding:4% 0 5% 0;
+    background-color: #2d3e3e;
+    color:white;
+}
+.farmoB4{
+    background-image: url('../../../assets/plant-grown.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white;
+    padding: 6% 0px;
+}
+.farmoB4 h2,.ptxt {
+    text-align: center;
+}
+.farmoB4  .ptxt{
+    background-color: #577900;
+    padding:10px 0;
+    font-size: 20px;
+}
+
+.direct {
+    text-align: center;
+    color: #c3d416;
+    font-size: 35px;
+    font-weight: 600;margin-bottom: 50px;}
+    .abt-outer .titletag-container {
+        padding-bottom: 0px;
+      }
+      .ai-list-item ul {
+    border-left: 1px solid #2c3e3e;
+    padding-left: 25px;
+    margin-bottom: 30px;
+}
+.ai-list-item ul li {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 27px;
+}
+.ai-list-item ul li::after {
+    position: absolute;
+    left: -33px;
+    top: 3px;
+    content: "";
+    height: 15px;
+    width: 15px;
+    border: 2px solid #2c3e3e;
+    border-radius: 50%;
+    background: #d8e800;
+}
+.ai-list-item h5{
+    color:#ffffff;
+}
+.ai-list-item p {
+    color: #5d7102;
+    font-weight: 500;
+  }
+  .farmin {padding: 0% 0% 0% 3%;}
+  .farmoB4 h2{font-size:38px;text-decoration: underline;}
+  .para13 {
+    margin: 0;
+    font-size: 18px;
+  color: #fdfff5;
+  line-height: 28px;
+}
+.farmoB4 h5{
+font-size: 22px;font-weight: 400;margin-bottom: 15px;}
+.timeline-in {
+  position: relative;margin-top: 52px;
+}
+.text {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.text h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #ebff93;
+  text-align: center;
+}
+
+.text p {
+  font-size: 17px;
+  margin-top: 14%;
+  text-align: center;
+}
+.demo {
+  text-align: center;
+  margin: 0px !important;
+  font-size: 26px;
+}
+.one {
+  width: 25%;
+  padding: 15px 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.hr-line {
+  width: 100%;
+  height: 0.5em;
+  background-color: #546464;
+  border-radius: 2em;
+  margin-bottom: 15px; 
+  position: absolute;
+  top: 28%;
+}
+
+.dote {
+  position: relative;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.timeline-in ul li::after { 
+  position: absolute;
+  left: 44%;
+  top: 24%;
+  content: "";
+  height: 27px;
+  width: 27px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  background: #d8e800;
+}
+.timeline-in ul li::before {height: 2px;background-color: #577900;} 
+.farmoB3 .greentitle {font-size: 34px;
+  margin-bottom: 14%;
+  background: #0000002b;
+  width: 38%;
+  margin: 0 auto;
+  padding: 10px;}
+.overview-outer1 h1{font-size:36px;margin-bottom: 30px;margin-top:0px;text-decoration: underline;}
+.overview-outer1 h2{font-size:36px;margin-bottom: 30px;margin-top:45px;text-decoration: underline;}
+.frmimg img {
+  width: 100%;
+  padding: 6%;
+}
+.global-cover{padding: 0% 7%;}
+.global-cover p {color: #fff;margin-bottom:8%;font-size: 20px;text-align: center;padding: 0% 10%;}
+.global-cover h1{margin-bottom:30px;font-size: 50px;}
+.model-work {text-align: center;margin: 30px 0px 90px;}
+.model-work h2{font-size: 38px; text-decoration: underline;color: #caf100;margin-bottom: 50px;}
+.model-work p{font-size: 20px; padding: 0% 19%;}
+
+
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .one {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+
+}
+
+
+@media(max-width:768px){
+  .one {
+    width: 100%;
+    text-align: start;
+    padding: 10px;
+  }
+
+  .dote {
+    margin: 0.5rem 0;
+  }
+  .model-work p {padding: 0% 3%;}
+  .farmoB3 .greentitle {width:100%;font-size: 32px;margin-top: 26px;}
+  .overlay-contentF {
+      left: 50%;
+      width: 100%;
+  }
+  .timeline-in ul li::after {
+    left: -1.4%;
+  top:7%;}
+    .hr-line {
+      width: .5rem;
+      height: 100%;
+
+      top: 0px;
+      left: 0%;
+  }
+}
+@media (max-width: 600px) {
+  .red-outer-div{padding: 0px 40px;}
+  .key {font-size: 28px;margin-bottom: 30px;}
+  .overview-outer1 h1,.overview-outer1 h2 {font-size:30px ;}
+  .global-cover h1 {font-size:34px ;}
+  .one {
+    width: 100%;
+    text-align: left;
+    padding: 10px 0px 0px 35px;
+    align-items: flex-start;}
+  .text h3 {
+    font-size: 22px;
+  }
+   .text p {
+    text-align: left;
+    padding-left: 1%;
+    padding-right: 11%;
+    margin-top: 12px;
+  }
+  .farmoB3 h2 {
+    font-size: 28px !important; margin: 30px 0px;
+  }
+  .timeline-in ul li::after {
+    left: 0 !important;
+    top: 7% !important;
+    height: 17px !important;
+    width: 17px !important;
+    border: 3px solid #fff !important;
+  }
+  .demo {font-size: 20px;}
+  .hr-line{display: none !important;}
+  .farmoB4 h2 {
+    font-size: 30px;}
+    .farmin {padding: 0 4%;}
+    .farmoB4 {padding:15% 0%;}
+    .direct{font-size: 24px;}
+}

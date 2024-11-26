@@ -1,0 +1,51 @@
+.fmont-outer .btn{
+    background-color: #00446f;
+    color:white;
+    transition: all .5s;
+}
+.fmont-outer .btn:hover{
+    color:#ffff
+}
+.box1{
+    padding:0 100px;
+    background-color: #60add4;
+}
+.box1{
+    position: relative;
+}
+.box1 .fish-in{
+    position: absolute;
+    right:7%;
+    width: 29%;
+    bottom: 0%;
+  }
+.content-center .fish-in img{
+    width: 100%;
+}
+.content-center p{
+    font-size: 17px;
+    font-weight: 500;
+    color: #14516b;
+}
+.boat-fish{
+    width:100%;
+    background-size: cover;
+    height:100%
+}
+.fmont-outer .btn:hover {
+    background: #111913;
+  }
+@media (min-width: 991px) and (max-width: 1025px) {
+.box1 {
+    padding: 57px 51px;}
+}
+@media(max-width:768px){
+    .box1 {
+        padding: 9%;}
+        .fishmont.d-flex {
+            display: block !important;
+          }
+          .box1 .fish-in {
+            bottom: -1%;
+        }
+}

@@ -1,0 +1,12 @@
+.imgwrapper{
+    overflow: hidden;
+}
+.vessel-outer .shapehere{
+    background-image: url('../../../../../assets/bg-2.png');
+}
+.fishimghere {
+    transition: 0.3s;
+}
+.fishimghere:hover {
+    transform: scale(1.1);
+}

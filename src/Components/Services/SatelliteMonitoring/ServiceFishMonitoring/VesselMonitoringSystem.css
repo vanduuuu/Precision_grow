@@ -1,0 +1,18 @@
+
+.vessel-outer .container{
+    margin-top: 4%;
+}
+.vessel-outer h1{
+    color:#0d3e62;
+    font-weight: 800;
+}
+.vessel-outer p{
+    color:#757575;
+    font-size: 19px;
+    text-align: justify;
+    hyphens: manual;
+    font-weight: 500;
+}
+.fishimghere{
+padding:10px;
+}

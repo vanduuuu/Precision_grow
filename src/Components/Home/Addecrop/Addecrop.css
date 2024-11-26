@@ -1,0 +1,134 @@
+.ecrop-outer{
+    background-image: url('../../../assets/rolling-hills.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+p.t1{
+    background: #6f8313;
+    display: inline;
+    padding: 5px 15px;
+    border-radius: 28px;
+    color: white;
+    font-size: 22px;
+}
+.ecrop_ul li{
+    display: inline;
+    font-size: 18px;
+    padding: 0px 10px;
+    font-weight: 400;
+    color:#0e2b29
+}
+.logo-list ul li,.ceritified-icon ul li{
+    display: inline;
+}
+.ceritified-icon{
+    position: relative;
+    right:0px;
+}
+.logo-list {
+    margin-top: 13%;
+}
+.agri {
+    position: relative;
+    top: 10%;
+}
+.agri ul li {
+    background-color: #17726c;
+    margin-bottom: 20px;
+    position: relative;
+    width: 66%;font-weight: 500;
+    padding: 11px 10px 11px 7%;
+    color: white;
+    border-radius: 25px 0px 0px 25px;
+    margin-left: 20%;
+}
+.agri ul li span {
+    position: absolute;
+    background-color: #063640;
+    left: -12px;
+    height: 33px;
+    width: 33px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    top:10px;
+    font-weight: 700;padding-top: 3px;
+    font-size: 18px;
+    box-shadow: 0px 2px 7px 0px #00ffea;
+}
+.ceritified-icon {
+    /* position: absolute;
+    right: 5%;
+    bottom: 5%; */margin-top: 17%;
+}
+@media (min-width: 991px) and (max-width: 1025px) {
+    p.t1{
+        font-size: 20px;
+    }
+    .machinee {
+        position: absolute;
+        width: 36%;
+        top: 41%;
+    }
+}
+@media(max-width:768px){
+    .machinee {
+        position: absolute;
+        width: 29%;
+        right: 0;
+        top: 54%;
+    }
+    .agri ul li {
+        width: 50%;
+        left: 5%;
+        top: 38px;
+        padding: 0px 10px 5px 5%;
+    }
+    .logo-list img{
+        width:12%;
+    }
+    .agri ul li span {
+        left: -7px;
+        top: -1px;
+    }
+    .ceritified-icon {
+        bottom: 2%;
+    }
+    .ceritified-icon {
+        margin-top: 5%;
+    }
+    .logo-list {
+        margin-top: 9%;
+    }
+}
+@media(max-width:600px){
+    .agri ul {margin: 0 auto;}
+    
+    .agri ul li {
+        width: 75%;
+        left:0%;
+        top: 0px;
+        padding: 0px 8px 5px 11%;
+    }
+    .logo-list img {
+        width: 20%;
+    }
+    .logo-list {
+        margin: 10% 5%;
+    }
+    .ceritified-icon { margin-top: 8%;
+  margin-bottom: 15%;
+    }
+    .ceritified-icon img {
+        width: 14%;
+        
+    }
+p.t1 {
+    font-size: 17px;
+}
+.machinee {
+    right: 78%;
+    top: 63%;
+}
+}

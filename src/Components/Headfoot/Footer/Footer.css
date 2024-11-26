@@ -1,0 +1,335 @@
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  outline: none;
+}
+
+a,
+a:active,
+a:focus {
+  color: #6f6f6f;
+  text-decoration: none;
+  transition-timing-function: ease-in-out;
+  -ms-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+  -ms-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* section {
+    padding: 60px 0;
+    min-height: 80vh;
+} */
+.footer {
+  padding: 35px 0px 0px;
+  background-color: #6e8320;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.footer-certified ul{z-index: 999;}
+.footer h2{
+  text-align: center;
+  font-size: 39px;
+  margin-top: 40px;
+  margin-bottom: 5%;font-weight: 600;
+}
+.support {
+  background: #6f850b;
+  text-align: center;
+  margin: 0;
+  color: white;
+  font-size: 20px;
+  border-bottom: 1px solid #6e8320;
+  border-bottom: 1px solid #7f9920;
+  padding: 15px 0;
+  position: sticky;
+  bottom: 0;
+  z-index: 22;
+}
+.support p {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+.support span {
+  color: #d5ff05;
+}
+.footer-certified ul li {
+  display: inline-block;
+  padding: 20px 10px;
+}
+.shape-right-bottom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  opacity: 0.2;
+  z-index: 0;
+}
+.widget1 {
+  text-align: center;
+}
+.footerlogo {
+  width: 90%;
+margin: auto;}
+
+.footer .widget1 p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 26px;
+}
+.power {
+  margin-bottom:11px !important;
+  color: #fff799 !important;
+  font-size: 18px !important;font-weight: 500;
+  /* margin-left:14%; */
+}
+
+.w-45{width: 45%;}
+.sap{background: #fff;
+  padding: 7px;}
+.socialLinks ul li {
+  display: inline-block;
+  margin-bottom: 9px;
+}
+/* .socialLinks {
+  padding-bottom: 19px;
+} */
+.socialLinks {
+  margin: 7px 0px 26px;
+}
+.logosocial {
+  display: flex;
+}
+
+.socialLinks ul li a i {
+  display: block;
+  margin: 0 2px;
+  width: 40px;
+  height: 40px;
+  background: #fafafa;
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 5px;
+  line-height: 40px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.col-sm-6.col-lg-2 {
+  padding: 10px 0 0 10px;
+}
+.col-md-6.col-lg-4 {
+  padding: 10px 0 0 10px;
+}
+.socialLinks ul li a .fa-facebook-f {
+  color: #4267b2;
+}
+
+.socialLinks ul li a .fa-square-x-twitter {
+  color: #050505;
+}
+
+.socialLinks ul li a .fa-instagram {
+  color: #dd5044;
+}
+.socialLinks ul li a .fa-youtube {
+  color: #fd1702;
+}
+.socialLinks ul li a .fa-blogger-b {
+  color: #eeb108;
+}
+.socialLinks ul li a .fa-flickr {
+  color: #e4137c;
+}
+
+.socialLinks ul li a .fa-soundcloud {
+  color: #f55300;
+}
+.socialLinks ul li a .fa-linkedin-in {
+  color: #0177b5;
+}
+
+.socialLinks ul li a:hover i {
+  color: #fff;
+}
+
+.socialLinks ul li a:hover .fa-facebook-f {
+  background: #4267b2;
+}
+
+.socialLinks ul li a:hover .fa-square-x-twitter {
+  background: #070707;
+}
+
+.socialLinks ul li a:hover .fa-instagram {
+  background: #dd5044;
+}
+.socialLinks ul li a:hover .fa-youtube {
+  background: #f81702;
+}
+.socialLinks ul li a:hover .fa-blogger-b {
+  background: #eeb108;
+}
+.socialLinks ul li a:hover .fa-linkedin-in {
+  background: #0177b5;
+}
+.socialLinks ul li a:hover .fa-flickr {
+    background: #f30084;
+  }
+  .socialLinks ul li a:hover .fa-soundcloud {
+    background: #f55300;
+  }
+footer .logo {
+  max-width: 200px;
+}
+
+.footer h5 {
+  font-weight: 500;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #fff;
+  font-size: 22px;
+}
+
+.footer .widget4 ul li a {
+  font-size: 16px;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 13px;
+  display: block;
+}
+.dunlogo{
+width: 130px;
+margin-bottom: 30px;
+}
+.footer .widget4 ul li a:hover {
+  color: #fff799;
+}
+
+.footer .widget4 h5 {
+  margin-bottom: 22px;
+  font-weight: 600;
+  color: #fff;
+  font-size: 21px;
+}
+
+.copyRightArea {
+  margin-top: 83px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 25px 0px 28px;
+}
+
+.copyRightArea p {
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+.copyRightArea span {
+  color: #beff00;
+}
+.imgh {
+  width: 45px;
+  margin-right: 20px;
+}
+.footer-here-is i {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  font-weight: 300;
+  font-size: 20px;color: #fff;
+}
+.footer-here-is h6 {
+  display: block;
+  text-transform: uppercase;
+  color: #fff799;margin-bottom:10px;
+  font-size: 16px;font-weight:600;
+}
+.text-whitee {
+  color: white;
+  /* font-family: "Merriweather", serif; */
+  font-size: 52px;
+}
+.whatsapp_btn {
+  width: 53px;
+  height: 53px;
+  font-size: 32px;
+  line-height: 50px;
+  position: fixed;
+  bottom: 88px;
+  right: 30px;
+  border-radius: 100%;
+  background-color: #23b75a;
+  box-shadow: 2px 2px 4px rgb(0 0 0 / 58%);
+  color: #fff;
+  z-index: 111;
+  padding-left: 13px;
+}
+.icon-flag {margin-right:0px;}
+.country-flag  li{margin-right:10px;display: flex;} 
+.footer .content{text-align:start;}
+.footer .content p {  display: block;margin-bottom: 9px;
+  text-transform: uppercase;
+  color: #fff799;font-weight: 600;
+  font-size: 16px;}
+.footer .content strong {
+  display: block;
+  text-transform: uppercase;
+  color: #fff799;
+  font-size: 16px;font-weight:600;
+}
+.footer .content a{color: #fff;}
+.footer-certified{margin-top: 40px;}
+.zindex{z-index: 99;}
+
+@media(max-width:768px){
+  .footer h2 {
+    font-size: 30px;
+    margin-top: 0;
+}
+.footerlogo {
+  width: 42%;
+}
+.power {
+  margin-bottom: -17px !important;
+}
+}
+@media (max-width: 600px) {
+  .footer h2 {
+    font-size: 19px;
+  }
+  .footerlogo {
+    width: 55%;
+}
+  .country-flag {display: block; margin-bottom: 20px;}
+  .country-flag li{margin-bottom: 30px;}
+footer .country-flag{
+  padding: 10px;
+}
+.footer .widget4 h5 {
+  margin-bottom: 0px;
+}
+}

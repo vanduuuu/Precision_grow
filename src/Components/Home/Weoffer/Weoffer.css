@@ -1,0 +1,30 @@
+.Weoff-outer{
+   background-image: url('../../../assets/landscape-with-warm-tones.webp');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+}
+.fmont-outer .box1{padding: 7%;}
+.fmont-outer .box1 h1{
+   font-size: 46px;
+   margin-bottom: 40px;
+   font-weight: 600;
+   color: #031117;}
+ .fmont-outer .box1 p{font-size: 18px;color: #023453;margin-bottom:50px;}
+ .fmont-outer .btn {
+   background-color: #124762;
+   color: white;
+   transition: all .5s;
+   padding: 10px 30px;font-weight: 500;
+   font-size: 16px;letter-spacing: 0.5px;
+   margin: 0px;font-family: 'Montserrat', sans-serif;
+ }
+ @media(max-width:768px){
+  .fmont-outer .box1 {
+    padding: 6% 6% 15% 6%;
+}
+ }
+ @media(max-width:600px){
+   .fmont-outer .box1 h1{font-size: 36px;}
+   .fmont-outer .box1 p {font-size: 16px;}
+}

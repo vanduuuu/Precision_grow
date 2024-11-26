@@ -1,0 +1,31 @@
+.card {
+    margin-bottom: 20px; /* Space between cards */
+}
+
+.crop-image {
+    height: 300px; /* Fixed height for the image */
+    width: 100%; /* Ensures the image takes full width of the container */
+    object-fit: cover; /* Ensure the image covers the area */
+}
+
+.txxt1 {
+    color: #084672;
+    font-size: 41px;
+    font-weight: 700;
+}
+
+/* Optional: Media query for responsiveness */
+@media (max-width: 768px) {
+    .txxt1 {
+        font-size: 32px; /* Adjust font size for smaller screens */
+    }
+
+    .crop-image {
+        height: 200px; /* Adjust image height for smaller screens */
+    }
+    .cropOut1 .content-box{
+        left: 0px;
+        padding: 7% 6%;
+        top: 52%;
+}
+}

@@ -1,0 +1,55 @@
+.service_card_outer .card {
+    text-align: center;
+    padding: 35px;
+    background: url('../../../assets/landscape-with-warm-tones.webp') right bottom no-repeat;
+    margin-bottom: 55px;
+    min-height: 830px;
+}
+
+.service_card_outer .card p {
+    font-size: 19px;
+    color: #557474;
+}
+
+.service_card_outer .Sthumb {
+    width: 66%;
+    margin: auto;
+    border-radius: 50%;
+    background: linear-gradient(to top, #89d925, #285713);
+    box-shadow: 0px 15px 10px -10px rgba(109, 117, 143, 0.33);
+    padding: 10px;
+    transition: all 0.15s linear;
+}
+
+.service_card_outer .card:hover .Sthumb {
+    background: linear-gradient(to top, #1a5757, #fff);
+}
+
+.service_card_outer .Sthumb img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.service_card_outer .btnSer {
+    background-color: #183838;
+    color: #fff;
+    margin-top: auto; /* Ensures button stays at the bottom */
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: all 0.15s linear;
+}
+
+.service_card_outer .btnSer:hover {
+    background-color: #1a5757;
+}
+@media (min-width: 991px) and (max-width: 1025px){
+    .service_card_outer .card{
+        padding:14px;
+    }
+}
+@media(max-width:600px){
+    .service_card_outer .card {
+        padding: 35px 10px;}
+}

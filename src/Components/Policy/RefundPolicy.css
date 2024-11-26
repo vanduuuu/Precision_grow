@@ -1,0 +1,17 @@
+.refund-outer{
+    background-color: #e9f1ee;
+}
+.refund-outer h3{
+    color: #16564d;
+    font-size: 30px;
+    text-decoration: underline;
+}
+.refund-outer h5{
+    color:#16564d
+}
+.refund-outer p{
+    font-size: 17px;
+    color: #666666;
+    text-align: justify;
+    word-spacing: 2px;
+}

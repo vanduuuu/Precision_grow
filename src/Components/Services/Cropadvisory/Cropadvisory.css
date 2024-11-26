@@ -1,0 +1,31 @@
+.cropadvisory-outer {
+    background-image: linear-gradient(rgb(0 0 0 / 0%), /* Adjust the rgba values for the gradient color */ #00000094), 
+    url(../../../assets/regenerative-agriculture.webp);
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+}
+.cropadvisory-outer .card{
+    padding:20px;
+    height:100%;
+    background-color: #f0f8ffcc;
+}
+.cropadvisory-outer .card img {
+    height: auto;
+    width: 30%;
+    height: auto;
+    text-align: center;
+    margin: auto;
+}
+.dropdivAd{
+    background-color: #00000094;
+} 
+.cropAddiv2{
+    background-color: white;
+}
+.para23{text-align: center;
+    color: #fff;
+    margin-bottom: 60px;
+    font-size: 20px;
+    font-weight: 600;
+    hyphens: none;}

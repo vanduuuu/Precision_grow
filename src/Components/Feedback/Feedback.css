@@ -1,0 +1,635 @@
+
+.Modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 800px;
+    height: auto; 
+    max-height: 80vh; 
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1000;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+ 
+}
+
+/* Remove extra space inside the modal */
+#container {
+    margin: 0px auto;
+    background-color: #ffffffd9; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+/* Adjust form padding */
+#container form {
+    padding: 25px 80px;
+    max-height: 55vh;
+    overflow-y: auto;
+}
+
+/* Reduce excess padding and margin inside input fields */
+.main_container input,
+textarea {
+    padding: 10px;
+    margin-bottom: 10px; 
+}
+
+/* Avoid excess space for the submit button */
+.submit {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+/* Adjust modal overlay to be more precise */
+.Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 999;
+}
+
+
+/* Close Button Styling */
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: rgb(18, 56, 56);
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+.main_container {
+    font-family: 'Montserrat', Arial, sans-serif;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+   
+}
+
+/* button {
+    overflow: visible;
+} */
+
+/* button, */
+
+.feedbackType select {
+    text-transform: none;
+}
+
+/* button, */
+.main_container  input,
+select,
+textarea {
+    color: #5A5A5A;
+    font: inherit;
+    margin: 0;
+}
+
+#contact_form input {
+    line-height: normal;
+}
+
+.message textarea {
+    overflow: auto;
+    /* margin: 0px; */
+}
+
+#container {
+    margin: 0px auto;
+    position: relative;
+    background-color: #ffffffd9; 
+   
+}
+
+#container form {
+    padding:25px 80px;
+}
+
+.rateof{
+margin:0px; 
+color: rgb(111, 133, 11);
+font-weight: 700;
+font-size: 18px !important;
+}
+
+.main_container h1 {
+    color: #123838;;
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 7px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 20px;
+    margin: 0;
+}
+
+.main_container h1::after {
+    content: "";
+    height: 3px;
+    width: 15%;
+    display: block;
+    background: #153700;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.main_container h4,
+.main_container h5 {
+    color: #6e8320;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing:0.6px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+
+.icon_wrapper {
+    margin: 50px auto 0;
+    width: 100%;
+}
+
+/* .icon {
+    display: block;
+    fill: #153700;
+    height: 50px;
+    margin: 0 auto;
+    width: 50px;
+    height:20px;
+    
+} */
+
+.email {
+    float: right;
+    width: 45%;
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+.main_container input[type='text'],
+[type='email'],
+select,
+textarea {
+    background: none;
+    border: none;
+    border-bottom: solid 2px #153700;
+    color: #153700;
+    font-size: 1.000em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0em 0 1.875em 0;
+    padding: 0 0 0.875em 0;
+    text-transform: capitalize;
+    width: 100%;
+}
+
+
+
+.main_container input[type='text']:focus,
+[type='email']:focus,
+textarea:focus {
+    outline: none;
+    padding: 0 0 0.875em 0;
+}
+
+.message {
+    float: none;
+    margin-top: 19px;
+}
+
+.name {
+    float: left;
+    width: 45%;
+    margin-top: 4px;
+}
+
+.main_container select {
+    outline: none;
+}
+
+.main_container select::-ms-expand {
+    display: none;
+}
+
+.telephone {
+    float: left;
+    width: 45%;
+}
+
+.feedbackType {
+    float: right;
+    width: 45%;
+}
+
+.friend {
+   
+    width: 100%;
+    margin: 2% auto 0 auto;
+    text-align: center;
+}
+
+/* emoji */
+.feedback-container {
+    width: 100%;
+    min-height: 180px;
+    position: relative;
+    margin: 0 auto 7% auto;
+}
+
+.rate {
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    top: 11%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.emoji-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 45%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    overflow: hidden;
+
+}
+
+.far {
+    margin: 1px;
+    transform: translateX(0);
+    transition: 0.3s;
+}
+
+
+.rating-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0%;
+    text-align: center;
+}
+
+.fa-star {
+    color: rgb(201, 204, 189);
+    cursor: pointer;font-size: 30px;
+}
+
+.fa-star.active {
+    color: gold;
+}
+
+/* emoji end */
+
+.main_container textarea {
+    line-height: 150%;
+    height: 90px;
+    resize: none;
+    width: 100%;
+    margin: 0px;
+    padding:15px !important;
+}
+
+
+.main_container ::-webkit-input-placeholder {
+    color: #d4d4d4;
+}
+
+.main_container :-moz-placeholder {
+    color: #153700;
+    opacity: 1;
+}
+
+.main_container ::-moz-placeholder {
+    color: #153700;
+    opacity: 1;
+}
+
+.main_container :-ms-input-placeholder {
+    color: #153700;
+}
+
+#form_button {
+    background: none;
+    background-color: #153700;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.875em;
+    font-weight: bold;
+    outline: none;
+    padding: 15px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    width: 45%;
+    margin: 8% auto 3% auto;
+}
+
+#form_button:hover {
+    background: #6f850b;
+    color: #fff;
+}
+.label:hover{background-color: #6f850b;color: #fff;}
+
+
+/*  */
+
+.switchFilter {
+    width: 0;
+    display: inline-block;
+    background-color: #153700;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: all 0.4s cubic-bezier(0, 0, 0.25, 1);
+}
+
+.label {
+    cursor: pointer;
+    text-transform: uppercase;
+    border:2px solid #153700;
+    color: #153700;
+    width: 66px;
+    padding: 5px 0px;
+    text-align: center;
+    display: inline-block;
+    transition: all 0.4s;
+    margin-right: 18px;
+}
+/* 
+.switch {
+    position: absolute;
+    z-index: 1;
+} */
+
+.switch input[type="radio"] {
+    visibility: hidden;
+    position: absolute;
+    height: 100%;
+}
+
+.switch input[type="radio"]#yes:checked~label[for="yes"] {
+    color: white;
+
+}
+
+.switch input[type="radio"]#yes:checked~.switchFilter {
+    left: 0;
+    opacity: 1;
+    width: 68px;
+}
+
+.switch input[type="radio"]#no:checked~label[for="no"] {
+    color: white;
+
+}
+
+.switch input[type="radio"]#no:checked~.switchFilter {
+    left: 88px;
+    width: 68px;
+    opacity: 1;
+}
+
+/*  */
+
+
+.button {
+    background: none;
+    border: solid 2px #153700;
+    color: #153700;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 0.875em;
+    font-weight: bold;
+    outline: none;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.button:hover {
+    background: #153700;
+    color: #F2F3EB;
+}
+
+.button::after {
+    background: #153700;
+    color: #F2F3EB;
+}
+
+.clear{clear: both;}
+@media only screen and (max-width: 769px) {
+
+    #container {
+        /* margin: 20px auto; */
+        width:100%;
+    }
+    #container form {padding: 30px;    max-height:75vh;
+        overflow-y: auto;}
+    .main_container h4 {
+        margin-bottom: 12px !important;
+    }
+
+    .main_container h4,
+    h5 {
+        letter-spacing: 0.6px;
+        padding: 0px 7px 30px 7px;
+
+    }
+    .name {
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .email {
+        width: 100%;
+        margin:0em 0 1.875em 0;
+    }
+
+    .telephone {
+        width: 100%;
+    }
+
+    .feedbackType {
+        width: 100%;
+    }
+
+    .message {
+        float: none;
+        margin-top: 0px;
+    }
+
+    .submit {
+        margin-top: 15px;
+    }
+
+    .message textarea {
+        height: 64px;
+    }
+    .feedback-container {
+        height: 230px;
+
+    }
+
+    .emoji-container {
+        top: 45%;
+
+    }
+
+    .rating-container {
+        width: 100%;
+        top: 75%;
+        left: 50%;
+        
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .main_container h1 {
+        font-size: 26px;
+    }
+
+
+    #form_button {
+        padding: 15px 25px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 426px) {
+
+    #container {
+        margin: 20px auto;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .main_container h4,
+    h5 {
+        letter-spacing: 0px;
+        padding: 0px 7px 30px 7px;
+
+    }
+
+    .feedback-container {
+        height: 169px;
+
+    }
+
+    .emoji-container {
+        top: 34%;
+
+    }
+
+    .rating-container {
+        width: 100%;
+        top: 66%;
+        left: 50%;
+        transform: translateX(-50%);
+        /* bottom: 0%; */
+    }
+
+    .name {
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .email {
+        width: 100%;
+        margin:0em 0 1.875em 0;
+    }
+
+    .telephone {
+        width: 100%;
+    }
+
+    .feedbackType {
+        width: 100%;
+    }
+
+    .message {
+        float: none;
+        margin-top: 0px;
+    }
+
+    .submit {
+        margin-top: 15px;
+    }
+
+    .message textarea {
+        height: 64px;
+    }
+
+    .icon {
+        height: 35px;
+        width: 35px;
+    }
+
+
+
+    .main_container input[type='text'],
+    [type='email'],
+    select,
+    textarea {
+        font-size: 0.875em;
+    }
+}
+
+@media only screen and (max-width: 377px) {
+    .rating-container {
+        left: 63%;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    .main_container h1 {
+        letter-spacing: 2px;
+    }
+
+    /* .underline {
+        width: 117px;
+    } */
+
+    .rating-container {
+        top: 66%;
+        left: 54%;
+    }
+
+    .emoji-container {
+        top: 34%;
+
+    }
+
+    .rate {
+        width: 301px;
+    }
+
+}

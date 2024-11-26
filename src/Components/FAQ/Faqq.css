@@ -1,0 +1,66 @@
+/* Faq.css */
+.accordion {
+    width: 100%;
+    background-color: transparent!important;
+  }
+  .faqouter {
+    background: #2b3e3e;
+}
+  .faqh1{
+    color:#d2db66;font-size: 43px;margin: 35px;
+  }
+  .accordion-item {
+    margin-bottom: 10px;
+    background-color: transparent;
+    color:white;
+    border:none
+  }
+  .accordion-header {
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #8dddb13b;
+  }
+  
+  .accordion-header h2 {
+    margin: 0;
+    font-size: 21px;
+    color: #b9eaa1;
+    line-height: 30px;
+    font-weight: 600;
+  }
+  
+  .accordion-content {
+    padding: 15px;
+    display: none;
+    overflow: hidden;
+  }
+  
+  .accordion-content.open {
+    display: block;
+  }
+  
+  .icon {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+  }
+  
+  .icon.fas.fa-plus {
+    transform: rotate(0);
+  }
+  
+  .icon.fas.fa-minus {
+    transform: rotate(180deg);
+  }
+  
+
+  @media(max-width:600px){
+    .faqh1{font-size: 36px;margin-top:40px;margin-bottom: 30px;}
+    .accordion-header h2{font-size: 19px;}
+    .accordion-item .icon{width: auto !important;}
+    .faq-imgg {
+      padding: 90px 70px 0px 40px;
+    }
+ }

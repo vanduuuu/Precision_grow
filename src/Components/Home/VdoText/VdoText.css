@@ -1,0 +1,70 @@
+.vdotxtt {
+    position: relative;
+    width: 100%;
+    min-height:750px; /* Or any height you need */
+    background-size: cover;
+  }
+  
+  .vdotxtt video {
+    width: 100%;
+    height: 100%;
+  }
+
+  .vdotxttinfo {
+    bottom: 0;
+    left: 10%;
+    background-color: #ffefc0cf;
+    color: black;
+    padding: 3%;
+    width: 34%;
+    box-sizing: border-box;
+}
+.vdotxttinfo p{
+  font-size: 18px;
+  text-align: justify;
+  hyphens: manual;color: #393939;
+}
+.work{
+  font-weight: 600;
+  font-size: 48px;
+  margin-top: -10px;
+  margin-bottom: 25px;color: #022;
+}
+.cropsateimg.parameter h1 {
+  font-size: 38px;
+  font-weight: 600;
+}
+.cropsateimg .ai-list-item ul li{margin-bottom: 10px;}
+.shapehere {
+ background-image: url('../../../assets/10.png');
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-repeat: no-repeat;
+}
+.darkgreentitle {
+  font-size: 32px;
+  color: #153700;
+  margin-bottom: 60px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+@media(max-width:600px){
+ 
+  .vdotxttinfo{
+    width: 100% !important;
+    left:0!important;
+  }
+  div h1 {
+    font-size: 31px;}
+    .shapehere{
+      display: none;
+    }
+    .position-absolute {
+      position: relative !important;
+    }
+    .work {font-size: 36px;margin-top: 30px;}
+    .vdotxtt {min-height: auto;}
+}
+  

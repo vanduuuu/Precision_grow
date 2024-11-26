@@ -1,0 +1,46 @@
+.titletag {
+  text-align: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Montserrat", sans-serif;
+  background-position: top;
+}
+.titletag-container {
+  padding-bottom: 30px;
+}
+.titletag h1 {
+  font-size: 70px;
+  display: inline-block;
+  background-position: top;
+  margin-bottom: 30px;
+}
+.mask-text {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: cover;
+  background-position: center;
+  font-size: 100px;
+  font-weight: 900;
+  margin: 0;
+    margin-bottom: 0px;
+  line-height: 1.1;
+  text-transform: capitalize;
+  font-family: var(--font-secondary);
+  display: inline-block;
+}
+
+@media(max-width:768px) {
+  .titletag h1 {
+    font-size: 57px;
+    text-align: center;
+}
+}
+
+@media(max-width:600px) {
+  .titletag h1 {
+    font-size: 37px;margin: 30px 0px;
+  }
+  .titletag-container {
+    padding-bottom: 0px;
+}
+}

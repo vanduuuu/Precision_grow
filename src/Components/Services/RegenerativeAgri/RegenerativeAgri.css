@@ -1,0 +1,22 @@
+.greentitle{
+    color:#caf100;
+}
+.red-outer-div{
+    background-color: #eaf1ee;
+    /* background-image: url('../../../assets/farmboundary.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.red-outer-div .row{
+/* background-color: #00000030;
+padding:30px; */
+}
+.ai-list-item h4 {
+    color: #4b5908;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .farmoB4 p{margin-bottom: 60px;}
+  .farmoB4 .ai-list-item h4 {color: #e9ffc0;}
+  .farmoB4 .ai-list-item p {color: #fff;margin-bottom: 35px;}

@@ -1,0 +1,30 @@
+.fishdivouter{
+    background-color: #0d3e62;
+    color:white
+}
+.fishdivouter .txt1 {
+    font-size: 30px;
+    text-align: center;
+    line-height: 48px;
+}
+.fishcard-section{
+      background-color: #E9F1EE;
+}
+.fishdivouter span{
+    color:#00d9ff;
+    font-weight: 700;
+}
+.fishshape .shapehere{
+    background-image: url('../../../../assets/bg-2.png');
+}
+.fishshape .vdotxttinfo{
+    background-color: #2b3e3ed1;
+    color: white;
+} 
+.fishshape h2{
+color:#00d9ff;
+font-weight: 800;
+}
+.fishshape p {
+    color: #fff;
+}

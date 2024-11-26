@@ -1,0 +1,13 @@
+.Wil-outer-div{
+    background-color: #2b3e3e;
+    color:white
+}
+.Wil-outer-div .greentitle{
+    margin-bottom: 26px;
+}
+.Wil-outer-div .ai-list-item h4{ color: #f6fdd7;}
+.Wil-outer-div .ai-list-item p{ color: #fff;}
+.Wil-outer-div h1 {
+    font-size: 38px;
+    font-weight: 600;
+  }

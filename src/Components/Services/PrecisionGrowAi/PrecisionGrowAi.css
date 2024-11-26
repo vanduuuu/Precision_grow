@@ -1,0 +1,33 @@
+.ai-outer{
+    background-color: #293e3e;
+}
+.ai-outer2{
+background-image: url('../../../assets/drone-flies-field-crops.webp');
+background-attachment: fixed;
+}
+
+.ul-list p{
+    padding-left:20px;
+}
+.listtitle{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #7a9309;
+}
+.div_p p{
+    font-size: 16px;
+    color:#666666;font-weight: 500;
+margin-top:12px;
+text-align: justify;
+}
+.ul-list li{
+    list-style: none;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+.ul-list li span {
+    color: #2b3e3e;
+    font-weight: 700;
+    font-size: 18px;
+}

@@ -1,0 +1,33 @@
+.flypop-button {
+    z-index: 999;
+    position: fixed;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+.flypop-button button {
+    border: none;
+    padding: 12px 10px;
+    background-color: #b8d54f;
+    border-radius: 6px 0px 0px 6px;
+    letter-spacing: .2px;
+    transform: translateX(2px);
+    -webkit-transform: translateX(2px);
+}
+.flypop-button button span {
+    font-weight: normal;
+    writing-mode: vertical-lr;
+    -webkit-writing-mode: vertical-lr;font-weight: 600;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    transform: rotate(180deg);
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+.shapehere1{
+    background-image: url('../../../assets/10.png');
+    background-repeat: no-repeat;
+    background-color: #f0ffff9e;
+    padding-top:4%;
+}
+.achivement-items h2{
+    color:#366666;
+}
+.achivement-items p, .list-details{
+        font-size: 19px;
+        color: #557474;
+}
+.list-details i{
+    color:green;
+}
+
+.feature-item img{
+    width:20%;
+}
+@media(max-width:768px){
+    .shapehere1 .row{
+padding-top:8%;
+    }
+}
+@media (max-width: 600px) {
+    .shapehere1 .row {
+        padding-top: 30%;
+    }
+}
