@@ -282,18 +282,17 @@ const Subnavbar = () => {
                   Contact
                 </Link>
               </li>
-             
-            </ul>
-           
-                <Link
+             <li>
+             <Link
                   className="nav-link ecroptodaylogo ex-link1 rounded"
                   to="https://ecroptoday.co.in/"  onClick={() => setIsNavbarOpen(false)}
                   target="_blank"
                 >
-                  <span classNAme="ecroptodaylogo">E-CROPTODAY</span>
+                  <span className="ecroptodaylogo">E-CROPTODAY</span>
                 </Link>
-               
-                <Link
+             </li>
+             <li>
+             <Link
                   className="nav-link rounded p-0"
                   to="https://sdgindiaindex.niti.gov.in/#/"  onClick={() => setIsNavbarOpen(false)}  target="_blank"
                 >
@@ -303,6 +302,12 @@ const Subnavbar = () => {
                     className="sdg-img"
                   />
                 </Link>
+             </li>
+            </ul>
+           
+                
+               
+               
           </div>
         </div>
       </nav>

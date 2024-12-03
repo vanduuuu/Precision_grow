@@ -8,7 +8,7 @@ nav {
   /* Container for logo and icons */
   .brand-logo {
     width: 19%;
-    padding-left: 4%;
+    padding-left: 0%;
     display: flex;
     align-items: center;
   }
@@ -20,12 +20,14 @@ nav {
   
   /* Navbar link styling */
   .navbar-expand-lg .navbar-nav .nav-link {
-    margin-left: 25px !important;
+    margin-left: 8px !important;
     font-size: 16px;
     font-weight: 600;
     position: relative;
   }
-  
+  .icon-fixed img{
+    height: 110px;
+  }
   /* Active link styles */
   .navbar-nav .nav-link.active,
   .navbar-nav .nav-link.show {
@@ -64,12 +66,14 @@ nav {
   a.nav-link.ex-link1 {
     background: #153700;
     color: white;
+    padding: 11px 9px !important;
   }
   
   a.nav-link.ex-link1:hover {
     background-color: #6f8313;
     color: white !important;
     border: 1px solid #153700;
+    padding: 15px 0px!important;
   }
   
   /* Styling for sticky icons */
@@ -114,12 +118,27 @@ nav {
   }
   
   /* Responsive Styles */
-  @media (max-width: 1025px) {
-    .navbar-nav .nav-link {
-      margin-left: 10px !important;
-      font-size: 14px !important;
-    }
+  @media(min-width:900px) and (max-width:1024px){
+    .navbar-expand-lg .navbar-nav .nav-link {
+      margin-left: 2px !important;
   }
+  .navbar-nav .nav-link {
+    font-size: 13px !important;
+}
+a.nav-link.ex-link1 {
+  padding: 6px!important;
+  font-size: 11px !important;
+  white-space: nowrap;
+}
+.top-bar-area ul li span, .top-bar-area ul li i {
+  color: white;
+  font-size: 15px !important;
+}
+.icon-fixed img {
+  height: 89px;
+}
+  }
+
   
   @media (max-width: 991px) {
     .navbar-nav .nav-link {
@@ -175,9 +194,11 @@ nav {
       width: 100%;
       margin: auto;
     }
-  
+    .sticky-top {
+      top: 0px;}
     .navbar-toggler {
-      right: 19%;
+      right: 11%;
+      top:10px
     }
   
     .carousel-indicators {
@@ -202,7 +223,9 @@ nav {
       margin-left: 0;
       width: 100%;
     }
-  
+    a.nav-link.ex-link1 {
+      padding: 11px 4px!important;
+  }
     .marquee-bar {
       padding: 0 !important;
     }
@@ -212,7 +235,7 @@ nav {
     .logo {
       width: 82%;
     }
-  
+    
     .brand-logo {
       width: 57%;
       margin-bottom: 5px;
@@ -225,7 +248,7 @@ nav {
     .icon-fixed {
       top: 0px;
       width: 56px;
-      right: 13px;
+      right: 0px;
     }
   
     .navbar-toggler {
