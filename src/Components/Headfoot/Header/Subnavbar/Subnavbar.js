@@ -282,6 +282,15 @@ const Subnavbar = () => {
                   Contact
                 </Link>
               </li>
+              <li>
+             <Link
+                  className="nav-link ecroptodaylogo ex-link1 rounded"
+                  to="https://ecroptoday.co.in/"  onClick={() => setIsNavbarOpen(false)}
+                  target="_blank"
+                >
+                  <span className="ecroptodaylogo">ESG Consultant</span>
+                </Link>
+             </li>
              <li>
              <Link
                   className="nav-link ecroptodaylogo ex-link1 rounded"
