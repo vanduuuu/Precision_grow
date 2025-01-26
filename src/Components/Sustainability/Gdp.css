@@ -1,0 +1,49 @@
+.include-img{
+    height: 495px;
+    width: 495px;
+}
+.include-img img{
+    height:100%;
+    width:100%;
+    margin-top: 60px;
+    border-radius: 100%;
+}
+.bg111{
+    background-image: url('../../assets/images/ab.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+.m-cont11{
+    background-color: #c9e0bf9e;
+    padding:10px;
+}
+
+.m-cont11 h1{
+    color: rgb(3, 92, 3);
+    font-family: Abril Fatface, serif;
+    font-size: 60px;
+    font-style: italic;
+}
+.m-cont11 li{
+    color: rgb(4, 51, 4);
+    
+}
+@media(max-width:768px){
+    .cont-order{
+        order: 2; 
+    }
+    .cont-order2{
+       order:1;
+    }
+}
+@media(max-width:600px){
+    .include-img {
+        height: 301px;
+        width: 301px;
+    }
+    ul#myTab {
+        margin-left: 0% !important;}
+        .tab-content ul {
+            width: 100%;}
+}

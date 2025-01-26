@@ -1,0 +1,114 @@
+
+/* Custom Card Styles */
+.hor-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    background-color: #f9f8f8;
+}
+
+.hor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.hor-card img {
+    width: 95%; /* Make the image responsive */
+    height: 100%;
+    transition: transform 0.3s ease;
+    object-fit: cover; /* Ensure the image doesn't stretch or distort */
+}
+
+/* Title Scrolling Background Effect */
+.card-title {
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1b7878;
+    display: inline-block;
+    z-index: 1;
+    overflow: hidden; /* Ensures the pseudo-element doesn't overflow */
+}
+
+/* Before pseudo-element for the background */
+.card-title::before {
+    content: ''; /* Empty content to create the effect */
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start from off-screen to the left */
+    height: 100%;
+    width: 100%;
+    background: #26486d1f; /* Blue background (can be changed) */
+    transition: left 0.5s ease-in-out; /* Smooth transition from left to right */
+    z-index: -1; /* Behind the text */
+}
+
+/* On hover, slide the background in */
+.hor-card:hover .card-title::before {
+    left: 0;
+}
+
+/* Custom List Styling */
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.custom-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.icon-bg {
+   margin-right: 10px;
+}
+
+.hor-card h5 {
+    color: #1b7878;
+    text-decoration: underline;
+}
+
+.fa-check {
+    font-size: 16px;
+}
+
+/* Reverse Layout: For larger screens where the image is on the left */
+.reverse .col-md-4 {
+    order: 2; /* Image will be on the right side */
+}
+
+.reverse .col-md-8 {
+    order: 1; /* Content will be on the left side */
+}
+
+/* Responsive Styles: Image always on top for smaller screens */
+@media (max-width: 768px) {
+    .hor-card .row {
+        flex-direction: column; /* Stack image and text vertically on small screens */
+    }
+
+    .hor-card .col-md-4,
+    .hor-card .col-md-8 {
+        width: 100%; /* Both take up full width */
+    }
+
+    .hor-card .col-md-4 {
+        order: -1; /* Ensure image is on top */
+    }
+}
+@media (max-width: 991px) {
+    .hor-card .row {
+        flex-direction: column; /* Stack image and text vertically on small screens */
+    }
+
+    .hor-card .col-md-4,
+    .hor-card .col-md-8 {
+        width: 100%; /* Both take up full width */
+    }
+
+    .hor-card .col-md-4 {
+        order: -1; /* Ensure image is on top */
+    }
+}

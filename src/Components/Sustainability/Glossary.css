@@ -1,0 +1,11 @@
+.glo-outer{
+    background-color: #E9F1EE;
+}
+.glo-outer section{
+    padding-top: 10%;
+}
+@media(max-width:768px){
+    .glo-outer section {
+        padding-top: 21%;
+    }
+}

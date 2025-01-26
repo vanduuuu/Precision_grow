@@ -1,0 +1,18 @@
+.chooseouter {
+    background-color: #2b3e3e;
+}
+
+.earth-img {
+    position: relative;
+    /* top: 10%; Keeps the image positioned with a slight offset from the top */
+    display: flex; /* Use flexbox to center the content */
+    justify-content: center; /* Horizontally center the image */
+    align-items: center; /* Vertically center the image */
+    width: 100%; /* Ensure the div takes full width */
+    height: 100%; /* Ensure the div takes full height */
+}
+
+.earth-img img {
+    max-width: 100%; /* Ensure the image scales down correctly */
+    height: auto; /* Maintain aspect ratio */
+}

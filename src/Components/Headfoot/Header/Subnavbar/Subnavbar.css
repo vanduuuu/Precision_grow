@@ -1,0 +1,298 @@
+/* Base styles for the navbar */
+nav {
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2), 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.navbar .logo {
+  width: 300px; /* Set the width of the logo */
+  height: auto; /* Automatically scale the height to maintain aspect ratio */
+  display: inline-block; /* Ensure it is displayed properly */
+}
+
+/* Styling for navbar items */
+nav ul li {
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+/* Navbar link styling */
+.navbar-expand-lg .navbar-nav .nav-link {
+  font-size: 19px;
+  font-weight: 600;
+  position: relative;
+display: inline-flex;
+text-transform: uppercase;
+}
+.icon-fixed img{
+  height: 90px;
+}
+.navbar-expand-lg .navbar-nav {
+  align-items: center;
+}
+/* Active link styles */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: #6f8313 !important;
+}
+
+/* Underline effect for links on hover */
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #6f8313;
+  
+}
+
+.nav-link:hover {
+  color: #6f8313 !important;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+}
+
+
+/* Extra link styling */
+a.nav-link.esg {
+  white-space: nowrap; 
+  background-color: #2c6294;
+  color: white;
+  cursor: pointer;
+  padding:11px;
+}
+a.nav-link.esg:hover {
+  background-color: #6f8313;
+  color: white !important;
+  border: 1px solid #153700;
+}
+
+/* Styling for sticky icons */
+.icon-fixed {
+  position: fixed;
+  top: 0px;
+  right: 10px;
+  z-index: 1000;
+}
+.dropdown-submenu .submenu {
+  display: none;
+  position: absolute;
+  top: 9px;
+  left: 90%;
+  margin-left: 0;
+  border-radius: 5px;
+  min-width: 170px;
+  z-index: 1000;
+  background-color: #f8f9fa;
+}
+
+.dropdown-menu {
+  display: none;
+  padding: 10px;
+  border:none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000; 
+ 
+    --bs-dropdown-link-active-bg: white!important;
+    --bs-dropdown-link-active-color: rgba(14, 13, 13, 0.925)!important;
+}
+button.navbar-toggler {
+  border: none;
+  margin-right: 13%;
+}
+
+.dropdown-item:hover {
+  color: white;
+  
+}
+.dropdown-item {
+  font-size: 13px;
+  font-weight: 500;
+  color: #413434;
+  margin: 5px 0;
+  text-transform: uppercase;
+}
+
+.dropdown:hover .dropdown-menu{
+  display: block; 
+  padding:10px;
+  border:none;
+  border-radius:0px;
+  
+}
+.dropdown-menu:hover .dropdown-menu{
+  display: block;
+  padding:10px;
+  border:none;
+  border-radius:5px;
+}
+.dropdown-item:active, .dropdown-item:hover {
+  
+  text-decoration: none;
+  background-color: #473603!important;
+  padding:0px 5px;
+}
+.nav-link{
+  display: inline-block;
+}
+.submenu {
+  position: relative;
+}
+
+
+.dropdown-submenu:hover > .submenu {
+  display: block;
+}
+.sdg-india p{
+  font-size: 10px;
+}
+.sdg-india{
+  width: 128px;
+  margin: 2px;
+
+}
+
+ .nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 0px;
+  height: 1px;
+  background-color: rgb(111, 131, 19);
+}
+/* Responsive Styles */
+@media (max-width:1550px){
+.navbar-nav .nav-link {
+  font-size: 13px !important;
+  white-space: nowrap;
+}
+nav ul li {
+  margin-left: 4px;
+}
+a.nav-link.esg {
+  padding: 14px;
+}
+}
+@media(max-width:992px){
+  .navbar-expand-lg .navbar-nav {
+    align-items: start;
+    padding: 12px 30px;
+}
+nav ul li {
+  margin-left: 0px;
+  margin-bottom: 4px;
+}
+}
+@media (min-width:991px) and (max-width:1301px){
+  .navbar-nav .nav-link {
+    font-size: 11px!important;
+  }
+  nav ul li {
+    margin-left: 9px!important;
+}
+.navbar .logo {
+  width: 200px!important;}
+a.nav-link.e1{
+  padding: 6px 5px!important;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 0;
+  padding-left: 0;
+}
+.sdg-india {
+  width: 70px;
+}
+  }
+  
+
+@media (max-width: 768px) {
+  .brand-logo {
+    width: 38%;}
+  .logo {
+    width: 100%;
+    margin: auto;
+  }
+
+  button {
+    margin-top: 6px;
+    margin-right: 12%;
+    border: none;
+    border: none;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+  .sticky-top {
+    top: 0px;}
+
+ 
+
+  .dropdown-submenu .submenu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 30%!important;
+    margin-left: 0;
+    border-radius: 5px;
+    min-width: 170px;
+    z-index: 1000;
+    background-color: #f8f9fa;
+  }
+  .carousel-indicators {
+    display: none;
+  }
+
+  .dropdown-menu {
+    position: static;
+    display: none;
+    box-shadow: none;
+  }
+
+  .dropdown-menu.show {
+    display: block;
+  }
+
+
+}
+
+@media (max-width: 600px) {
+  .navbar .logo {
+    width: 210px; /* Set the width of the logo */
+    height: auto; /* Automatically scale the height to maintain aspect ratio */
+    display: inline-block; /* Ensure it is displayed properly */
+  }
+
+  .dropdown-submenu .submenu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 50%!important;
+    margin-left: 0;
+    border-radius: 5px;
+    min-width: 170px;
+    z-index: 1000;
+    background-color: #f8f9fa;
+  }
+  .brand-logo p {
+    margin-left: 22%;
+  }
+
+  .icon-fixed {
+    top: 0px;
+    width: 56px;
+    right: 0px;
+  }
+
+
+  .top-bar-area {
+    display: none !important;
+  }
+}
+

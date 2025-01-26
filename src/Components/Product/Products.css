@@ -1,0 +1,6 @@
+.bgdraw{
+  background-image: url('../../assets/shapes/web-bg.webp');
+  height:100%;
+  width:100%;
+  background-color: rgb(218, 223, 211);
+}

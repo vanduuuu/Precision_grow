@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.feature-one--two {
+    background-blend-mode: overlay;
+    background-color: hsl(60, 7%, 78%);
+     background-image: url('../../assets/images/sustainability-bg.webp'); 
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0;
+ 
+}
+ @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+.feature-one--two h2{
+    color: green;
+}
+.padding-box {
+    padding: 80px 0;
+}
+.sustain-list li{
+    border: 3px solid rgb(98, 141, 34);
+    border-radius: 15%;
+    padding: 20px;
+    margin: 15px;
+    height: 100%;
+    background-color: #def1d53d;
+}
+.sustain-list li u{
+    font-weight:700;
+    font-size: 20px;
+    color: green;
+}
+.service_card_outer .card {
+    text-align: center;
+    padding: 35px;
+    background: url('../../assets/images/landscape-with-warm-tones.webp') right bottom no-repeat;
+    margin-bottom: 55px;
+    min-height: 830px;
+    
+}
+.section-txt {
+    background-image: url('../../assets/images/bg-content.webp');
+    background-color: #def1d5;
+}
+.service_outer{
+background-color: #2e3f2f;
+color: #fff;
+min-height: 100vh;
+padding: 50px 0;
+position: relative;
+}
+.service_outer .img-flaw{
+    left: 36%;
+    position: absolute;
+    top: -85px;
+    z-index: 1;
+}
+.service_card_outer .card p {
+    font-size: 19px;
+    color: #557474;
+}
+section .container .bg-content{
+    background-image: url('../../assets/images/hero_441.webp');
+}
+.service_card_outer .Sthumb {
+    width: 66%;
+    margin: auto;
+    border-radius: 5px;
+    background: linear-gradient(to top, #89d925, #285713);
+    box-shadow: 0px 15px 10px -10px rgba(109, 117, 143, 0.33);
+    padding: 10px;
+    transition: all 0.15s linear;
+}
+
+.service_card_outer .card:hover .Sthumb {
+    background: linear-gradient(to top, #478d8d, #fff);
+}
+
+.service_card_outer .Sthumb img {
+    width: 100%;
+    border-radius: 10px 0px;
+}
+
+.service_card_outer .btnSer {
+    background-color: #183838;
+    color: #fff;
+    margin-top: auto; /* Ensures button stays at the bottom */
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: all 0.15s linear;
+}
+.section-4{
+    background-image: url('../../assets/images/bg4.webp');
+  
+}
+
+    .section-4  .container {
+        background-color: #184a117d;
+        color: white;
+        padding: 19px 10px;
+        border-bottom: 5px dashed #f1ce00;
+        border-top: 5px dashed #f1ce00;
+      }
+
+
+.service_card_outer .btnSer:hover {
+    background-color: #000202;
+}
+@media (min-width: 991px) and (max-width: 1025px){
+    .service_card_outer .card{
+        padding:14px;
+    }
+
+
+}
+@media(max-width:768px){
+    .section_outer .img-flaw{
+        
+        position: absolute;
+        top: -120px;
+        z-index: 984;
+    }
+}
+
+
+@media(max-width:600px){
+    .service_card_outer .card {
+        padding: 35px 10px;
+    }
+    .service_outer .img-flaw{
+        left: 10%!important;
+        position: absolute;
+        top: -90px;
+        z-index: 1;
+    }
+    }
+        
