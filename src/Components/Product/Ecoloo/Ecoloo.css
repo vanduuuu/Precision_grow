@@ -1,0 +1,175 @@
+.tab-img img {
+  border-radius: 0px 40px 0px 40px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.ecoloo-container {
+  position: relative;
+  width: 100%;
+  height: 653px;
+  background-image: url('https://api.ecrop.co/assets/precisiongrow/eco-bg.webp');
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #ccc;
+  background-repeat: no-repeat;
+}
+
+/* Text on Image */
+.top-right-text {
+  position: absolute;
+  top: 25%;
+  right: 22%;
+  color: #2b3e3e;
+  font-weight: 600;
+  padding: 5px;
+  border-radius: 5px;
+  width: 46%;
+}
+
+/* Timeline Styles */
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 2%;
+  position: relative;
+}
+
+.circle-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(53, 127, 130);
+  position: absolute;
+  color: white;
+  font-size: 24px;
+}
+
+.circle-img img {
+  height: 70%;
+  width: 70%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.circle-img img:hover {
+  transform: scale(1.1);
+}
+
+.timeline-item.left .circle-img {
+  left: 50%;
+  transform: translate(-53%, 30%);
+}
+
+.timeline-item.right .circle-img {
+  left: 50%;
+  transform: translate(-50%, 22%);
+}
+
+.timeline-item.left .timeline-content {
+  margin-right: auto;
+  border-radius: 0px 20px 20px 0px;
+  background: #f3f3f3 url('https://api.ecrop.co/assets/precisiongrow/') no-repeat left;
+  border: 2px solid rgba(136, 187, 64);
+  background-size: 150px 150px;
+  text-align: right;
+}
+
+.timeline-item.right .timeline-content {
+  margin-left: auto;
+  border-radius: 20px 0px 0px 20px;
+  background: #f3f3f3 url('https://api.ecrop.co/assets/precisiongrow/') no-repeat right;
+  border: 2px solid rgba(136, 187, 64);
+  background-size: 150px 150px;
+  background-position: calc(100% - 10px) center;
+}
+
+.timeline-content {
+  flex-basis: 50%;
+  padding: 30px 90px;
+}
+
+
+/* Nav Tabs */
+.navtabs-outer {
+  color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 50%;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 12%;
+  }
+
+  .timeline-item .circle-img {
+    position: relative;
+    top: -100px;
+    left: 12% !important;
+    transform: none;
+    margin-bottom: 10px;
+  }
+
+  .timeline-item.left .timeline-content,
+  .timeline-item.right .timeline-content {
+    margin: 0;
+    padding: 20px 30px;
+    margin-top: -125px;
+  }
+
+  .top-right-text {
+    top: 1%;
+    right: 6%;
+    width: 90%;
+  }
+
+  .card-hover {
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .timeline-item {
+    margin-bottom: 30%;
+  }
+
+  .timeline-item.left .timeline-content,
+  .timeline-item.right .timeline-content {
+    padding: 20px 15px;
+  }
+
+  .timeline-content h4 {
+    font-size: 27px;
+  }
+
+  .timeline-content p {
+    font-size: 15px;
+  }
+
+  .navtabs-outer .nav-tabs .nav-link {
+    width: 48%;
+    margin-bottom: 10px;
+  }
+
+  .card-body h6 {
+    font-size: 18px;
+  }
+
+  .card-back p {
+    font-size: 14px;
+  }
+}

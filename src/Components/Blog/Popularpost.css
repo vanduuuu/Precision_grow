@@ -1,0 +1,10 @@
+.popular-blogs {
+    background-color: #9e9b9b2e;
+    border: 1px solid #0000003b;
+    padding: 10px;
+    border-radius: 6px;
+}
+.popular-blogs h3 {
+    color: #337d7d;
+    font-size: 20px;
+}

@@ -1,0 +1,161 @@
+.contact-section {
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.email-desc {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+.tabs-wrapper {
+  margin-bottom: 60px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+  background: #02746a;
+  border-radius: 10px;
+  overflow: hidden;
+  color: white;
+}
+
+.tab {
+  flex: 1;
+  padding: 12px 30px;
+  cursor: pointer;
+  z-index: 2;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.tab.active {
+  color: #000;
+}
+
+.tab-highlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  transition: left 0.3s ease;
+  z-index: 1;
+  border-radius: 10px;
+  border: 1px solid #02746a;
+}
+
+.card-group1 {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #02746a;
+  border-radius: 12px;
+}
+
+.card-item-wrapper {
+  flex: 1 1 280px;
+  min-width: 260px;
+  max-width: 320px;
+  text-decoration: none;
+  position: relative;
+}
+
+.card-item {
+  height: 100%;
+  background: transparent;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  min-height: 300px;
+}
+
+.card-item.active {
+  transform: scale(1.05);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.card-link {
+  margin-top: 15px;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.card-link:hover {
+  background: #fff;
+  color: #02746a;
+}
+
+.card-highlight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 120%;
+  background: linear-gradient(135deg, rgba(53, 127, 130), #b8d54f);
+  transition: left 0.3s ease, width 0.3s ease;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 10px;
+  border: 1px solid #a3d97a;
+}
+
+/* WhatsApp layout styling */
+.whatsapp-desc {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.row-info {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+    .card-highlight {
+    display: none!important;
+  }
+}

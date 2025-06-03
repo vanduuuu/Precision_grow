@@ -1,0 +1,90 @@
+
+.highlight-k {
+    font-size: 1.8em;       
+    color: #9bb735;        
+    font-weight: bolder;
+  }
+  .quote-container {
+  position: relative;
+  margin: 2rem 0;
+}
+
+.quote-icon1 {
+  position: absolute;
+top: -24px;
+    left: 5%;
+  transform: translateX(-50%);
+  background: linear-gradient(to right, #88e408, #2e7d32);
+  -webkit-background-clip: text;
+  opacity: 0.2;
+  z-index: 0;
+  pointer-events: none;
+}
+.image-bg-shape {
+    position: absolute;
+    top: -15%;
+    left: 71%;
+    width: 36%;
+    height: 59%;
+    background: radial-gradient(circle at top left, #b8d54f, #36818000);
+    z-index: 0;
+    opacity: 3;
+  opacity: 0.4;
+}
+
+.quote-text {
+  position: relative;
+  z-index: 1;
+  padding: 1rem 2rem;
+  margin: 0 1.25rem;
+  font-weight: 700;
+  font-size: 1.8rem; 
+}
+
+.circle-overlay {
+    position: absolute;
+    bottom: 6%;
+    left: 20%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid white;
+    box-shadow: 0 6px 15px #000;
+    z-index: 2;
+}
+.circle-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media(max-width:768px){
+    .image-bg-shape {
+    left: 63%;}
+    .quote-text {
+    font-size: 1.5rem;
+}
+}
+@media(max-width:600px){
+        .quote-text {
+        font-size: 1.1rem;
+        padding: 0;
+    }
+    .quote-icon1 {
+    top: -13px;
+    left: 8%;
+font-size: 35px;}
+.circle-overlay {
+    position: static;
+    transform: none;
+    width: 100%;
+   height: 100%;
+margin-top: 30px;
+}
+.productt-img .pro-imgg{
+   border: 4px solid white;
+    box-shadow: 0 6px 15px #000;
+}
+}

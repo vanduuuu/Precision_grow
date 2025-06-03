@@ -1,0 +1,50 @@
+/* 189 mb data of assets */
+/* 98.7 mb data of assets */
+
+.flypop-button {
+    z-index: 999;
+    position: fixed;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+.flypop-button button {
+    border: none;
+    padding: 12px 10px;
+    background-color: #b8d54f;
+    border-radius: 6px 0px 0px 6px;
+    letter-spacing: .2px;
+    transform: translateX(2px);
+    -webkit-transform: translateX(2px);
+}
+.flypop-button button span {
+    font-weight: normal;
+    writing-mode: vertical-lr;
+    -webkit-writing-mode: vertical-lr;font-weight: 600;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    transform: rotate(180deg);
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* slider-btn-cotrol */
+.swiper-pagination{
+    display: none;
+}
+.carousel-indicators{
+    display: none!important;
+}.loading {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #555;
+}

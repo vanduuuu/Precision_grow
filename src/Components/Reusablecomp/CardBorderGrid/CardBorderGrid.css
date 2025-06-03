@@ -1,0 +1,25 @@
+.agricards{
+    border-color: gray;
+    min-height: 100%;
+    background:transparent;
+  }
+.agricards img{
+width:80px;
+height:80px;
+}
+
+.custom-title-green{
+    color:#1a852b
+}
+.custom-title-white{
+    color:#ffffff
+}
+.subhead-white{
+color:white;
+}
+/* Mobile screen pe border right transparent karne ke liye */
+@media (max-width: 900px) {
+  .mobile-border-transparent {
+    border-right-color: transparent !important;
+  }
+}

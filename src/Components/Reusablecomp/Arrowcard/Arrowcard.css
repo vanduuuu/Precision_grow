@@ -1,0 +1,95 @@
+/* Styling for the Arrow Card */
+.arrow-card {
+  position: relative;
+  background-color: #f8f9fab1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  height: 100%; /* Same height for all cards */
+  border-left: 2px solid #b8d54f;
+  border-right: 2px solid #357f82;
+  box-sizing: border-box;
+  border-radius: 30px;
+}
+
+/* Remove left border on first card */
+.arrow-card.first {
+  border-left: none;
+}
+
+/* Remove right border and circle on last card */
+.arrow-card.last {
+  border-right: none;
+}
+
+.arrow-card.last .circle {
+  display: none;
+}
+
+/* Circle styling - Positioned between two cards */
+.arrow-card .circle {
+  width: 30px;
+  height: 30px;
+  background-image: linear-gradient(135deg, #16dfe6, #b8d54f);
+  border-radius: 50%;
+  border: 3px solid white;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* Image wrapper - only shows if image exists */
+.arrow-card .image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  height: auto; /* dynamic height */
+  padding: 0;
+}
+
+/* Hide wrapper if empty (no image) */
+.arrow-card .image-wrapper:empty {
+  display: none;
+  margin-bottom: 0;
+  height: 0;
+  padding: 0;
+}
+
+/* Image styling */
+.arrow-image {
+  max-width: 70px;
+  height: auto;
+}
+
+/* No space between cards container */
+.tour {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+/* Responsive fix */
+@media (max-width: 768px) {
+  .col1 {
+    border: 1px solid rgba(0, 0, 0, 0.525);
+    border-radius: 20px;
+  }
+  .arrow-card {
+    border: none;
+  }
+  .arrow-card .circle {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .col1 {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,47 @@
+.key-parameters {
+  background:url('https://api.ecrop.co/assets/precisiongrow/key-parameter.webp') no-repeat center center/cover;
+
+  position: relative;
+  z-index: 1;
+}
+
+.boldertext{
+  color: #147885;
+  text-shadow: 1px 3px 1px #1e2117;
+}
+.glass-card {
+  backdrop-filter: blur(10px);
+  /* background: rgba(255, 255, 255, 0.6); */
+  border-radius: 60px 0;
+  box-shadow: 6px 7px 10px rgba(52, 61, 54, 0.701);
+  transition: all 0.3s ease-in-out;
+  /* background-color: red; */
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+}
+
+.icon-circle {
+  background: linear-gradient(135deg, #c5e7cd, #c3f0ce);
+  border-radius: 50%;
+  padding: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 12px rgba(72, 180, 97, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.glass-card:hover .icon-circle{
+  transform: scale(1.15);
+}
+
+.card-title {
+  font-size: 1.1rem;
+}
+
+.card-text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}

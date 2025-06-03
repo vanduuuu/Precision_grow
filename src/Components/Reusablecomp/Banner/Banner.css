@@ -1,0 +1,93 @@
+/* Container ensuring relative positioning */
+.image-container1 {
+    position: relative;
+    width: 100%;
+    height: 450px;
+  }
+  
+  /* Image styling */
+  .banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the container without distortion */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Keeps the image in the background */
+  }
+  
+  /* Gradient overlay for the entire banner */
+  .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(80deg, #121f20a3 0%, rgba(71, 61, 61, 0) 100%);
+    z-index: 1; /* Places the overlay on top of the image */
+  }
+  
+  /* Left-centered text overlay */
+  .text-overlay1 {
+    position: absolute;
+    top: 50%; /* Vertically center the text */
+    left: 0; /* Aligns the text to the left side */
+    transform: translateY(-50%); /* Vertically centers it */
+    padding: 20px;
+    z-index: 2; /* Places the text above the overlay */
+    width: 60%; /* Ensure the text is confined within the container */
+  }
+  
+/* Heading styling */
+/* Heading styling */
+.heading {
+    font-size: 1.5rem; /* Smaller font size */
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds depth to the text */
+    position: relative; /* Make the heading relative for positioning the pseudo-element */
+  }
+  
+  /* Pseudo-element for gradient border */
+  .heading::after {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute;
+    bottom: -8px; /* Adjust the space between the heading and the border */
+    left: 0; /* Align it to the left edge of the heading */
+    width: 39px; /* Set the width of the gradient border */
+    height: 4px; /* Set the height of the border */
+    background: linear-gradient(to right, #4efa04de, #ffffff00); /* Gradient color */
+  }
+  
+  
+  
+  /* Subheading styling */
+  .subheading {
+    font-size: 59px; /* Smaller font size for subheading */
+    color: white;
+    opacity: 0.8;
+    text-shadow: 3px 1px 0px rgba(0, 0, 0, 0.7); /* Optional: Adds subtle shadow for readability */
+  }
+  
+  @media (max-width: 768px) {
+    .heading {
+      font-size: 1.2rem; /* Further smaller font size on smaller screens */
+    }
+  .text-overlay1 {
+    width: 80%;
+}
+    .subheading {
+      font-size: 2.25rem;
+    }
+  }
+  @media(max-width:600px){
+    .text-overlay1 {
+    width: 100%;
+}
+@media (max-width: 600px) {
+    .subheading {
+        font-size: 1.9rem;
+    }
+}
+  }

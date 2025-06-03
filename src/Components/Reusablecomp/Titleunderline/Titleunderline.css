@@ -1,0 +1,20 @@
+.underline {
+    width: 70px;
+    height: 3px;
+    background: linear-gradient(to right, #3ca55c, #b5ac49); /* Green-yellow gradient */
+    border-radius: 2px;
+  }
+  
+  .heading-style {
+  font-size: 38px;
+  font-weight: 700;
+  text-align: center;
+  color: rgba(53, 127, 130);
+}
+.green-title {
+  color: #ffffff;
+}
+@media(max-width:600px){
+  .heading-style {
+    font-size: 26px;}
+}

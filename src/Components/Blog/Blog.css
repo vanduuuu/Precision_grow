@@ -1,0 +1,79 @@
+/* Pagination Container */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Common styles for all pagination buttons */
+.pagebtn {
+  padding: 8px 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  color: #2b7678;
+}
+
+/* Button hover effect */
+.pagebtn:hover {
+  background-color:#2b7678;
+  color: white;
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Disabled button styling (for prev and next buttons) */
+.pagebtn:disabled {
+  background-color: #e0e0e0;
+  color: #2b7678;
+  cursor: not-allowed;
+  border-color: #ccc;
+}
+
+/* Styling for the active button */
+.pagebtn.active {
+  background-color: #2b7678;
+  color: white;
+  font-weight: bold;
+}
+
+/* Styling for prev and next buttons */
+.pagebtn-prev, .pagebtn-next {
+  font-weight: bold;
+  padding: 8px 20px;
+}
+
+/* Add more space for the prev/next buttons */
+.pagebtn-prev, .pagebtn-next {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.pagebtn-prev:hover, .pagebtn-next:hover {
+  background-color: #2b7678;
+  color: white;
+}
+
+.pagebtn-prev:disabled, .pagebtn-next:disabled {
+  background-color: #e0e0e0;
+  color: #b5b5b5;
+}
+
+/* Add style for the ellipsis */
+.pagebtn-ellipsis {
+  background-color: transparent;
+  border: none;
+  color: #333;
+  font-size: 18px;
+  cursor: default;
+}
+@media(max-width:600px){
+  .pagebtn{
+    padding: 3px 8px  ;
+  }
+}

@@ -1,0 +1,142 @@
+/* General Styles for Swiper Container */
+.swiper_container {
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.swiper-slide {
+  width: 30rem;  /* Adjust width for better responsiveness */
+  height: 40rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border: 2px solid;
+  box-shadow: 3px 2px white;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect on images */
+.swiper-slide img:hover {
+  transform: scale(1.05);
+}
+
+/* Slide Content (Title and Description) */
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  width: 70%;
+  z-index: 5;
+}
+
+/* Slide Content Text Styles */
+.slide-content h2 {
+  font-size: 35px;
+}
+
+.slide-content p {
+  font-size: 18px;
+}
+
+/* Swiper Navigation Buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #f8f9fa;
+  font-size: 2rem;
+  cursor: pointer;
+  background: #6e8320;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+  z-index: 10;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Position of Navigation Buttons */
+.swiper-button-prev {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.swiper-button-next {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Arrow Size */
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 22px;
+}
+
+/* Hover Effect on Arrows */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .swiper-slide {
+    width: 100%;
+    height: auto; /* Adjust height automatically */
+  }
+
+  .swiper-slide img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+  }
+
+  .swiper_container {
+    padding: 2rem 0;
+  }
+
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-size: 20px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    height: 40px;
+    width: 40px;
+  }
+
+  .slide-content {
+    width: 80%;
+    font-size: 18px;
+  }
+
+  .slide-content h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 425px) {
+  .swiper-slide img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+}

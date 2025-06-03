@@ -1,0 +1,10 @@
+.custom-card:hover{
+ border-radius: 0px 40px 0px 40px;
+ border:2px solid rgba(53,127,130);
+ background-color:rgb(250, 244, 244);
+}
+
+.custom-card{
+    border:2px solid rgba(136,187,64);
+  
+   }

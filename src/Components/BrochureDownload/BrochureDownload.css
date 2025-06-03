@@ -1,0 +1,19 @@
+.modal-header{
+    justify-content: space-between;
+}
+.brochure-btn{
+    background-color: #388184;
+    color:white;
+    width:36%;
+}
+.brochure-btn:hover{
+    background-color: #388284cc;
+}
+.Brobtn{
+    background-color: #388284cc!important;
+}
+@media(max-width:1024px){
+    .brochure-btn {
+    width: 72%;
+}
+}

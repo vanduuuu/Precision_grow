@@ -1,0 +1,197 @@
+/* Background Section */
+.ecrop-outer {
+  background-image: url('../../../assets/icons_About/Your_Own_Agriculture.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Headings */
+.addecrop h5,
+.addecrop,
+.h2 {
+  color: #164e4c;
+  margin-top: 30px;
+}
+
+.textt-color {
+  color: #88b939;
+}
+
+/* Styled Pill Text */
+p.t1 {
+  background: #5b8616;
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 28px;
+  color: white;
+  font-size: 22px;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+}
+
+/* Agri List Section */
+.agri {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.agri ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 320px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.agri ul li {
+  background-color: #17726c;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 14px 16px 14px 50px;
+  position: relative;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  min-height: 80px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.agri ul li:hover {
+  background-color: #145c57;
+}
+
+.agri ul li span {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #063640;
+  color: #fff;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 2px 8px rgba(0, 255, 234, 0.7);
+}
+
+/* Logo List */
+.logo-list {
+  margin-top: 5%;
+  text-align: center;
+}
+
+.logo-list ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.logo-list img {
+  width: 80px;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Certification Icons */
+.ceritified-icon {
+  background-color: rgba(255, 255, 255, 0.4);
+  margin-top: 5%;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.ceritified-icon ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* UL Pills (Generic Use) */
+.ecrop_ul li {
+  display: inline-block;
+  padding: 8px 14px;
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  margin: 5px;
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+  p.t1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .agri ul {
+    max-width: 90%;
+  }
+
+  .agri ul li {
+    font-size: 15px;
+    padding: 12px 16px 12px 46px;
+  }
+
+  .agri ul li span {
+    height: 30px;
+    width: 30px;
+    font-size: 14px;
+  }
+
+  .logo-list img {
+    width: 60px;
+  }
+
+  .ceritified-icon {
+    margin-top: 8%;
+  }
+
+  .logo-list {
+    margin-top: 8%;
+  }
+}
+
+@media (max-width: 600px) {
+  .agri ul li {
+    font-size: 14px;
+    padding: 10px 14px 10px 44px;
+  }
+
+  .agri ul li span {
+    height: 28px;
+    width: 28px;
+    font-size: 13px;
+    left: 12px;
+  }
+
+  .logo-list img {
+    width: 50px;
+  }
+
+  .ceritified-icon img {
+    width: 50px;
+  }
+
+  p.t1 {
+    font-size: 17px;
+  }
+
+  .logo-list {
+    margin: 10% 5%;
+  }
+}

@@ -1,0 +1,49 @@
+
+  .carousel-content {
+    background-image:url("https://api.ecrop.co/assets/precisiongrow/Testimonials.webp"); 
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 0px 40px 0px 0px;
+    text-align: center; 
+     color: white;
+    max-width: 100%;
+    position: relative;
+    height:315px;
+
+  }
+  
+  .carousel-content h6 {
+    font-size: 18px;
+    line-height:1.3rem;
+    margin-bottom: 15px;
+    text-align: center;
+    justify-content: center;
+    padding: 8%;
+    color:white;
+  }
+  .testo{
+  border-radius: 0px 0px 0px 40px;
+   
+  }
+  .carousel-content p {
+color:#000;
+  }
+  
+  .carousel-content button {
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 4px;
+  }
+  @media(max-width:1024px){
+    .testo{
+   
+          height: 315px;
+          margin-bottom: 10px;
+      }
+      .carousel-content{
+        height: auto;
+      }
+  }
+  

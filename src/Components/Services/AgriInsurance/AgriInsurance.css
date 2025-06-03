@@ -1,0 +1,30 @@
+
+.card11 {
+  background-color: rgba(53, 127, 130);
+  border-radius: 0px 40px 0px 40px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  height: 100%;
+}
+
+.card11:hover {
+  transform: translateY(-10px);
+}
+.arrow-right {
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-top: 5px solid rgb(94, 198, 4);
+  border-right: 5px solid rgb(94, 198, 4);
+  transform: translateY(-50%) rotate(45deg);
+}
+.card11 h5{
+  color:rgb(94, 198, 4);
+}
+
+
+    

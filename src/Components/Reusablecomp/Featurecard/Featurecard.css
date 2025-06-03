@@ -1,0 +1,19 @@
+.feature-box1 {
+  flex: 1 1 35%;
+  border-radius: 30px 0px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 10px;
+  border: 2px solid #357f825c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.space-infeature{
+  margin: 10px;
+}
+@media (max-width: 768px) {
+  .feature-box1 {
+    flex: 1 1 100%;  /* changed only this */
+  }
+}

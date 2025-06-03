@@ -1,0 +1,70 @@
+.agricard1 {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin: 20px auto;
+}
+
+.agri-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.agri-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 10px #357f82;
+}
+
+.agri-card-title,
+.agri-card-description {
+  height: 126px;               /* ✅ Fixed height */
+  margin: 0;                   /* ✅ Remove default margin */
+  display: flex;
+  align-items: center;         /* ✅ Vertically center */
+  justify-content: center;     /* ✅ Horizontally center */
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.agri-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  background-color: #f0f8ff;
+  color:#357f82
+}
+
+.agri-card-description {
+  font-size: 1rem;
+  background-color: #357f82;
+  color:#f0f8ff;
+}
+.legend-item {
+  list-style: none;
+  position: relative;
+  padding-left: 24px; /* space for square */
+  font-weight: 600;
+}
+
+/* Create square before the text */
+.legend-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border:1px solid #357f82
+}
+
+/* Gray box for Issues */
+.legend-item.gry::before {
+  background-color: #f0f8ff; /* gray */
+}
+
+/* Green box for Solutions */
+.legend-item.grn::before {
+  background-color: #357f82; /* green */
+}
+

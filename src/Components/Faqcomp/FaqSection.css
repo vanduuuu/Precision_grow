@@ -1,0 +1,60 @@
+/* Gradient applied only to the image container */
+.faqimg-container.green {
+  background: linear-gradient(to right, #179a49, #ffffff); /* Green gradient */
+}
+.faqimg-container.blue {
+  background: linear-gradient(to right, #046d7b, #ffffff); /* Green gradient */
+}
+.faqimg-container.lightblue {
+  background: linear-gradient(to right, #1ca2c0, #ffffff); /* Green gradient */
+}
+.faqimg-container.lightgreen {
+  background: linear-gradient(to right, #60c01c, #ffffff); /* Green gradient */
+}
+.faq-imgg{
+  width: 100%;
+  height: 580px;
+  /* height:100%; */
+}
+.faq-imgg img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.accordion-item {
+  margin-bottom: 10px;
+  background-color: transparent;
+  color: rgb(71, 67, 67);
+  border: none;
+}
+
+.accordion-header {
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(53, 127, 130, 0.3);
+}
+
+.accordion-content{
+  padding: 15px;
+}
+.icon {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.icon.fas.fa-plus {
+  transform: rotate(0);
+}
+
+.icon.fas.fa-minus {
+  transform: rotate(180deg);
+}
+@media(max-width:600px){
+  .accordion-header {
+   padding: 0px;}
+   .faq-imgg {
+    height: 100%;}
+}

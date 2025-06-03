@@ -1,0 +1,56 @@
+.roadmaps{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  .card-grouppp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .roadmap-card {
+    width: 280px;
+    background: white;
+    border: 3px dotted ;
+    border-image: linear-gradient(to top left, rgb(53,127,130), rgb(136,187,64)) 1;
+    border-radius:0px 100px 0px 100px;
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+   
+
+  }
+  .roadmap-card:hover{
+    background: linear-gradient(45deg, rgb(218, 252, 172), rgb(166, 204, 206));
+   
+  }
+  
+  .roadmap-img {
+    width: 100px; 
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+    padding: 5px;
+  }
+  
+  .roadmap-content {
+    padding: 15px;
+  }
+  
+  .roadmap-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba(53, 127, 130);
+    margin-top: 10px;
+  }
+  
+  .roadmap-description {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+  }
+  

@@ -1,0 +1,28 @@
+.fishcardhere{
+    height:420px;
+    position: relative;
+    border: 3px solid #0a7765;
+    flex-wrap:nowrap;
+    border-radius: 0px 40px 0px 40px;
+
+}
+.read-btn{
+    background-color: #1c91c5;
+    color:white
+}
+.card-img-tops {
+    height: 200px;
+        border-radius: 0px 40px 0px 40px;
+
+}
+@media(max-width:768px){
+    /* .fishcardhere{
+    height: 478px;
+      margin: auto;
+    } */
+}
+@media(max-width:425px){
+    .fishcardhere{
+        height: auto !important;
+    }
+}

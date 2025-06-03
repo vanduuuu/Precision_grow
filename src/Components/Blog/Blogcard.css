@@ -1,0 +1,147 @@
+/* Blog Card Styling */
+.blog-card {
+    background-color: #2d777a12;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* To position the content over the image */
+    transition: all 0.3s ease;
+  }
+  .card-img-topss1{
+    width:20px;
+     height:20px
+  }
+  /* Image Container with Dark Overlay */
+  .image-container {
+    position: relative;
+    height: 400px; /* Increased height for a larger image */
+    border-radius: 10px; /* Match card border radius */
+    overflow: hidden; /* Ensure nothing escapes the border */
+  }
+  
+  /* Pseudo-element for Border Above Image */
+  .image-container::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: calc(95% + 6px);
+    height: calc(95% + 0px);
+    border-radius: 10px;
+    z-index: 2;
+  }
+  
+  /* Image */
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px; /* Slight rounded corners for image */
+    z-index: 1; /* Keep the image beneath the border */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: 1;
+  }
+  
+  /* Content Section */
+  .content-section {
+    position: absolute;
+    bottom: 0; /* Align to the bottom */
+    left: 0; /* Align to the left */
+    transform: translateY(0); /* Keep it aligned at the bottom */
+    z-index: 3; /* Ensure the content is on top of the image */
+    color: white; /* White text on top of the dark image */
+    text-align: left; /* Align text to the left */
+    padding-left: 20px; /* Padding from the left */
+    padding-right: 20px;
+    padding-bottom: 30px; /* Padding at the bottom */
+    width: 100%; /* Keep content inside image bounds */
+    background: #000000ab;
+  }
+  
+  /* Meta Info (Author and Date) */
+  .meta-info {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 6px;
+    text-shadow: 1px 1px 1px black;
+    background: #337d7d;
+    padding: 6px 5px;
+    display: inline-block;
+}
+  
+  .meta-info .author {
+    font-weight: bold;
+  }
+  
+  .meta-info .date {
+    margin-left: 10px;
+  }
+  
+  /* Blog Title */
+  .blog-title1 {
+    font-size: 24px;
+    font-weight: bold;
+    /* margin: 0; */
+    position: relative;
+    color: white;
+    transition: color 0.3s ease;
+    padding-bottom: 10px; /* Space for any bottom effect if needed */
+    text-shadow: 1px 1px 1px black;
+    margin-top: 10px;
+
+  }
+  
+  /* Hover Effect for Title Color Change */
+  .blog-card:hover .overlay {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.092), rgba(0, 0, 0, 0.607));
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .blog-card {
+      margin-bottom: 20px;
+    }
+  
+    .content-section {
+      padding: 15px;
+      width:100%;
+    }
+  
+    .image-container {
+      height: 250px;
+    }
+  
+    .blog-title1 {
+      font-size: 20px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .content-section {
+      padding: 10px;
+    }
+  
+    .image-container {
+      height: 200px;
+    }
+    .meta-info{
+      color:#2d777a;
+      text-shadow: none;
+      background-color: #2d777a20;
+      font-size: 10px;
+    }
+    .blog-title1 {
+      font-size: 18px;
+      color: #2d777a;
+      text-shadow: none;
+    }
+  }
+  

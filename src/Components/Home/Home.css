@@ -1,0 +1,132 @@
+/* Home.css */
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Black overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+.modal-page {
+  position: relative;
+  width: 80vw;
+  max-width: 40%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  height: auto;
+  overflow: visible;
+  text-align: center;
+}
+
+/* Close Button Styles */
+.close-button {
+  position: absolute;
+  top: -34px; /* Default position for desktop screens */
+  right: -7px;
+  font-size: 22px; /* Smaller font for mobile */
+  cursor: pointer;
+  border: none;
+  padding: 5px;
+  color: white;
+  background-color: transparent;
+  border-radius: 50%; /* Circular button */
+  z-index: 1;
+}
+
+.image-slider {
+  width: 100%;
+  height: auto; /* Adjust the height as needed */
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 1s ease-in-out;
+}
+.cont {
+  padding: 2rem;
+  font-size: 20px;
+  font-weight: 500;
+  color: #2e3a2c;
+  background: #e8f5e9; /* Light green background */
+  border-radius: 40px 0 40px 0;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+  text-align: center;
+}
+
+.ecroptoday {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+.ecroptoday img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Button Styling */
+.ecroptoday a {
+  text-decoration: none;
+}
+
+.ecroptoday button {
+  position: absolute;
+  bottom: 15px;
+  left: 70%;
+  transform: translateX(-50%);
+  padding: 10px 24px;
+  font-size: 14px;
+  border: 1px solid white;
+  background-color: rgba(53, 127, 130, 0.9);
+  color: white;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.ecroptoday button:hover {
+  background-color: white;
+  color: rgba(53, 127, 130);
+  font-weight: 700;
+  border: 2px solid rgba(53, 127, 130);
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+  .modal-page {
+    max-width: 70%; /* Full width for smaller screens */
+  }
+  .close-button {
+    top: -42px;
+    right: -52px;
+  }
+  .ecroptoday button {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal-page {
+    max-width: 90%; /* Full width for smaller screens */
+  }
+  .ecroptoday button {
+    padding: 3px;
+    font-size: 11px;
+    left: 78%;
+}
+.poem li{
+  font-size: 15px;
+}
+}
