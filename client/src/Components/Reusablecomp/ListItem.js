@@ -3,7 +3,7 @@ import './Listitem.css'
 const ListItem = ({ icon, label, index, title }) => {
   return (
     <div key={index} className="d-flex align-items-center mt-3">
-      <img src={icon} alt={`ecropicon${index + 1}`} className="me-3 list-ecrop-icon" loading="lazy"/>
+      <img src={icon} alt={`ecropicon${index + 1}`} className="me-3 list-ecrop-icon" loading="lazy" width="100" height="100"/>
       <div>
 {title && (
   <h6

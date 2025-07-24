@@ -82,9 +82,9 @@ const VideoSlider = () => {
             className="d-block w-100 img-fluid"
             src={item.imgSrc}
             alt={item.alt}
-             width="1920" 
-  height="800" 
-            loading="lazy"
+             width="1920"
+  height="800"
+            loading={item.id === 1 ? "eager" : "lazy"}
           />
           <Carousel.Caption className="carousel-caption">
             <h3 className="display-5 fw-bold">{colorizeTitle(item.title)}</h3>

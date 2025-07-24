@@ -1,6 +1,10 @@
 /* Home.css */
 
 /* Modal Styles */
+.poem {
+  min-height: 120px;     /* ✅ Required to fix CLS */
+  overflow: hidden; 
+}
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -124,7 +128,7 @@
   .ecroptoday button {
     padding: 3px;
     font-size: 11px;
-    left: 78%;
+    left: 86%;
 }
 .poem li{
   font-size: 15px;

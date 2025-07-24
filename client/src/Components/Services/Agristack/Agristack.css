@@ -1,0 +1,27 @@
+.organic-tag {
+  z-index: 2;
+  max-width: 100px;
+}
+
+.organic-badge {
+  width: 100%;
+  height: auto;
+}
+.organic-tag-out{
+    top:-40px;
+    width:100%;
+}
+.square-bullets {
+  list-style-type: square;
+}
+.agr-benf-sec{
+   background-color: #02746a; 
+}
+.agr-help-sec{
+    background-color: #02746b17;
+}
+@media(max-width:600px){
+   .organic-tag-out img{
+    width:24%;
+} 
+}

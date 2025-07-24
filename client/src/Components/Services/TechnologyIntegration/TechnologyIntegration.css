@@ -1,0 +1,15 @@
+.backbgcolor::before{
+content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 21%;
+        height: 100%;
+        background-color: #357f82;
+        z-index: -1;
+}
+@media(max-width:768px){
+    .backbgcolor::before{
+        display: none;
+    }
+}

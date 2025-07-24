@@ -1,59 +1,47 @@
 import React, { createContext, useState, useEffect, useMemo } from "react";
 import { db } from "./Firebaseconfig.js";
-import { collection, getDocs, query, where } from "firebase/firestore";
+import { collection, query, where, onSnapshot } from "firebase/firestore";
 
+// Step 1: Create the context
 export const BlogContext = createContext();
 
+// Step 2: Create the provider
 export const BlogProvider = ({ children }) => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const CACHE_KEY = "precisionGrowPosts";
+    // Step 3: Create query for Precision Grow posts
+    const blogQuery = query(
+      collection(db, "posts"),
+      where("categoryId", "==", "Precision Grow")
+    );
 
-    const cachedPosts = localStorage.getItem(CACHE_KEY);
-    if (cachedPosts) {
-      setPosts(JSON.parse(cachedPosts));
-      setLoading(false);
-    }
-
-    const fetchAndUpdatePosts = async () => {
-      try {
-        const blogQuery = query(
-          collection(db, "posts"),
-          where("categoryId", "==", "Precision Grow")
-        );
-        const blogSnapshot = await getDocs(blogQuery);
-        const blogPosts = blogSnapshot.docs.map((doc) => ({
+    // Step 4: Set up real-time listener
+    const unsubscribe = onSnapshot(
+      blogQuery,
+      (snapshot) => {
+        const blogPosts = snapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
         }));
-
-        // Compare old and new data to avoid unnecessary updates
-        const oldPosts = localStorage.getItem(CACHE_KEY);
-        const oldPostsParsed = oldPosts ? JSON.parse(oldPosts) : null;
-
-        const isSame =
-          oldPostsParsed &&
-          JSON.stringify(oldPostsParsed) === JSON.stringify(blogPosts);
-
-        if (!isSame) {
-          setPosts(blogPosts);
-          localStorage.setItem(CACHE_KEY, JSON.stringify(blogPosts));
-        }
+        setPosts(blogPosts);
         setLoading(false);
-      } catch (error) {
+      },
+      (error) => {
         console.error("Error fetching blog posts:", error);
         setLoading(false);
       }
-    };
+    );
 
-    fetchAndUpdatePosts();
+    // Step 5: Clean up listener on unmount
+    return () => unsubscribe();
   }, []);
 
-  // Memoize context value to prevent unnecessary re-renders
+  // Step 6: Memoize the context value
   const contextValue = useMemo(() => ({ posts, loading }), [posts, loading]);
 
+  // Step 7: Return the provider
   return (
     <BlogContext.Provider value={contextValue}>
       {children}

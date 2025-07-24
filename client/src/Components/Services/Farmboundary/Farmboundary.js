@@ -7,6 +7,9 @@ import Featurecard from "../../Reusablecomp/Featurecard/Featurecard.js";
 import Titleunderline from "../../Reusablecomp/Titleunderline/Titleunderline.js";
 import Arrowcard from "../../Reusablecomp/Arrowcard/Arrowcard.js";
 import CardBorderGrid from "../../Reusablecomp/CardBorderGrid/CardBorderGrid.js";
+import f1 from '../../../assets/icons_About/f1.webp'
+import f2 from '../../../assets/icons_About/f2.webp'
+import f3 from '../../../assets/icons_About/f3.webp'
 const Farmboundary = () => {
 
 const tourData = [
@@ -238,8 +241,10 @@ const tourData = [
               <img
                 src="https://api.ecrop.co/assets/precisiongrow/Farm Boundary3.webp"
                 alt="Efficiency"
-                className="benefit-icon my-2"
+                className="benefit-icon img-fluid my-2"
                 loading="lazy"
+                width="100"
+                height="100"
               />
               <div className="benefit-text">
                 <p>
@@ -254,8 +259,10 @@ const tourData = [
               <img
                 src="https://api.ecrop.co/assets/precisiongrow/Farm Boundary4.webp"
                 alt="Cost Effective"
-                className="benefit-icon my-2"
+                className="benefit-icon img-fluid my-2"
                 loading="lazy"
+                width="100"
+                height="100"
               />
               <div className="benefit-text">
                 <p>
@@ -269,8 +276,10 @@ const tourData = [
               <img
                 src="https://api.ecrop.co/assets/precisiongrow/Farm Boundary5.webp"
                 alt="Sustainability"
-                className="benefit-icon my-2"
+                className="benefit-icon img-fluid my-2"
                 loading="lazy"
+                width="100"
+                height="100"
               />
               <div className="benefit-text">
                 <p>
@@ -301,6 +310,8 @@ const tourData = [
             alt="map"
             className="img-fluid w-100 d-block"
             loading="lazy"
+            width="1385"
+                height="733"
           />
 
           <div
@@ -410,13 +421,14 @@ const tourData = [
   <div className="row pt-5">
     <div className="col-lg-3 position-relative image-stack-container">
       <div className="image-wrapper">
-        <img src="https://api.ecrop.co/assets/precisiongrow/farm-whole-sale.webp" alt="farm-whole-sale" className="img-fluid img-stacked" loading="lazy"/>
+        <img src={f2} alt="farm-whole-sale" className="img-fluid img-stacked" loading="lazy" width="100"
+                height="100"/>
       </div>
       <div className="image-wrapper image-middle">
-        <img src="https://api.ecrop.co/assets/precisiongrow/farm-pre-production.webp" alt="farm-pre-production" className="img-fluid img-stacked" loading="lazy"/>
+        <img src={f3} alt="farm-pre-production" className="img-fluid img-stacked" loading="lazy"/>
       </div>
       <div className="image-wrapper">
-        <img src="https://api.ecrop.co/assets/precisiongrow/farm-insurance.webp" alt="farm-insurance" className="img-fluid img-stacked" loading="lazy"/>
+        <img src={f1} alt="farm-insurance" className="img-fluid img-stacked" loading="lazy"/>
       </div>
     </div>
     <div className="col-lg-8 offset-lg-1">

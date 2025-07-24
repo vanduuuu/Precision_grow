@@ -19,6 +19,8 @@ const Blogcards = ({ image, title, date, author, detailPage }) => {
             src="https://api.ecrop.co/assets/precisiongrow/precisiongrow_round_logo.png"
             className="card-img-topss1 rounded-top"
             alt="precisiongrow"
+            width="900"
+                        height="500"
           />
           &nbsp; Precision Grow
         </span>

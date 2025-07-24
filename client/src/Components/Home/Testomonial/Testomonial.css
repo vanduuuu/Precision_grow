@@ -1,49 +1,51 @@
+.testimonial-row {
+ min-height: 400px;}
 
-  .carousel-content {
-    background-image:url("https://api.ecrop.co/assets/precisiongrow/Testimonials.webp"); 
-    padding: 20px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 0px 40px 0px 0px;
-    text-align: center; 
-     color: white;
-    max-width: 100%;
-    position: relative;
-    height:315px;
 
-  }
-  
-  .carousel-content h6 {
-    font-size: 18px;
-    line-height:1.3rem;
-    margin-bottom: 15px;
-    text-align: center;
-    justify-content: center;
-    padding: 8%;
-    color:white;
-  }
-  .testo{
+.custom-img {
   border-radius: 0px 0px 0px 40px;
-   
+  max-height: 400px;
+  object-fit: cover;
+}
+
+/* Right gradient background */
+.gradient-bg {
+  /* background: linear-gradient(135deg, #88bb40, #357f82); */
+  padding: 30px;
+  border-radius: 0px 40px 0px 0px;
+  min-height: 100%;
+  text-align: center;
+  position: relative;
+  background-image: url('https://api.ecrop.co/assets/precisiongrow/Testimonials.webp');
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+}
+
+/* Testimonial text */
+.carousel h6 {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: white;
+  position: relative;
+  padding-left: 25px;
+}
+
+/* Author name */
+.carousel p {
+  color: #e0e0e0;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .custom-img {
+    max-height: 300px;
   }
-  .carousel-content p {
-color:#000;
+
+  .gradient-bg {
+    border-radius: 10px;
+    padding: 20px;
   }
-  
-  .carousel-content button {
-    font-size: 14px;
-    padding: 8px 16px;
-    border-radius: 4px;
-  }
-  @media(max-width:1024px){
-    .testo{
-   
-          height: 315px;
-          margin-bottom: 10px;
-      }
-      .carousel-content{
-        height: auto;
-      }
-  }
-  
+}

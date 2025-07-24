@@ -22,10 +22,10 @@
     "sitemap": "^8.0.0",
     "swiper": "^11.1.12",
     "web-vitals": "^2.1.4"
-  },
+  },  
   "scripts": {
-    "start": "react-scripts start",
-    "build": "cross-env GENERATE_SOURCEMAP=true react-scripts build",
+    "start": "react-scripts start GENERATE_SOURCEMAP=false",
+    "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "webpack serve --mode development --open",

@@ -10,6 +10,14 @@ import {
   WhatsappShareButton,
 } from "react-share";
 import "./BlogDetailPage.css";
+import {
+  FaFacebook,
+  FaLinkedin,
+  FaWhatsapp,
+  FaShareAlt,
+  FaTimes,
+} from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const BlogDetailPgs = () => {
   const { slug } = useParams(); // slug is post id
@@ -124,30 +132,36 @@ const BlogDetailPgs = () => {
   </div>
 
   {/* Share Buttons */}
-  <div className="d-flex align-items-center">
-    <div className={`social-icons ${shareOpen ? "open" : ""}`}>
-      <FacebookShareButton url={window.location.href} quote={shareMessage}>
-        <i className="fab fa-facebook share-icon fb"></i>
-      </FacebookShareButton>
-      <TwitterShareButton url={window.location.href} title={shareMessage}>
-        <i className="fab fa-twitter share-icon twitter"></i>
-      </TwitterShareButton>
-      <LinkedinShareButton url={window.location.href} title={shareMessage} summary={post.metaDescription}>
-        <i className="fab fa-linkedin share-icon linkedin"></i>
-      </LinkedinShareButton>
-      <WhatsappShareButton url={window.location.href} title={shareMessage}>
-        <i className="fab fa-whatsapp share-icon whatsapp"></i>
-      </WhatsappShareButton>
-    </div>
+<div className="d-flex align-items-center">
+  <div className={`social-icons ${shareOpen ? "open" : ""}`}>
+    <FacebookShareButton url={window.location.href} quote={shareMessage}>
+      <FaFacebook className="share-icon fb" />
+    </FacebookShareButton>
+    <TwitterShareButton url={window.location.href} title={shareMessage}>
+  <FaXTwitter className="share-icon twitter"/>
+</TwitterShareButton>
 
-    <button
-      onClick={() => setShareOpen(!shareOpen)}
-      className={`share-toggle-btn ms-3 ${shareOpen ? "bg-red" : "bg-blue"}`}
-      title={shareOpen ? "Close Share Options" : "Share This Post"}
+    <LinkedinShareButton
+      url={window.location.href}
+      title={shareMessage}
+      summary={post.metaDescription}
     >
-      <i className={shareOpen ? "fas fa-times" : "fas fa-share-alt"}></i>
-    </button>
+      <FaLinkedin className="share-icon linkedin" />
+    </LinkedinShareButton>
+    <WhatsappShareButton url={window.location.href} title={shareMessage}>
+      <FaWhatsapp className="share-icon whatsapp" />
+    </WhatsappShareButton>
   </div>
+
+  <button
+    onClick={() => setShareOpen(!shareOpen)}
+    className={`share-toggle-btn ms-3 ${shareOpen ? "bg-red" : "bg-blue"}`}
+    title={shareOpen ? "Close Share Options" : "Share This Post"}
+  >
+    {shareOpen ? <FaTimes /> : <FaShareAlt />}
+  </button>
+</div>
+
 </div>
 
      

@@ -5,6 +5,31 @@ footer{
   z-index: 0; /* 👈 Make sure footer has a lower z-index */
 
   }
+  .grow-with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rice-icon {
+  width:auto;
+  height: 50px;
+}
+
+/* Footernew.css */
+.flag-logo {
+  width: 70px;
+  height: auto;
+  padding: 3px;
+  border-radius: 50%;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.33);
+  transition: transform 0.3s ease;
+}
+
+.flag-logo:hover {
+  transform: scale(1.1);
+}
+
 footer:after, footer:before {
     background-color: #93a84b;
     content: "";
@@ -132,10 +157,15 @@ footer:after {
         top: 3px;
         font-size: 14px;
     }
+    .heading1{
+      font-size: 22px;
+    }
   }
 
  
   @media(max-width:768px){
+    .flag-logo {
+  width: 50px;}
     .copyRightArea {
         padding: 0px;
     }

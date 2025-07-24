@@ -1,0 +1,21 @@
+/* Magazine.css */
+.publication-card {
+  background: linear-gradient(to right, #e6f0ff, #ffffff); /* Light blue to white */
+  border: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.publication-card .card-body1 h4 {
+  color: #036067; /* Slightly darker blue for title */
+}
+
+.publication-card .btn-success {
+  background-color: white;
+  border-color: #107c83;
+  color:#107c83;
+}
+
+.publication-card .btn-success:hover {
+  background-color: #107c83;
+  color:white
+}

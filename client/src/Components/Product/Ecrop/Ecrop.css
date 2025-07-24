@@ -14,7 +14,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: -8px !important;
+  bottom: 0px !important;
   position: absolute;
 }
 

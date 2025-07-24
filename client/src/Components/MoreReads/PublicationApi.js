@@ -1,0 +1,138 @@
+// publications.js
+import pdf1 from '../../assets/pdf/Agrospheres-2025-6-7-79-83.pdf'
+export const PublicationApi = [
+  
+  {
+    id: 1,
+    name: "Agrospheres:e- Newsletter",
+    title: "How Cover Cropping is Transforming Modern Farming",
+    volume: "6(7)",
+    date: "12 July 2025",
+    pdf: 'https://api.ecrop.co/assets/precisiongrow/Agrospheres-2025-6-7-10-13.pdf',   
+  },
+    {
+    id: 2,
+    name: "Agrospheres:e- Newsletter",
+    title: "Soil Health and Carbon Sequestration Techniques: Pathways to Sustainable Agriculture",
+    volume: "6(7)",
+    date: "12 July 2025",
+    pdf: pdf1,   
+  },
+   {
+    id: 3,
+    name: "Agrospheres:e- Newsletter",
+    title: "Carbon Farming: Agriculture's Contribution to Halting Climate Change",
+    volume: "6(7)",
+    date: "11 July 2025",
+    pdf: 'https://api.ecrop.co/assets/precisiongrow/Agrospheres-2025-6-7-6-9.pdf',
+  },
+   {
+    id: 4,
+    name: "Agrospheres:e- Newsletter",
+    title: "Strategies for Increasing Maize Yields in Variable Climates",
+    volume: "6(7)",
+    date: "4 July, 2025",
+    pdf: 'https://api.ecrop.co/assets/precisiongrow/Agrospheres-2025-6-7-30-32.pdf',
+  },
+    {
+    id: 5,
+    name: "Agrospheres:e- Newsletter",
+    title: "Developing Agribusiness Partnerships and Networks",
+    volume: "6(6)",
+    date: "16 June, 2025",
+    pdf: 'https://api.ecrop.co/assets/precisiongrow/Agrospheres-2025-6-6-32-35.pdf',
+  },
+  {
+    id: 6,
+    name: "Agrospheres:e- Newsletter",
+    title: "Sowing Equality: Gender Inclusiveness in Sustainable Agriculture",
+    volume: "6(6)",
+    date: "13 June, 2025",
+    pdf: 'https://api.ecrop.co/assets/precisiongrow/Agrospheres-2025-6-6-48-52.pdf',
+  },
+
+
+ 
+  {
+    id: 7,
+   name: "Agrospheres:e- Newsletter",
+    title: "Role of Drones in Precision Agriculture",
+    volume: "6(5)",
+    date: "16 May, 2025",
+    pdf: 'https://api.ecrop.co/assets/precisiongrow/Agrospheres-2025-6-5-31-33.pdf',
+  },
+   {
+    id: 8,
+    name: "Agrospheres:e- Newsletter",
+    title: "Impact of Global Trade Policies on Agriculture",
+    volume: "6(5)",
+    date: "14 May, 2025",
+    pdf: 'https://api.ecrop.co/assets/precisiongrow/Agrospheres-2025-6-5-25-27.pdf',
+  },
+    {
+    id: 9,
+    name: "Agrospheres:e- Newsletter",
+    title: "Role of Remote Sensing and GIS in Horticultural Crop Management",
+    volume: "6(5)",
+    date: "10 May, 2025",
+    pdf: 'https://api.ecrop.co/assets/precisiongrow/Agrospheres-2025-6-5-61-64.pdf',
+  },
+  {
+    id: 10,
+    name: "Agri Articles",
+    title: "Precision Agriculture: Increasing Yields through  Data-Supported Decisions",
+    volume: "5(2)",
+    date: "Mar/Apr, 2025",
+    pdf: 'https://api.ecrop.co/assets/precisiongrow/E-05-02-691-693.pdf',
+  },
+    {
+    id: 11,
+    name: "Current Agriculture Trends",
+    title: "Smart Farming: How IoT and AI are Revolutionizing Crop Management ",
+    volume: "4(7)",
+    date: "22 July, 2025",
+    pdf: 'https://api.ecrop.co/assets/precisiongrow/CAT-2025-4-7-35-37.pdf',
+  },
+  {
+    id: 12,
+    name: "Current Agriculture Trends",
+    title: "Drone-Enabled Herbicide Automation with AI-Weed Detection: Transforming Precision Weed Management",
+    volume: "4(7)",
+    date: "10 July, 2025",
+    pdf: 'https://api.ecrop.co/assets/precisiongrow/CAT-2025-4-7.pdf',
+  },
+
+  {
+    id: 13,
+    name: "Agri Magazine",
+    title: "Future farming with the integration of artificial ecological policies and artificial intelligence.(In Hindi)",
+    volume: "2(5)",
+    date: "May, 2025",
+    pdf: 'https://api.ecrop.co/assets/precisiongrow/H-AGM-02-05-04-06.pdf',
+  },
+  {
+    id: 14,
+    name: "Agri Magazine",
+    title: "Carbon Credits for Farmers Challenges and Opportunities",
+    volume: "2(5)",
+    date: "May, 2025",
+    pdf: 'https://api.ecrop.co/assets/precisiongrow/E-AGM-02-05-233-236.pdf',
+  },
+  {
+    id: 15,
+    name: "Agriculture Bulletin",
+    title: "Novel Ways to Use Water for 'Per Drop More Crop'",
+    volume: "1(6)",
+    date: "June, 2025",
+    pdf: 'https://api.ecrop.co/assets/precisiongrow/f-1-6.pdf',
+  },
+  {
+    id: 16,
+    name: "Agriculture Bulletin",
+    title: "Mobile Apps for Real Time Agronomic Decision Making",
+    volume: "1(6)",
+    date: "June, 2025",
+    pdf: 'https://api.ecrop.co/assets/precisiongrow/a-1-6-5.pdf',
+  },
+
+];

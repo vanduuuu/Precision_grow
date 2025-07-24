@@ -60,7 +60,7 @@ const AgricLoan = () => {
 
       {/* Intro */}
       <section>
-        <p className='text-center boldlook'>Welcome to the future of agri-lending!</p>
+        <h1 className='text-center boldlook'>Welcome to the future of agri-lending!</h1>
         <Container>
           <p className='text-center fs-4'>
             With the help of satellite data, our cutting-edge technology provides accurate risk insights, making decisions simpler for farmers and lenders.

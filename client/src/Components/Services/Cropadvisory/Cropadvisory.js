@@ -1,11 +1,10 @@
 import React from "react";
-import "./Cropadvisory.css";
 import Cropgridcomp from "./Cropgridcomp.js";
 import { Helmet } from "react-helmet-async";
 import FaqSection from "../../Faqcomp/FaqSection.js";
 import Banner from "../../Reusablecomp/Banner/Banner.js";
 import Titleunderline from "../../Reusablecomp/Titleunderline/Titleunderline.js";
-import { MdKeyboardArrowDown } from "react-icons/md";
+import HoverCardList from "../../Reusablecomp/HoverCardList/HoverCardList.js";
 
 const crop_api = [
   {
@@ -101,7 +100,7 @@ const Cropadvisory = () => {
           content="Get tailored crop advisory solutions to enhance yields and sustainability. Empower your farming practices with Precision Grow's expert guidance."
         />
         <meta
-          name="description"
+          name="keywords"
           content="crop advisory services, smart crop recommendations, farming decision support"
         />
 
@@ -125,39 +124,8 @@ const Cropadvisory = () => {
           Services assist farmers in preventing losses, addressing plant health
           concerns, and thriving.
         </p>
-        <Titleunderline title="We Operate Through 3 Key Pathways" tag="h2" />
-
-        <section className="cropadvisory-outer py-5">
-          <div className="row gy-4">
-            {crop_api.map((cards) => (
-              <div key={cards.id} className="col-lg-4 col-md-6 col-sm-12">
-                <div className="card shadow-sm border-0 rounded-3 crop-card d-flex flex-column">
-                  <img
-                    src={cards.imageSrc}
-                    className="card-img-top"
-                    alt={cards.title}
-                    loading="lazy"
-                    style={{
-                      height: "220px",
-                      objectFit: "cover",
-                      borderTopLeftRadius: "0.75rem",
-                      borderTopRightRadius: "0.75rem",
-                    }}
-                  />
-                  <div className="card-body d-flex flex-column">
-                    <h5 className="card-title d-flex justify-content-between align-items-center">
-                      {cards.title}
-                      <MdKeyboardArrowDown className="arrow-icon" />
-                    </h5>
-                    <p className="card-text content-text">
-                      {cards.description}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
+        <Titleunderline title="We Operate Through 3 Key Pathways" tag="h1" />
+        <HoverCardList data={crop_api}/>
       {/* -------------------------------------------------------------container Empowering Agri-Service Providers----------------------------------------- */}
       <Titleunderline title="Empowering Agri-Service Providers" tag="h3" />
       <p className="text-center fs-5 fw-bold coloredtxt1">

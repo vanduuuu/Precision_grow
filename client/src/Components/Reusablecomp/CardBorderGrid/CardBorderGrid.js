@@ -18,18 +18,25 @@ const CardBorderGrid = ({
 
           return (
             <div key={index} className="d-flex">
-              <div className={`card agricards flex-fill text-center p-3 ${borderEndClass} border-0`}>
-                {card.image && (
+              <div className={`card agricards flex-fill text-center py-2 p-lg-3 ${borderEndClass} border-0`}>
+                
+                {/* Render Icon or Image */}
+                {card.icon ? (
+                  <div className="mb-3 icon-wrapper">
+                    {React.createElement(card.icon, { size: 50 })}
+                  </div>
+                ) : card.image ? (
                   <img
                     src={card.image}
                     className="card-img-top mx-auto mb-3"
                     alt={card.title}
                     loading="lazy"
                   />
-                )}
-                <div className="card-title p-0 card-body d-flex flex-column justify-content-center align-items-center">
+                ) : null}
+
+                <div className="card-title p-0 card-body d-flex flex-column align-items-center">
                   <h5 className={`fs-4 fw-bold ${titleClass}`}>{card.title}</h5>
-                  <p className={`card-text ${textClass}`}>{card.content}</p>
+                  <p className={`${textClass}`}>{card.content}</p>
                 </div>
               </div>
             </div>

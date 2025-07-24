@@ -1,7 +1,6 @@
 import React from "react";
 import WildCard from '../../Services/WildfireSolution/WildCard.js'
 import { Helmet } from 'react-helmet-async';
-import RealtimeCard from '../WildfireSolution/RealtimeCard.js'
 import Banner from "../../Reusablecomp/Banner/Banner.js";
 import Titleunderline from "../../Reusablecomp/Titleunderline/Titleunderline.js";
 import Featurecard from "../../Reusablecomp/Featurecard/Featurecard.js";
@@ -15,9 +14,9 @@ const wildfiedata=[
       duration: "1000",
     },
     {
-      title: "Automatic Notifications",
+      title: "Instant Alert Throught e-Crop App",
       description:
-        "Receive instant alerts through WhatsApp, SMS, or email with automatic notifications. Whether it's a sudden wildfire threat or a change in weather conditions, stay informed and act fast with updates directly to your device.",
+        "Receive instant alerts through e-Crop with automatic notifications. Whether it's a sudden wildfire threat or a change in weather conditions, stay informed and act fast with updates directly to your device.",
       aos: "fade-up",
       duration: "1000",
     },
@@ -36,6 +35,36 @@ const wildfiedata=[
       duration: "1000",
     }
   ]
+  const realMont = [
+    {
+      title: "Live Fire Tracking",
+      description:
+        "Monitor the wildfire's progression with near-real-time tracking data, allowing for swift action and resource deployment. Our live fire tracking system helps you stay on top of the situation, ensuring that fire measures are implemented without delay.",
+      aos: "fade-up",
+      duration: "1000",
+    },
+    {
+      title: "Activity Feed",
+      description:
+        "Stay updated with a continuous activity feed that includes key data like wind speed, temperature, humidity, and more. This real-time feed is vital for understanding the evolving conditions of a fire and adjusting strategies accordingly.",
+      aos: "fade-down",
+      duration: "2000",
+    },
+    {
+      title: "Fire Propagation",
+      description:
+        "Estimate fire spread with advanced analysis, using multiple data sources to predict how the wildfire will move. This helps anticipate risk zones and allows for more effective evacuation plans and fire containment measures.",
+      aos: "fade-up",
+      duration: "2000",
+    },
+     {
+      title: "Incident Management",
+      description:
+        "Efficient incident management is key to successful wildfire response. Our platform allows for coordinated action between teams, streamlining decision-making and ensuring that resources are deployed quickly to combat the wildfire.",
+      aos: "fade-down",
+      duration: "2000",
+    },
+  ];
   return (
 
     <div>
@@ -63,7 +92,7 @@ const wildfiedata=[
         Precision Grow provides farmers with the first global wildfire intelligence tool, offering early detection, real-time updates, and damage insights using data from 20+ satellites. Stay ahead of the flames and safeguard your land, crops, and future with smart, satellite-driven solutions.
     </p>
     <section data-aos="fade-up" data-aos-duration="3000">
-               <Titleunderline title="Early Detection" tag="h3"/>
+               <Titleunderline title="Early Detection" tag="h1"/>
 
 
   <div className="row">
@@ -89,7 +118,26 @@ const wildfiedata=[
     </section>
 </div>
 <WildCard />
-<RealtimeCard />
+<div className="container">
+  <Titleunderline title="Real-Time Monitoring" tag="h3"/>
+  <div className="row justify-content-center">
+              {realMont.map((item, index) => (
+                <div className="col-xl-3 col-lg-6 col-md-6 mb-4" key={index}>
+                  <Featurecard
+                  key={item.title}
+                    title={item.title}
+                    description={item.description}
+                    aos={item.aos}
+                    duration={item.duration}
+                    customClass="card-height2"
+                    bgColor="#357f82"
+                    descColor="white"
+                    titleColor="white"
+                  />
+                </div>
+              ))}
+            </div>
+            </div>
     {/* --------------------------------------------------------wildfire section------------------------------------------------------------------------------------- */}
     <section className="d-flex justify-content-center align-items-center " data-aos="fade-up" data-aos-duration="3000">
   <div className="container row damage">

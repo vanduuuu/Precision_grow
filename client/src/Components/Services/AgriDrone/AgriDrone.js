@@ -45,10 +45,10 @@ const WhyChoose = () => (
       />
 
   <div className="container why-choose-wrapper">
-    <p className="lg-fs-3 sm-fs-2 fw-bolder text-center">
+    <h1 className="lg-fs-6 fs-4 fw-bolder text-center">
       We revolutionize agriculture with our Drone Farming services, bringing unmatched efficiency, precision, and sustainability to the field.
 Our customized drone technology gives farmers accurate, valuable insights about their fields, helping them make informed decisions.
-    </p>
+    </h1>
     <div className="cards-side left-side">
       {cardData.slice(0, 2).map(({ id, title, icon, description }) => (
         <div key={id} className="side-card left">

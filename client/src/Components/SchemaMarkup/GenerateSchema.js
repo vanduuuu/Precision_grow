@@ -1,6 +1,16 @@
 export const GenerateSchema = (type, data = {}) => {
+  
+  const commonAddress = {
+    "@type": "PostalAddress",
+    "streetAddress": "Unit No 22, Building No. 2(A3), Sector 1, Millennium Business Park, Mahape",
+    "addressLocality": "Navi Mumbai",
+    "addressRegion": "Maharashtra",
+    "postalCode": "400710",
+    "addressCountry": "IN"
+  };
   const commonProvider = {
     "@type": "LocalBusiness",
+    "@id": "https://precisiongrow.co.in/#organization",
     "name": "Precision Grow",
     "url": "https://precisiongrow.co.in/",
     "logo": {
@@ -15,7 +25,10 @@ export const GenerateSchema = (type, data = {}) => {
       "https://www.instagram.com/precisiongrow_/",
       "https://www.youtube.com/channel/UCt1nu8YiUMjnvckNLfepa5g",
       "https://www.linkedin.com/company/precisiongrow"
-    ]
+    ],
+    "email": "mail@precisiongrow.co.in",
+"telephone": "+91-8097283444",
+"address": commonAddress,
   };
 
   const commonContact = {
@@ -27,14 +40,6 @@ export const GenerateSchema = (type, data = {}) => {
     "availableLanguage": ["English", "Hindi"]
   };
 
-  const commonAddress = {
-    "@type": "PostalAddress",
-    "streetAddress": "Unit No 22, Building No. 2(A3), Sector 1, Millennium Business Park, Mahape",
-    "addressLocality": "Navi Mumbai",
-    "addressRegion": "Maharashtra",
-    "postalCode": "400710",
-    "addressCountry": "IN"
-  };
 
   switch (type) {
     case "HomePage":

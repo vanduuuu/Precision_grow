@@ -50,13 +50,13 @@ const RegenerativeAgri = () => {
     <div className="container agri my-5">
     <div className="d-flex justify-content-center align-items-center ">
       <div className="container row Ai-power">
-        <div className="col-lg-7 col-md-12 d-flex flex-column justify-content-center text-center">
+        <div className="col-lg-6 col-md-12 d-flex flex-column justify-content-center text-center">
         <img src="https://api.ecrop.co/assets/precisiongrow/Regenerative Agriculture2.webp" alt="AIFarming" className=" AIFarming img-fluid" loading="lazy" />
         </div>
-        <div className="col-lg-5 col-md-12  d-flex flex-column justify-content-center align-items-center" >
-         <p className="h2 mb-4">Why Regenerative Agriculture?</p>
+        <div className="col-lg-6 col-md-12  d-flex flex-column justify-content-center" >
+         <h1 className="fs-lg-6 mb-4">Why Regenerative Agriculture?</h1>
          
-         <p className="text-center">Regenerative Agriculture not only stops degradation of the ecosystem but also improves it to its better version. It is a process to work with the nature by catalysing  whenever required. 
+         <p>Regenerative Agriculture not only stops degradation of the ecosystem but also improves it to its better version. It is a process to work with the nature by catalysing  whenever required. 
           
           Advanced technologies and green practices can make this happen at a faster pace. Precision Grow has introduced revolutionary technologies in the agriculture world to minimize the adverse effects on the environment and improve the livelihood of farmers.
           </p>

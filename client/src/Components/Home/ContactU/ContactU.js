@@ -8,9 +8,8 @@ const ObfuscatedEmail = () => {
   const email = "mail@precisiongrow.co.in";
   const obfuscated = [...email].map((char) => `&#${char.charCodeAt(0)};`).join("");
   return (
-    <a
-      href={`mailto:${email}`}
-      className="text-white text-decoration-none"
+    <span
+      className="text-white"
       dangerouslySetInnerHTML={{ __html: obfuscated }}
       aria-label="Email us at mail@precisiongrow.co.in"
     />
@@ -84,7 +83,7 @@ const ContactU = () => {
   }, [hoveredCard, activeCard]);
 
   return (
-    <section className="contact-section">
+    <section className="contact-section mb-5">
       <Titleunderline title="Connect With Us" tag="h3" />
 
       {/* Tabs */}

@@ -1,0 +1,12 @@
+.section-title-icon {
+  width: 40px;
+  height: auto;
+}
+
+.section-title-wrapper {
+  gap: 4px;
+}
+
+.section-title-text {
+  font-size: 1.3rem;
+}

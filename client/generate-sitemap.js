@@ -81,7 +81,12 @@ const generateSitemap = async () => {
     "/ecrop",
     "/ecoloo",
     "/skywatch",
-    "/policy"
+    "/policy",
+    "/krishak-bazar",
+    "/agristack",
+    "/crop-consultancy",
+    "/sustainable-farming-solutions",
+    "/technology-integration"
   ];
 
   // Write URLs to the sitemap stream (Static routes)

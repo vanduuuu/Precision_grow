@@ -15,7 +15,7 @@
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
   position: relative;
-  padding-right: 30px; /* space for arrow */
+  padding-right: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,7 +24,7 @@
 }
 
 .cropadvisory-outer .arrow-icon {
-  font-size: 28px; /* bigger arrow */
+  font-size: 28px;
   color: #0a7765;
   transition: transform 0.4s ease, color 0.4s ease;
   flex-shrink: 0;
@@ -36,7 +36,7 @@
   color: #0a995a;
 }
 
-/* Content hidden by default with max-height trick */
+/* Description hidden by default */
 .cropadvisory-outer .content-text {
   font-size: 0.95rem;
   line-height: 1.4;
@@ -44,16 +44,16 @@
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: 
-    max-height 0.5s ease, 
-    opacity 0.4s ease 0.2s; /* delay opacity a bit for smooth */
+  transition:
+    max-height 0.5s ease,
+    opacity 0.4s ease 0.2s;
   transform-origin: top;
   margin-top: 0;
 }
 
-/* Show content on hover */
+/* Reveal on hover */
 .cropadvisory-outer .crop-card:hover .content-text {
-  max-height: 300px; /* enough for content height */
+  max-height: 300px;
   opacity: 1;
   margin-top: 10px;
 }

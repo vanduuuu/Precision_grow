@@ -11,7 +11,9 @@ import Testomonial from './Testomonial/Testomonial.js';
 import Titleunderline from '../Reusablecomp/Titleunderline/Titleunderline.js';
 import FaqSection from '../Faqcomp/FaqSection.js';
 import AwardCertificateSlider from '../Reusablecomp/AwardCertificateSlider/AwardCertificateSlider.js';
-
+import { Link } from 'react-router-dom';
+import esg from '../../assets/icons_About/esg.webp'
+import ecroptoday from '../../assets/icons_About/ecropbanner.webp'
 const homeFaqs = 
 [
   { title: 'How does eCrop optimize agricultural productivity?',
@@ -88,8 +90,8 @@ const Home = () => {
       {/* Rest of your components */}
       <VideoSlider />
  
-      <div className='poem container col-lg-6 my-4 p-2' data-aos="fade-up" data-aos-duration="3000">
-     <ul className='text-center cont'>
+      <div className='poem container col-lg-6 my-4 p-2'>
+     <ul className='text-center cont'  data-aos="fade-up" data-aos-duration="3000">
                 <li><span>I</span>n a farm not so big,</li>
                 <li>There’s a farmer working hard and his land he digs.</li>
                 <li>He plants the seed, they go in the land,</li>
@@ -103,17 +105,31 @@ const Home = () => {
 
 
             <Titleunderline title="Welcome To Precision Grow" tag="h1" />
-      
+            <div className='container'>
+                    <p className='fs-4 text-center'>Precision Grow (A Unit of Tech Visit IT Pvt Ltd) is revolutionizing Agriculture and Industries through its precise satellite monitoring, IoT devices, and AI technologies. Our solutions deliver real-time data, actionable insights, and sustainable practices to empower businesses turn challenges into opportunities for a smarter, greener future. Join with us for the future of farming - smarter, efficient, and sustainable!!</p>
       <MissionPg />
+</div>
 
+ <div className="ecroptoday"  data-aos="fade-up" data-aos-duration="2000">
+                    <img src={esg} alt="ecroptoday" width="1900" height="350" className='img-fluid' loading="lazy" />
+                   
+                    <a
+    href="https://esgconsultants.co.in/"
+    target="_blank"
+    rel="noopener noreferrer nofollow"
+  >
+  <button>ESG CONSULTANTS</button>
+</a>
+
+           </div>
       <Titleunderline title="Why Choose Us" tag="h2"/>
 
       <WeChoose />
        <div className="ecroptoday"  data-aos="fade-up" data-aos-duration="2000">
-                    <img src="https://api.ecrop.co/assets/precisiongrow/ecroptoday.webp" alt="ecroptoday" width="3520" height="614" className='img-fluid' loading="lazy" />
-                    <a href='https://ecroptoday.co.in/' target="_blank" rel="noopener noreferrer nofollow">
-  <button>ECROPTODAY</button>
-</a>
+                    <img src={ecroptoday} alt="ecroptoday" width="1900" height="350" className='img-fluid' loading="lazy" />
+                    <Link to='/publications'>
+  <button>EXPLORE PUBLICATIONS</button>
+</Link>
 
            </div>
            <div className='testono'>

@@ -6,7 +6,7 @@ import React, {
   useMemo,
 } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FiMenu, FiX, FiChevronDown } from "react-icons/fi";
+import { FiMenu, FiX, FiChevronDown,FiPhone  } from "react-icons/fi";
 import "./Navbar.css";
 import Topbar from "../Topbar/Topbar";
 
@@ -105,19 +105,26 @@ const Subnavbar = () => {
           { label: "Agri Insurance", path: "/agri-insurance" },
           { label: "Agri Loan", path: "/agri-loan" },
           { label: "Agri Drone", path: "/agri-drone" },
+          { label: "Krishak Bazar", path: "/krishak-bazar" },
+          { label: "Agristack", path: "/agristack" },
+          { label: "Crop Consultancy", path: "/crop-consultancy" },
+          { label: "Sustainable Farming Solutions", path: "/sustainable-farming-solutions" },
+          { label: "Technology Integration", path: "/technology-integration" }
         ],
       },
       {
         title: "Products",
         links: [
           { label: "eCrop(Smart Farming With electronic Crop)", path: "/ecrop" },
+          { label: "Buy Product", path: "/buy-product" },
           { label: "SkyWatch", path: "/skywatch" },
           { label: "ECOLOO", path: "/ecoloo" },
         ],
       },
       { title: "Sustainability", path: "/sustainability" },
       { title: "Blog", path: "/blog" },
-      { title: "Policy", path: "/policy" }
+      { title: "Policy", path: "/policy" },
+      { title: "More Reads", path: "/more-reads" },
 
     ],
     []
@@ -195,7 +202,7 @@ const Subnavbar = () => {
 
                   <ul
                     id={`dropdown-${index}`}
-                    className="nav-dropdown"
+                    className="nav-dropdown pt-3"
                     style={{ display: openDropdownIndex === index ? "flex" : "none" }}
                   >
                     {item.links?.map((link, linkIndex) =>
@@ -255,7 +262,18 @@ const Subnavbar = () => {
 
          {/* Extra CTA buttons */}
 
-<li className="nav-extra-button">
+<li className="nav-extra-button mb-1 mb-lg-0 ">
+  <a
+    href="https://ecroptoday.co.in/" 
+    target="_blank"
+    rel="noopener noreferrer nofollow"
+    className="extra-btn-text"
+    aria-label="Green GDP"
+  >
+    Ecroptoday
+  </a>
+</li>
+<li className="nav-extra-button mb-2 mb-lg-0">
   <a
     href="https://greengdp.in/" 
     target="_blank"
@@ -284,6 +302,15 @@ const Subnavbar = () => {
     />
   </a>
 </li>
+<li className="nav-assistance d-xl-flex d-none align-items-center ms-lg-auto">
+  <div className="small text-start">
+    <div className="fw-bolder"><span>Need Assistance? Let’s Talk!</span></div>
+    <a href="tel:+919830632108" className="text-decoration-none">
+      <FiPhone className="text-success" /> +91 8097283444
+    </a>
+  </div>
+</li>
+
 
         </ul>
       </div>

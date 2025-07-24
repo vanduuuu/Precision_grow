@@ -12,7 +12,8 @@ import Titleunderline from "../../Reusablecomp/Titleunderline/Titleunderline";
 import { FaCheck } from "react-icons/fa";
 import ListItem from "../../Reusablecomp/ListItem.js";
 import BrochureDownload from "../../BrochureDownload/BrochureDownload.js";
-
+import ecropmachine from '../../../assets/icons_About/ecropmachine.png'
+import e1 from '../../../assets/icons_About/e1.png'
 const Ecrop = () => {
   const ecropData = [
     {
@@ -29,7 +30,7 @@ const Ecrop = () => {
     },
     {
       icon: "https://api.ecrop.co/assets/precisiongrow/ecrop4.webp",
-      label: "Ambient Temperature",
+      label: "Soil Nutrient",
     },
     {
       icon: "https://api.ecrop.co/assets/precisiongrow/ecrop5.webp",
@@ -41,7 +42,7 @@ const Ecrop = () => {
     },
   ];
   const images = [
-    "https://api.ecrop.co/assets/precisiongrow/ecrop-app1.webp",
+    e1,
     "https://api.ecrop.co/assets/precisiongrow/ecrop-app3.webp",
     "https://api.ecrop.co/assets/precisiongrow/ecrop-app4.webp",
     "https://api.ecrop.co/assets/precisiongrow/ecrop-app5.webp",
@@ -61,7 +62,7 @@ const Ecrop = () => {
       ],
     },
     {
-      title: "SMS includes water and fertilizer requirements:",
+      title: "e-Crop includes water and fertilizer requirements:",
       points: [
         "Get regular updates on water requirements (daily and weekly)",
         "Receive guidance on the daily, weekly, and total crop needs for Nitrogen, Phosphorous, and Potassium.",
@@ -71,7 +72,7 @@ const Ecrop = () => {
     {
       title: "Applications of the device:",
       points: [
-        "Yield forecasting to be more accurate at local, regional, and national levels.",
+        "Yield forecasting to be more accurate at the are were device as been installed.",
         "Forecasts by eCrop devices that are in different parts of places. Centralized data can be accessed by compiling data at desired levels at different times.",
         "Providing information to farmers via SMS about crops even while away from the field.",
       ],
@@ -155,10 +156,12 @@ const Ecrop = () => {
               <div className="col-md-3">
                 <div className="right">
                   <img
-                    src="https://api.ecrop.co/assets/precisiongrow/ecropnewmachine.webp"
+                    src={ecropmachine}
                     alt="ecropmachine"
                     loading="lazy"
                     className="ecropmachine img-fluid"
+                    width="300"
+                    height="500"
                   />
                 </div>
               </div>
@@ -224,6 +227,7 @@ const Ecrop = () => {
                       src={img}
                       alt={`Slide ${index + 1}`}
                       loading="lazy"
+                      
                     />
                   </Carousel.Item>
                 ))}

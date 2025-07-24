@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Collapse } from "react-bootstrap";
 import './Footernew.css';
-
+import india from '../../../assets/PG_Flag/India.webp'
+import brazil from '../../../assets/PG_Flag/Brazil.webp'
+import france from '../../../assets/PG_Flag/France.webp'
+import uae from '../../../assets/PG_Flag/UAE.webp'
+import israel from '../../../assets/PG_Flag/Israel.webp'
+import russia from '../../../assets/PG_Flag/Russia.webp'
+import indonesia from '../../../assets/PG_Flag/Indonesia.webp'
+import southafrica from '../../../assets/PG_Flag/SouthAfrica.webp'
+import vietman from '../../../assets/PG_Flag/Vietman.webp'
 import {
   BloggerIcon,
   FacebookIcon,
@@ -12,7 +20,7 @@ import {
   YoutubeIcon,
 } from "../../../assets/svgicons/icons.js";
 import { Link } from "react-router-dom";
-
+import rice from '../../../assets/icons_About/rice.png'
 const Footernew = () => {
   const [showSections, setShowSections] = useState(false);
 
@@ -36,6 +44,7 @@ const Footernew = () => {
             alt={`Partner ${idx + 1}`}
             className="img-fluid rounded border p-2 bg-white"
             loading="lazy"
+             width="141" height="65"
           />
         </Col>
       ))}
@@ -68,6 +77,7 @@ const Footernew = () => {
                   alt="Precision Grow Logo"
                   loading="lazy"
                   className="img-fluid"
+                   width="360" height="120"
                 />
               </div>
               <div className="img2 rounded-1">
@@ -76,6 +86,7 @@ const Footernew = () => {
                   alt="Dun Logo"
                   className="img-fluid"
                   loading="lazy"
+                   width="300" height="250"
                 />
               </div>
             </div>
@@ -132,7 +143,7 @@ const Footernew = () => {
           </Col>
 
           {/* Toggle Button (mobile only) */}
-          <Col xs={12} className="d-block d-md-none text-center mb-5">
+          <Col xs={12} className="d-block d-md-none text-center">
             <div
               onClick={handleFooter}
               className="d-inline-block px-4 py-2 mobbtn text-white font-weight-bold rounded shadow-sm text-center"
@@ -171,6 +182,7 @@ const Footernew = () => {
                       alt="Great Place to Work"
                       className="img-fluid w-25"
                       loading="lazy"
+                       width="85" height="145"
                     />
                   </div>
                 </Col>
@@ -194,10 +206,34 @@ const Footernew = () => {
               alt="great place to work"
               loading="lazy"
               className="img-fluid"
+              width="85"
+              height="145"
             />
           </Col>
         </Row>
       </Container>
+<div className="container">
+<h2 className="heading1 text-center fw-bolder">
+  Precision <span className="text-success grow-with-icon">GROW
+    <img src={rice} alt="rice icon" className="rice-icon" width="167" height="238"/>
+  </span> Global
+</h2>
+  <div className="row">
+    <div className="col d-flex flex-wrap justify-content-center align-items-center gap-3 py-3">
+      <img src={india} alt="India" className="flag-logo" width="209" height="209" />
+      <img src={brazil} alt="Brazil" className="flag-logo" width="209" height="209" />
+      <img src={france} alt="France" className="flag-logo" width="209" height="209" />
+      <img src={uae} alt="UAE" className="flag-logo" width="209" height="209" />
+      <img src={russia} alt="Russia" className="flag-logo" width="209" height="209" />
+      <img src={israel} alt="Israel" className="flag-logo" width="209" height="209" />
+      <img src={indonesia} alt="Indonesia" className="flag-logo" width="209" height="209" />
+      <img src={southafrica} alt="South Africa" className="flag-logo" width="209" height="209" />
+      <img src={vietman} alt="Vietman" className="flag-logo" width="209" height="209" />
+    </div>
+  </div>
+</div>
+
+
 
       {/* Bottom Bar */}
       <div className="copyRightArea py-1">

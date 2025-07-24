@@ -1,0 +1,63 @@
+/* Card Styling */
+.glass-card {
+  background-image: radial-gradient(circle at top, #fefcbf 0, #d9f99dae 10%, #fff 60%);
+  border-radius: 1rem;
+  box-shadow: 0 18px 20px rgba(0, 0, 0, 0.593);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  padding: 40px 20px;
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Serial Number */
+.serial-number {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background: linear-gradient(to right, #357f82, #97c251);
+  color: white;
+  padding: 6px 14px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 0 0 1rem 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Publication Name Text Hover Effect */
+.pub-hover {
+  position: relative;
+}
+
+/* Volume Highlight */
+.highlight-volume {
+  background-color: #357f82;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* Gradient Button */
+.gradient-btn {
+  background: linear-gradient(to right, #357f82, #97c251);
+  border: none;
+  color: white;
+  transition: background 0.3s ease;
+  border-radius: 8px;
+}
+
+.gradient-btn:hover {
+  background: linear-gradient(to right, #97c251, #357f82);
+  color: #fff;
+}
+
+/* Optional: Gradient Border */
+.border-gradient {
+  border: 1px solid transparent;
+  border-image: linear-gradient(to right, #357f82, #97c251) 1;
+}

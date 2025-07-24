@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import FaqSection from "../../Faqcomp/FaqSection.js";
 import Banner from "../../Reusablecomp/Banner/Banner.js";
 import InfoCardGroup from "../../Reusablecomp/InfoCardGroup.js";
-
+import ecoloo11 from '../../../assets/icons_About/ecoloo-11.png'
 const Ecoloo = () => {
    const ecoloodata = [
     {
@@ -91,7 +91,7 @@ const Ecoloo = () => {
                 <div class="timeline">
                   <div class="timeline-item left">
                     <div class="circle-img">
-                      <img src="https://api.ecrop.co/assets/precisiongrow/Ecoloo1.webp" loading="lazy" alt="Eco-Friendly" className="img-fluid" />
+                      <img src="https://api.ecrop.co/assets/precisiongrow/Ecoloo1.webp" loading="lazy" alt="Eco-Friendly" className="img-fluid" height="100" width="100" />
                     </div>
                     <div class="timeline-content">
                       <h6>Eco-Friendly</h6>
@@ -103,7 +103,7 @@ const Ecoloo = () => {
 
                   <div class="timeline-item right">
                     <div class="circle-img">
-                      <img src="https://api.ecrop.co/assets/precisiongrow/Ecoloo2.webp" loading="lazy" alt="Odour-Free" className="img-fluid"/>
+                      <img src="https://api.ecrop.co/assets/precisiongrow/Ecoloo2.webp" loading="lazy" alt="Odour-Free" className="img-fluid" height="100" width="100"/>
                     </div>
                     <div class="timeline-content">
                       <h6>Odor Free</h6>
@@ -115,7 +115,7 @@ const Ecoloo = () => {
 
                   <div class="timeline-item left">
                     <div class="circle-img">
-                      <img src="https://api.ecrop.co/assets/precisiongrow/Ecoloo3.webp" loading="lazy" alt="Water-Free" className="img-fluid"/>
+                      <img src="https://api.ecrop.co/assets/precisiongrow/Ecoloo3.webp" loading="lazy" alt="Water-Free" className="img-fluid" height="100" width="100"/>
                     </div>
                     <div class="timeline-content">
                       <h6>Water Free</h6>
@@ -127,7 +127,7 @@ const Ecoloo = () => {
 
                   <div class="timeline-item right">
                     <div class="circle-img">
-                      <img src="https://api.ecrop.co/assets/precisiongrow/Ecoloo4.webp" loading="lazy" alt="Sewage-Free" className="img-fluid"/>
+                      <img src="https://api.ecrop.co/assets/precisiongrow/Ecoloo4.webp" loading="lazy" alt="Sewage-Free" className="img-fluid" height="100" width="100"/>
                     </div>
                     <div class="timeline-content">
                       <h6>Sewage Free</h6>
@@ -139,7 +139,7 @@ const Ecoloo = () => {
 
                   <div class="timeline-item left">
                     <div class="circle-img">
-                      <img src="https://api.ecrop.co/assets/precisiongrow/Ecoloo5.webp" loading="lazy" alt="Energy-Free" className="img-fluid"/>
+                      <img src="https://api.ecrop.co/assets/precisiongrow/Ecoloo5.webp" loading="lazy" alt="Energy-Free" className="img-fluid" height="100" width="100"/>
                     </div>
                     <div class="timeline-content">
                       <h6>Energy Free</h6>
@@ -213,7 +213,7 @@ const Ecoloo = () => {
                           role="tabpanel"
                           aria-labelledby="description-tab-control"
                         >
-                          <div class="row">
+                          <div class="row align-items-center justify-content-center">
                             <div class="col-lg-7">
                               <ul>
                                 <li>
@@ -285,7 +285,7 @@ const Ecoloo = () => {
                             </div>
                             <div class="col-lg-5">
                               <div class="tab-img mt-5">
-                                <img src="https://api.ecrop.co/assets/precisiongrow/ecolo-1.webp" loading="lazy" alt="perfect_harmony_with_environment" className="img-fluid"/>
+                                <img src={ecoloo11} loading="lazy" alt="perfect_harmony_with_environment" className="img-fluid" height="500" width="500"/>
                               </div>
                             </div>
                           </div>
@@ -344,7 +344,7 @@ const Ecoloo = () => {
                             </div>
                             <div class="col-lg-5">
                               <div class="tab-img mt-3">
-                                <img src="https://api.ecrop.co/assets/precisiongrow/ecolo-3.webp" loading="lazy" alt="toiletimg" className="img-fluid"/>
+                                <img src="https://api.ecrop.co/assets/precisiongrow/ecolo-3.webp" loading="lazy" alt="toiletimg" className="img-fluid" height="600" width="450"/>
                               </div>
                             </div>
                           </div>
@@ -392,7 +392,7 @@ const Ecoloo = () => {
                             </div>
                             <div class="col-lg-5">
                               <div class="tab-img mt-3">
-                              <img src="https://api.ecrop.co/assets/precisiongrow/toilet.webp" loading="lazy" alt="environmental-requirement" className="img-fluid"/>
+                              <img src="https://api.ecrop.co/assets/precisiongrow/toilet.webp" loading="lazy" alt="environmental-requirement" className="img-fluid" height="581" width="428"/>
 
                               </div>
                             </div>

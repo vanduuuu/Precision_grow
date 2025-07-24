@@ -29,7 +29,7 @@ const PolicyPage = () => {
 
         {/* Refund Policy */}
         <section className="policys mb-5">
-          <Titleunderline title="Refund Policy" tag="h2" />
+          <Titleunderline title="Refund Policy" tag="h1" />
 
           <p className="text-center fs-1 boldlook mt-3">
             Precision Grow Refund Policy for SaaS Products

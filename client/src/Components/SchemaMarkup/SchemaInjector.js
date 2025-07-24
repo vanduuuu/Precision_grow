@@ -23,10 +23,10 @@ const serviceData = {
     url:"https://precisiongrow.co.in/fish-monitoring"
 
   },
-  "Farmboundary": {
+  "farm-boundary": {
     serviceType: "Farm Boundary Solutions for Sustainable Agriculture | Precision Grow",
     description: "Discover Precision Grow's innovative farm boundary solutions to enhance productivity and sustainability in agriculture. Transform your farming practices today!",
-    url:"https://precisiongrow.co.in/Farmboundary"
+    url:"https://precisiongrow.co.in/farm-boundary"
 
   },
  "precision-grow-ai": {
@@ -77,6 +77,31 @@ const serviceData = {
     description: "Discover Precision Grow's agri-drones to enhance crop management, boost yields, and promote sustainable farming practices in India.",
     url:"https://precisiongrow.co.in/agri-drone"
 
+  },
+  "krishak-bazar": {
+    serviceType: "Shop Fresh Farm Produce Online at Krishak Bazar Now!",
+    description: "Buy directly from farmers! Explore Krishak Bazar for fresh produce, agri tools, and top deals. Shop smart, support farmers",
+    url:"https://precisiongrow.co.in/krishak-bazar"
+  },
+    "agriStack": {
+    serviceType: "AgriStack: Smart Farm Data Platform for Better Yields",
+    description: "Unlock data-driven farming with AgriStack. Boost yields, cut costs & optimize sustainability for Indian farmers.",
+    url:"https://precisiongrow.co.in/agriStack"
+  },
+    "crop-consultancy": {
+    serviceType: "Smart Crop Consultancy for Sustainable Farming | Precision Grow",
+    description: "Get expert crop consultancy with agri‑tech insights to boost yield, save water & reduce pests. Easy tips for eco‑friendly farming success!",
+    url:"https://precisiongrow.co.in/crop-consultancy"
+  },
+  "sustainable-farming-solutions": {
+    serviceType: "Smart Sustainable Farming Solutions for Higher Yields",
+    description: "Discover eco‑friendly farming tools & techniques to boost crop yield, cut costs, and protect soil—all in easy steps!",
+    url:"https://precisiongrow.co.in/sustainable-farming-solutions"
+  },
+   "technology-integration": {
+    serviceType: "Tech-Driven Farming: AI & IoT Boost Yields Fast",
+    description: "Discover how Precision Grow’s AI, IoT & satellite tools help farmers make smarter, greener decisions for higher yields. Easy agri-tech made simple!",
+    url:"https://precisiongrow.co.in/technology-integration"
   },
 };
 

@@ -7,7 +7,13 @@
 
 .carousel-inner .carousel-item1 {
   position: relative;
+   aspect-ratio: 1920 / 800;
+  overflow: hidden;
 }
+.carousel-item1 img {
+  object-fit: cover;
+}
+
 
 .carousel-inner .carousel-item1::after {
   content: '';
