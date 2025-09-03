@@ -72,19 +72,19 @@ const Ecrop = () => {
     {
       title: "Applications of the device:",
       points: [
-        "Yield forecasting to be more accurate at the are were device as been installed.",
+        "Yield forecasting to be more accurate at the area where the device has been installed.",
         "Forecasts by eCrop devices that are in different parts of places. Centralized data can be accessed by compiling data at desired levels at different times.",
-        "Providing information to farmers via SMS about crops even while away from the field.",
+        "Providing information to farmers via eCrop app about crops even while away from the field",
       ],
     },
   ];
   return (
     <>
       <Helmet>
-        <title>eCrop: Smart Solutions for Enhanced Crop Management</title>
+        <title>eCrop: Smart Farming & Crop Management Solutions | Precision Grow</title>
         <meta
           name="description"
-          content="Discover eCrop by Precision Grow for innovative crop management solutions that boost yields and promote sustainable farming practices in India."
+          content="Enhance crop management with eCrop by Precision Grow. Use IoT devices and smart Agri tools to improve yields, monitor fields, and enable data-driven farming."
         />
         <meta
           name="keywords"

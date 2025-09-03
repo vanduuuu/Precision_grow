@@ -21,6 +21,8 @@ import {
 } from "../../../assets/svgicons/icons.js";
 import { Link } from "react-router-dom";
 import rice from '../../../assets/icons_About/rice.png'
+// import icar from '../../../assets/icons_About/ICAR1.webp'
+// import ctcri from '../../../assets/icons_About/CTCRI-Logo-02.webp'
 const Footernew = () => {
   const [showSections, setShowSections] = useState(false);
 
@@ -37,6 +39,8 @@ const Footernew = () => {
         "https://api.ecrop.co/assets/precisiongrow/ifoam.webp",
         "https://api.ecrop.co/assets/precisiongrow/ESC.webp",
         "https://api.ecrop.co/assets/precisiongrow/nasscom.webp",
+        // icar,
+        // ctcri
       ].map((img, idx) => (
         <Col key={idx} xs={6} sm={4} md={2} lg={6} className="mb-3">
           <img
@@ -62,14 +66,14 @@ const Footernew = () => {
 
   return (
     <footer className="text-white">
-      <Container className="py-3">
-        <Row>
-          <h3 className="heading1 mb-5 text-center fw-bolder">
+      <Container className="pt-3">
+        <Row className="text-center">
+          <h3 className="heading1 mb-4 text-center fw-bolder">
             Get in Touch and Start Your Journey to Success
           </h3>
 
           {/* Logo Column */}
-          <Col md={3} lg={2} sm={12} xs={12} className="mb-4">
+          <Col md={4} lg={2} sm={12} xs={12} className="mb-4">
             <div className="xs-flex-row">
               <div className="img1 bg-white p-1 rounded-1 mb-0 mb-md-3 h-sm-50 w-sm-25">
                 <img
@@ -93,7 +97,7 @@ const Footernew = () => {
           </Col>
 
           {/* Address Section */}
-          <Col md={7} lg={5} sm={6} xs={12}>
+          <Col md={8} lg={4} sm={6} xs={12}>
             <ul className="list-unstyled text-center px-md-3 px-lg-4 px-0">
               <li className="address-li">
                 <h6 className="hover-border-bottom">CORPORATE OFFICE</h6>
@@ -122,10 +126,10 @@ const Footernew = () => {
           {/* Explore Links (desktop only) */}
           <Col
             md={2}
-            lg={1}
+            lg={2}
             sm={6}
             xs={6}
-            className="mb-4 d-none d-md-block explorelist"
+            className="mb-4 d-none d-lg-block explorelist"
           >
             <h6 className="hover-border-bottom m-0">EXPLORE</h6>
             <ul className="list-unstyled">
@@ -143,7 +147,7 @@ const Footernew = () => {
           </Col>
 
           {/* Toggle Button (mobile only) */}
-          <Col xs={12} className="d-block d-md-none text-center">
+          <Col md={12} className="d-block d-lg-none text-center">
             <div
               onClick={handleFooter}
               className="d-inline-block px-4 py-2 mobbtn text-white font-weight-bold rounded shadow-sm text-center"
@@ -154,9 +158,9 @@ const Footernew = () => {
 
           {/* Collapsible Section (mobile only) */}
           <Collapse in={showSections}>
-            <div className="w-100 d-md-none">
-              <Row>
-                <Col xs={4} className="mb-4">
+            <div className="w-100 d-lg-none">
+              <Row className="my-4">
+                <Col xs={5} md={3}>
                   <h6 className="pb-2">EXPLORE</h6>
                   <ul className="list-unstyled mt-3">
                     {exploreLinks.map((item, idx) => (
@@ -172,7 +176,7 @@ const Footernew = () => {
                   </ul>
                 </Col>
 
-                <Col xs={8}>
+                <Col xs={7} md={9}>
                   <PartnerLogos />
 
                   {/* ✅ Great Place to Work logo visible only after toggle in mobile */}
@@ -193,13 +197,13 @@ const Footernew = () => {
           {/* Partner Logos and Great Place to Work (desktop only) */}
           <Col
             lg={3}
-            className="order-lg-2 order-4 d-none d-lg-block d-md-block"
+            className="order-lg-2 order-4 d-none d-lg-block"
           >
             <PartnerLogos />
           </Col>
           <Col
             lg={1}
-            className="order-lg-2 order-4 d-none d-lg-block d-md-block"
+            className="order-lg-2 order-4 d-none d-lg-block"
           >
             <img
               src="https://api.ecrop.co/assets/precisiongrow/great-place-to-work.webp"
@@ -219,7 +223,7 @@ const Footernew = () => {
   </span> Global
 </h2>
   <div className="row">
-    <div className="col d-flex flex-wrap justify-content-center align-items-center gap-3 py-3">
+    <div className="col d-flex flex-wrap justify-content-center align-items-center gap-3 py-2">
       <img src={india} alt="India" className="flag-logo" width="209" height="209" />
       <img src={brazil} alt="Brazil" className="flag-logo" width="209" height="209" />
       <img src={france} alt="France" className="flag-logo" width="209" height="209" />

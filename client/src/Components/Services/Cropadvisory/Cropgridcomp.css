@@ -1,11 +1,9 @@
 .cropgrid-container .row{
   margin:auto;
-  width:80%
+  width:90%
 }
 
-.cropgrid-image{
-  width: 90%;
-}
+
 .cropgrid-title {
   font-weight: 600;
   font-size: 1.9rem;

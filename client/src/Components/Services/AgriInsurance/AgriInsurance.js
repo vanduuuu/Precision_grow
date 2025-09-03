@@ -68,8 +68,8 @@ const AgriInsurance = () => {
   return (
     <>
     <Helmet>
-        <title>Agri Insurance Solutions for Farmers | Precision Grow</title>
-        <meta name="description" content="Secure your crops with Precision Grow's agri insurance. Protect your farming investments and ensure sustainability with tailored coverage options." />
+        <title>Agri Insurance Solutions for Smart Farming | Precision Grow</title>
+        <meta name="description" content="Protect your crops with Precision Grow’s Agri insurance. Get tailored coverage to secure your farm, reduce risks, and support smarter farming decisions." />
         <meta name="keywords" content="agriculture insurance tech, crop protection plans, farm risk solutions" />
       
         <link rel="canonical" href="https://precisiongrow.co.in/agri-insurance" />

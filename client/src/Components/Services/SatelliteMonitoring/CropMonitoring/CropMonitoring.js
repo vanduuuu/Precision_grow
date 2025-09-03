@@ -186,10 +186,10 @@ const features = [
   return (
     <>
       <Helmet>
-        <title>Crop Monitoring Solutions - Precision Grow Agri-Tech</title>
+        <title>Crop Monitoring by Precision Grow | Smart Farming Solutions</title>
         <meta
           name="description"
-          content="Enhance crop yield with Precision Grow's innovative crop monitoring solutions. Leverage satellite technology for smarter, sustainable farming practices."
+          content="Optimize crop health and yields with Precision Grow’s advanced crop monitoring tools. Leverage satellite technology and smart farming insights for better agriculture in India."
         />
         <meta
           name="keywords"

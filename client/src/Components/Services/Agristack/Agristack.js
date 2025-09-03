@@ -100,10 +100,10 @@ const Agristack = () => {
   return (
     <>
       <Helmet>
-        <title>AgriStack: Smart Farm Data Platform for Better Yields</title>
+        <title>AgriStack: Smart Farming Insights Powered by Agri Data</title>
         <meta
           name="description"
-          content="Unlock data-driven farming with AgriStack. Boost yields, cut costs & optimize sustainability for Indian farmers."
+          content="Unlock smart farming with AgriStack’s real-time soil, weather, and crop data. Use smart Agri tools and IoT devices for better yields and smarter decisions."
         />
         <link rel="canonical" href="https://precisiongrow.co.in/agristack" />
       </Helmet>

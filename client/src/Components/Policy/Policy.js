@@ -8,10 +8,10 @@ const PolicyPage = () => {
   return (
     <>
       <Helmet>
-        <title>Policy - Precision Grow Agri-Tech Solutions</title>
+        <title>Precision Grow Policy: Smart Farming & IoT Device Compliance</title>
         <meta
           name="description"
-          content="Learn about Precision Grow's policy, ensuring customer satisfaction and transparency in our agri-tech solutions. Shop with confidence today!"
+          content="Explore Precision Grow’s policy detailing safe usage and data protection around smart farming, IoT devices, and smart Agri tools—your trust is our priority."
         />
         <meta
           name="keywords"

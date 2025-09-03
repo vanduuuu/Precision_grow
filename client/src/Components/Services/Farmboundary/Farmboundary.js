@@ -197,11 +197,11 @@ const tourData = [
     <>
       <Helmet>
         <title>
-          Farm Boundary Solutions for Sustainable Agriculture | Precision Grow
+          Farm Boundary Solutions | Smart Farming with Precision Grow
         </title>
         <meta
           name="description"
-          content="Discover Precision Grow's innovative farm boundary solutions to enhance productivity and sustainability in agriculture. Transform your farming practices today!"
+          content="Explore Precision Grow’s smart farm boundary solutions to boost productivity, support sustainability, and modernize your agricultural practices today."
         />
         <meta
           name="keywords"

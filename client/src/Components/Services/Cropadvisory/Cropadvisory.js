@@ -33,9 +33,9 @@ const crop_api = [
 const sections = [
   {
     image: "https://api.ecrop.co/assets/precisiongrow/Reducing.webp",
-    title: "Reducing Crop Losses and Increasing Food Security",
+    title: "Crop Advisory Using IoT Devices | Precision Grow",
     description:
-      "Precision Grow’s advisory services deliver accurate, actionable insights, enabling farmers to embrace sustainable practices. This reduces crop losses, boosts climate resilience, and increases yields, enhancing food security for both farmers and their communities.",
+      "Harness IoT devices for precise crop advisory. Precision Grow offers real-time data and smart farming tools to maximize your farm’s potential.",
     reverse: false,
   },
   {

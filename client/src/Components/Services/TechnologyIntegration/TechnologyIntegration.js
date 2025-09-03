@@ -55,10 +55,10 @@ const TechnologyIntegration = () => {
   return (
     <>
       <Helmet>
-        <title>Tech-Driven Farming: AI & IoT Boost Yields Fast</title>
+        <title>AI & IoT–Powered Smart Farming Technology | ECROP</title>
         <meta
           name="description"
-          content="Discover how Precision Grow’s AI, IoT & satellite tools help farmers make smarter, greener decisions for higher yields. Easy agri-tech made simple!"
+          content="Harness real-time insights with ECROP’s AI powered smart farming and IoT sensors. Tools like geotagging and alerts improve yield, reduce costs, and boost sustainability."
         />
 
         <link

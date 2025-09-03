@@ -49,8 +49,8 @@ const Ecoloo = () => {
   return (
     <>
      <Helmet>
-        <title>Ecoloo: Sustainable Solutions for Eco-Friendly Farming</title>
-        <meta name="description" content="Discover Ecoloo's innovative solutions for sustainable farming that enhance productivity while protecting the environment. Join the eco-friendly revolution!" />
+        <title>Ecoloo: Sustainable & Eco-Friendly Farming Solutions</title>
+        <meta name="description" content="Discover Ecoloo’s smart farming solutions that boost productivity and protect the environment. Embrace sustainable agriculture with Precision Grow’s innovation." />
         <meta name="keywords" content="sustainable toilets for rural areas, ecoloo smart sanitation, eco-friendly loo" />
         <link rel="canonical" href="https://precisiongrow.co.in/ecoloo" />
       </Helmet>

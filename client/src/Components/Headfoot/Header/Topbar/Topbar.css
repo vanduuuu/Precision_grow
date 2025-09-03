@@ -1,15 +1,30 @@
-.top-marquee {
-  background: #014741;
-  overflow: hidden;
-  white-space: nowrap;
-  padding: 6px 0;
-  position: relative;
-  z-index: 10;
-  
-  display: flex;
-  align-items: center;     /* 👉 vertically center */
-  height: 40px;            /* Fixed height for alignment */
+
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
+/* ------------------------------------------------- */
+.top-marquee {
+  background:#0f7178;
+  white-space: nowrap;
+  padding: 0; /* remove extra padding */
+  /* position: sticky; */
+  /* top: 0; */
+  z-index: 1100; /* ensure it's above content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  overflow: hidden;
+  color:white
+}
+
+
 
 .scroll {
   display: inline-block;
@@ -40,4 +55,8 @@
   .top-marquee {
     height: 35px;
   }
+  .rakhi-img {
+   top: 60%;
+    height: 144px;}
+   
 }

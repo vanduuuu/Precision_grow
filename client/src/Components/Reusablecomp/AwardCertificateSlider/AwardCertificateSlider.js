@@ -5,7 +5,9 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import { AiOutlineClose } from "react-icons/ai";
-
+import PatentCertificate from '../../../assets/icons_About/certificate1.png'
+import PatentCertificate3 from '../../../assets/icons_About/awards3.webp'
+import PublicationCertificate from '../../../assets/icons_About/award4.jpg'
 import "./AwardCertificateSlider.css";
 import Titleunderline from "../Titleunderline/Titleunderline";
 
@@ -19,6 +21,9 @@ const certificates = [
   { id: 7, title: "FCC Certificate", image: "https://api.ecrop.co/assets/precisiongrow/techvisitFCC.webp" },
   { id: 8, title: "Assocham", image: "https://api.ecrop.co/assets/precisiongrow/assocham.webp" },
   { id: 9, title: "TechVisit CE", image: "https://api.ecrop.co/assets/precisiongrow/techvisitCE.webp" },
+  { id: 10, title: "Patent Certificate1", image: PatentCertificate },
+  { id: 11, title: "Patent Certificate3", image: PatentCertificate3 },
+  { id: 12, title: "Publication Certificate", image: PublicationCertificate },
 ];
 
 const AwardCertificateSlider = () => {

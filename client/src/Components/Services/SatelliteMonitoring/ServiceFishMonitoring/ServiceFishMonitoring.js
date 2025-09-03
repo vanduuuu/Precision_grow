@@ -38,8 +38,8 @@ const ServiceFishMonitoring = () => {
   return (
     <>
       <Helmet>
-        <title>Fish Monitoring Solutions | Precision Grow Agri-Tech</title>
-        <meta name="description" content="Enhance fish farming with Precision Grow's monitoring solutions. Optimize growth, ensure sustainability, and leverage satellite technology for success!" />
+        <title>Fish Monitoring Solutions | Smart Farming by Precision Grow</title>
+        <meta name="description" content="Enhance aquaculture with Precision Grow’s fish monitoring solutions. Use smart farming tools and satellite technology to boost growth and ensure sustainable fish farming." />
         <meta name="keywords" content="aquaculture monitoring system, smart fish farming, IoT for aquaculture" />
         <link rel="canonical" href="https://precisiongrow.co.in/fish-monitoring" />
       </Helmet>

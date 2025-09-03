@@ -1,0 +1,109 @@
+.coffee-outer{
+    background-color: #47190d;
+}
+/* Background banner */
+.hero-banner {
+  background-image: url("../../../assets/icons_About/coffe banner-1.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* ya scroll */
+  position: relative;
+  height: 70vh;
+}
+
+
+
+/* Overlay */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Bottom Coffee Image */
+.coffee-image {
+  bottom: -116px;
+  z-index: 5;
+}
+
+.coffee-image img {
+  width: 340px;
+}
+
+.coffee-innovation img {
+  max-height: 350px;
+  object-fit: cover;
+}
+
+/* Responsive text */
+.hero-text {
+  max-width: 60%;
+}
+.coffee-section {
+  position: relative;
+  overflow: hidden;
+  padding-top: 8%;
+}
+.coffee-section1 {
+  background: url("../../../assets/icons_About/b3.webp") center center / cover no-repeat fixed;
+  position: relative;
+}
+
+
+
+
+.quote-text {
+  font-weight: 700;
+  line-height: 1.4;
+  margin: auto;
+  position: relative;
+  background-color: #d79452;
+  color:#47190d;
+}
+.coffee-farm{
+    background-color: #d79452;
+  color:#47190d;
+}
+
+.coffee-table th,
+.coffee-table td {
+  border: 1px solid #a9745b; /* lighter brown shade */
+  vertical-align: middle;
+  padding: 12px;
+  color: #47190d;
+}
+
+
+/* Title Styling */
+.coffee-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.coffee-title span {
+  position: relative;
+}
+.brnclr{
+  color: #d79452;
+}
+
+/* Description */
+.coffee-description {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .coffee-title {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .coffee-description {
+    text-align: center;
+  }
+
+}

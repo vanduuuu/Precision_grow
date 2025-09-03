@@ -73,11 +73,11 @@ const KrishakBazar = () => {
   
                <Helmet>
                       <title>
-                        Shop Fresh Farm Produce Online at Krishak Bazar Now!
+                        Krishak Bazar: Farm-to-Market Platform by Smart Farming
                       </title>
                       <meta
                         name="description"
-                        content="Buy directly from farmers! Explore Krishak Bazar for fresh produce, agri tools, and top deals. Shop smart, support farmers."
+                        content="Empowering farmers through smart farming, IoT devices, and tech-enabled platforms. Krishak Bazar ensures fair trade, quality produce, and better profitability."
                       />
                       <link rel="canonical" href="https://precisiongrow.co.in/krishak-bazar" />
                     </Helmet>

@@ -34,7 +34,8 @@ import Navbar from "./Components/Headfoot/Header/Subnavbar/Navbar.js";
 // import Publications from "./Components/Home/Publications/Publications.js";
 import GlobalProvider from "./Contexts/GlobalProvider.js";
 import MoreReads from "./Components/MoreReads/MoreReads.js";
-
+import mausamlogo from '../src/assets/icons_About/mausamlogo.png'
+import Ecropcoffe from "./Components/Services/Ecropcoffee/Ecropcoffe.js";
 const Home = lazy(() => import("./Components/Home/Home.js"));
 const About = lazy(() => import("./Components/About/About.js"));
 const Contact = lazy(() => import("./Components/Contact/Contact.js"));
@@ -109,6 +110,7 @@ export const routes = [
   { path: "/technology-integration", component: TechnologyIntegration },
   { path: "/publications", component: Publications },
   { path: "/more-reads", component: MoreReads },
+  { path: "/ecrop-for-coffee", component: Ecropcoffe },
   { path: "/blog", component: Blogs },
   { path: "/post/:slug", component: BlogDetailPgs },
   { path: "*", component: Notfound }, // Wildcard route for unknown paths
@@ -177,6 +179,8 @@ function App() {
             </Routes>
           </Suspense>
           <LocationWrapper />
+     
+
         </div>
       </GlobalProvider>
     </HelmetProvider>
@@ -195,6 +199,22 @@ const LocationWrapper = () => {
       {/* Conditionally render Footer */}
       {showFooter && <ContactU />}
       {showFooter && <Footernew />}
+        {/* Fixed Button */}
+     <a
+  href="https://mausamgpt.co.in"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn btn-light border mx-2 border-success position-fixed mausambtn d-flex align-items-center"
+>
+  <img
+    src={mausamlogo}  // apna image path yahan lagana
+    alt="MausamGPT"
+    style={{ width: "20px", height: "20px", marginRight: "8px" }}
+  />
+MausamGPT
+</a>
+
+
     </>
   );
 };

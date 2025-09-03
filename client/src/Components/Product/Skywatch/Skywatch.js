@@ -156,11 +156,11 @@ const Skywatch = () => {
     <>
       <Helmet>
         <title>
-          Skywatch: Innovative Solutions for Sustainable Agriculture
+          SkyWatch: Real-Time Pollution Monitoring IoT Device
         </title>
         <meta
           name="description"
-          content="Discover Skywatch by Precision Grow—advanced agri-tech solutions that enhance crop health and promote sustainable farming practices in India."
+          content="Monitor industrial pollution and air quality in real time with SkyWatch. This advanced IoT device delivers accurate environmental data via a mobile app."
         />
         <meta
           name="keywords"

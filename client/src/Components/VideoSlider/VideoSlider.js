@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './VideoSlider.css';
 
-
 const VideoSlider = () => {
   const carouselItems = [
     { 
@@ -23,7 +22,7 @@ const VideoSlider = () => {
       title: 'Know Your Farm with eCrop', 
       title1: 'Smart solution for enhanced crop management',
       button: 'Learn More!', 
-      link: '/ecrop'
+      link: 'https://ecrop.co.in/'
     },
     { 
       id: 3, 
@@ -44,6 +43,11 @@ const VideoSlider = () => {
       link: '/'
     },
   ];
+
+  // Helper function to detect external links
+  const isExternal = (url) => {
+    return url.startsWith('http://') || url.startsWith('https://');
+  };
 
   // Function to colorize title text
   const colorizeTitle = (title) => {
@@ -82,16 +86,27 @@ const VideoSlider = () => {
             className="d-block w-100 img-fluid"
             src={item.imgSrc}
             alt={item.alt}
-             width="1920"
-  height="800"
+            width="1920"
+            height="800"
             loading={item.id === 1 ? "eager" : "lazy"}
           />
           <Carousel.Caption className="carousel-caption">
             <h3 className="display-5 fw-bold">{colorizeTitle(item.title)}</h3>
             <p>{item.title1}</p>
-            <Link to={item.link} className="btn">
-              {item.button}
-            </Link>
+            {isExternal(item.link) ? (
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn"
+              >
+                {item.button}
+              </a>
+            ) : (
+              <Link to={item.link} className="btn">
+                {item.button}
+              </Link>
+            )}
           </Carousel.Caption>
         </Carousel.Item>
       ))}

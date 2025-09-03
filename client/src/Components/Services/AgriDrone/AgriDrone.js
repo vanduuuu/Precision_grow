@@ -2,6 +2,7 @@ import React from "react";
 import { FaCheck ,FaSeedling, FaLeaf, FaClock, FaCog, FaCloudSun } from "react-icons/fa";
 import './AgriDrone.css'
 import Banner from "../../Reusablecomp/Banner/Banner";
+import { Helmet } from "react-helmet-async";
 
 const cardData = [
   {
@@ -38,6 +39,11 @@ const cardData = [
 
 const WhyChoose = () => (
   <>
+    <Helmet>
+          <title>Agri-Drones with IoT Precision Tools | Precision Grow</title>
+          <meta name="description" content="Leverage IoT-enabled Agri-drones by Precision Grow to enhance crop insights, automate monitoring, and bring efficiency to your precision farming practices." />
+          <link rel="canonical" href="https://precisiongrow.co.in/agri-drone" />
+        </Helmet>
     <Banner
         imageSrc="https://api.ecrop.co/assets/precisiongrow/Drone farming.webp"
         heading="Agri Drone"

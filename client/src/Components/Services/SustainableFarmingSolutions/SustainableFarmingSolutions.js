@@ -53,10 +53,10 @@ const SustainableFarmingSolutions = () => {
   return (
     <>
       <Helmet>
-        <title>Smart Sustainable Farming Solutions for Higher Yields</title>
+        <title>Smart Farming & Soil Health Solutions for Sustainability</title>
         <meta
           name="description"
-          content="Discover eco‑friendly farming tools & techniques to boost crop yield, cut costs, and protect soil—all in easy steps!"
+          content="Improve soil fertility, manage pests, and conserve water with IoT devices and smart farming tools. Precision Grow offers complete sustainable Agri solutions."
         />
 
         <link
@@ -68,6 +68,7 @@ const SustainableFarmingSolutions = () => {
         imageSrc={agristack}
         heading="Sustainable Farming"
         subheading="Healthy Soil Strong Roots Sustainable Farming"
+        alignment="center"
       />
       {/* AI-Powered Farming Section */}
       <div className="ai-outer2 mt-0 pt-0 pt-lg-5">

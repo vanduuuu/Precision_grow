@@ -48,11 +48,11 @@ const About = () => {
     <div>
       <Helmet>
         <title>
-          About Precision Grow: Innovating Sustainable Agri-Tech Solutions
+          About Precision Grow | Driving Innovation in Smart Farming
         </title>
         <meta
           name="description"
-          content="Learn how Precision Grow is transforming agriculture with innovative agri-tech solutions that enhance sustainability and crop productivity in India."
+          content="See how Precision Grow leads smart farming with innovative agri-tech that boosts crop productivity and supports sustainable agriculture in India."
         />
         <meta
           name="keywords"
@@ -119,7 +119,7 @@ const About = () => {
       <section>
         <Titleunderline title="What We Want To Do" tag="h2"/>
 
-        <div data-aos="fade-up" data-aos-duration="3000" className="mx-auto">
+        <div data-aos="fade-up" data-aos-duration="3000" className="mx-auto px-5">
           <InfoCardGroup cardData={cardData} />
         </div>
         <p className="text-center fs-4 fw-bold">

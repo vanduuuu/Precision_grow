@@ -78,8 +78,8 @@ const Home = () => {
   return (
     <div>
       <Helmet>
-              <title> Precision Grow: Advanced Agri-Tech for Sustainable Farming</title>
-              <meta name="description" content="Explore Precision Grow's agri-tech solutions to boost crop yields, optimize farming, and promote sustainability. Revolutionize agriculture in India today!" />
+              <title>Precision Grow | Smart Farming with Agri-Tech Solutions</title>
+              <meta name="description" content="Discover smart farming with Precision Grow's agri-tech tools to enhance yields, streamline farming, and drive sustainable agriculture in India." />
               {/* <link rel="canonical" href="https://precisiongrow.co.in/" /> */}
               <meta
     name="keywords"

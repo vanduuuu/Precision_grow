@@ -6,11 +6,11 @@ import CartSidebar from './CartSidebar';
 import rice from '../../../assets/icons_About/rice.png'
 import e1 from '../../../assets/icons_About/e1.png'
 import p1 from '../../../assets/icons_About/ecrop_3_0_1.webp'
-import p2 from '../../../assets/icons_About/ecrop_3_0_3.webp'
 import p3 from '../../../assets/icons_About/Soil_Sensor.webp'
 import p4 from '../../../assets/icons_About/ecrop_sensor.webp'
 import ProductCard from "./ProductCard.js";
 import revolfarm from '../../../assets/icons_About/rev-farming.webp'
+import { Helmet } from "react-helmet-async";
 
 const BuyProductPage = () => {
   // const [selectedImage, setSelectedImage] = useState(productImages[0]);
@@ -57,7 +57,16 @@ const products = [
   };
 // https://play.google.com/store/apps/details?id=com.precisiongrow.ecrop
   return (
-    <div className="buy-product-section">
+    <>
+     <Helmet>
+            <title>Buy Smart Farming Products | Precision Grow Agri-Tech Solutions</title>
+            <meta
+              name="description"
+              content="Browse Precision Grow's smart farming solutions, featuring IoT devices and advanced agri-tech tools. Elevate your farming practices with our innovative products."
+            />
+            <link rel="canonical" href="https://precisiongrow.co.in/buy-product" />
+          </Helmet>
+      <div className="buy-product-section">
 
    {/* HERO SECTION */}
 <section className="hero-section d-flex align-items-center text-white">
@@ -128,9 +137,15 @@ const products = [
       <li className="mb-3"><FaCheckCircle className="me-2 text-success" /> AI-Powered Insights: Get personalized recommendations for irrigation, fertilization & pest control.</li>
       <li><FaCheckCircle className="me-2 text-success" /> Easy-to-Use Mobile App: Manage your farm anytime, anywhere.</li>
     </ul>
-  <a href="https://play.google.com/store/apps/details?id=com.precisiongrow.ecrop" target="_blank" className="gradient-btn fw-semibold text-decoration-none mt-5">
-    Download Now
-  </a>          </Col>
+<a
+  href="https://play.google.com/store/apps/details?id=com.precisiongrow.ecrop"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="gradient-btn fw-semibold text-decoration-none mt-5"
+>
+  Download Now
+</a>
+         </Col>
             <Col md={5}>
             <img
               src={e1}
@@ -255,6 +270,8 @@ const products = [
 <CartSidebar show={showCart} onClose={() => setShowCart(false)} product={products} />
 
     </div>
+    </>
+  
   );
 };
 

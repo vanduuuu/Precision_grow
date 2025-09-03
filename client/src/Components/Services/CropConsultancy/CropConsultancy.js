@@ -11,6 +11,7 @@ import sustfar from "../../../assets/icons_About/sustainable-farming.webp";
 import aiiot from "../../../assets/icons_About/ai-iot.webp";
 import ListItem from "../../Reusablecomp/ListItem";
 import { Helmet } from "react-helmet-async";
+import CardIcon from "../../Reusablecomp/CardIcon/CardIcon";
 const CropConsultancy = () => {
   const CropConsultancyData = [
     {
@@ -101,11 +102,11 @@ const CropConsultancy = () => {
     <>
       <Helmet>
         <title>
-          Smart Crop Consultancy for Sustainable Farming | Precision Grow
+         Smart Crop Consultancy for Higher Yields & Profitability
         </title>
         <meta
           name="description"
-          content="Get expert crop consultancy with agri‑tech insights to boost yield, save water & reduce pests. Easy tips for eco‑friendly farming success!"
+          content="Get expert crop consultancy with ECROP. Leverage smart farming, IoT devices, and Agri tools to increase yields, reduce waste, and grow high-demand crops."
         />
         <link
           rel="canonical"
@@ -193,39 +194,18 @@ const CropConsultancy = () => {
             innovations help farmers make informed decisions, maximize
             productivity, and ensure long-term sustainability.
           </p>
-          <section className="py-5">
-            <div className="container">
-              <div className="row g-4">
-                {cardData.map((item) => {
-                  const Icon = item.icon;
-                  return (
-                    <div key={item.id} className="col-md-6 col-lg-4">
-                      <div className="card border-0 ">
-                        <div className="position-relative">
-                          <img
-                            src={item.image}
-                            className="card-img-top"
-                            alt={item.title}
-                            loading="lazy"
-                          />
-                          {/* Bottom-left icon circle */}
-                          <div className="bottom-left-icon bg-success text-white">
-                            <Icon className="icon" />
-                          </div>
-                        </div>
-                        <div className="my-4">
-                          <h4 className="fw-semibold">{item.title}</h4>
-                          <p className="text-secondary mb-0 ">
-                            {item.description}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </section>
+        <section className="py-5">
+  <div className="container">
+    <div className="row g-4">
+      {cardData.map((item) => (
+        <div key={item.id} className="col-md-6 col-lg-4">
+          <CardIcon {...item} />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
         </div>
         <div className="bg-light py-5">
           <div className="container pb-5 text-center">

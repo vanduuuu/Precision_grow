@@ -1,6 +1,9 @@
 import React from 'react'
 import './Addecrop.css'
-
+// import IcarCiphet from '../../../assets/icons_About/ICAR-CIPHET.webp'
+// import Iimr from '../../../assets/icons_About/IIMR.webp'
+import pglogo from '../../../assets/icons_About/Precision-Grow.webp'
+import azadilogo from '../../../assets/icons_About/Aazadi.webp'
 
 const Addecrop = () => {
   return (
@@ -19,23 +22,26 @@ const Addecrop = () => {
                        <div>
                 <h2 className='display-3 boldlook'>Your Own Agriculture Assistant</h2>
                 <h5 className='my-3 fs-4'>Get real-time data on your crops and make informed decisions.</h5>
-                       <p className='t1'>Manufactured & Marketed by</p>
+                       <p className='t1 m-0'>Manufactured & Marketed by</p>
                         <p className="display-4 pt-3 boldlook m-0" >Precision <span className='textt-color'>Grow</span></p>
 
                         <h5>(A Unit of Tech Visit IT Pvt Ltd)</h5>
-                        <div className='pt-4'>
-                        <p className='t1'>Developed & Patented by</p>
-                        <p className='h2'>ICAR-Central Tuber Crops Research Institute</p>
+                        <div className='pt-2'>
+                        <p className='t1 m-0'>Developed & Patented by</p>
+                        <h2 className='ceritified-icon'>ICAR-Central Tuber Crops Research Institute</h2>
                         <ul className='ecrop_ul mt-4 p-0'>
                                 <li>Patent No. 523325 </li>
                                 <li> Toll Free No. 18002688989</li>
                             </ul>
                             <div className="logo-list">
                             <ul>
-                                <li><img src="https://api.ecrop.co/assets/precisiongrow/logo-1.webp" loading="lazy" className="logo1" alt="logo11"/></li>
-                                <li><img src="https://api.ecrop.co/assets/precisiongrow/logo-2.webp" loading="lazy" className="logo1" alt="logo21"/></li>
                                 <li><img src="https://api.ecrop.co/assets/precisiongrow/logo-3.webp" loading="lazy" className="logo1" alt="logo31"/></li>
-                                <li><img src="https://api.ecrop.co/assets/precisiongrow/logo-4.webp" loading="lazy" className="logo1" alt="logo41"/></li>
+                                                                <li><img src="https://api.ecrop.co/assets/precisiongrow/logo-4.webp" loading="lazy" className="logo1" alt="logo41"/></li>
+
+                                <li><img src={pglogo} loading="lazy" className="logo1" alt="logo11"/></li>
+                                                                <li><img src={azadilogo} loading="lazy" className="logo1" alt="logo21"/></li>
+
+                               
                             </ul>
                         </div>
                         </div>

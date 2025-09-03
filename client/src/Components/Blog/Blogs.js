@@ -71,8 +71,8 @@ const Blogs = () => {
     <>
       <div className='blog-det-outer'>
         <Helmet>
-          <title>Precision Grow: Agri-Tech Solutions for Sustainable Farming</title>
-          <meta name="description" content="Discover Precision Grow's innovative agri-tech solutions that boost crop yields and promote sustainability in Indian agriculture. Transform your farming today!" />
+          <title>Precision Grow Blog: Insights on Smart Farming & Agri-Tech</title>
+          <meta name="description" content="Stay updated with Precision Grow's blog. Explore articles on smart farming, IoT devices, and smart Agri tools to enhance agricultural practices and sustainability." />
           <meta name="keywords" content="agri-tech trends, sustainable farming news, precision agriculture blog" />
         </Helmet>
 

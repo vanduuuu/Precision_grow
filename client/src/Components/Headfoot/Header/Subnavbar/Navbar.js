@@ -8,7 +8,9 @@ import React, {
 import { Link, useLocation } from "react-router-dom";
 import { FiMenu, FiX, FiChevronDown,FiPhone  } from "react-icons/fi";
 import "./Navbar.css";
-import Topbar from "../Topbar/Topbar";
+import Topbar from "../Topbar/Topbar.js";
+// import flag from './assets/icons_About/national-flag-of-india-india.gif'
+// import flag from '../../../../assets/icons_About/national-flag-of-india-india.gif'
 
 const Subnavbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -98,6 +100,7 @@ const Subnavbar = () => {
           },
           { label: "Farm Boundary", path: "/farm-boundary" },
           { label: "Precision Grow AI", path: "/precision-grow-ai" },
+          { label: "Ecrop For Coffee", path: "/ecrop-for-coffee" },
           { label: "Regenerative Agriculture", path: "/regenerative-agriculture" },
           { label: "Product Traceability", path: "/product-traceability" },
           { label: "Crop Advisory", path: "/crop-advisory" },
@@ -134,12 +137,14 @@ const Subnavbar = () => {
     <>
     <Topbar/>
        <nav
-      className="navigation"
+      className="sticky navigation"
       role="navigation"
       aria-label="Main Navigation"
       ref={navRef}
     >
+   
       <div className="nav-container">
+      
         {/* Logo */}
         <div className="brand">
           <Link to="/" aria-label="Go to homepage">
@@ -310,11 +315,18 @@ const Subnavbar = () => {
     </a>
   </div>
 </li>
-
+{/* <li className="nav-flag">
+  <img
+    src={flag}// or use an external link
+    alt="India Flag"
+    className="navbar-flag"
+  />
+</li> */}
 
         </ul>
       </div>
     </nav>
+
     </>
  
   );

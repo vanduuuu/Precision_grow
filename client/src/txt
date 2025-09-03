@@ -1,276 +1,92 @@
-import React, { useState,useEffect, lazy, Suspense } from 'react'; 
-import { HelmetProvider } from 'react-helmet-async';
-import {Route, Routes, useLocation} from 'react-router-dom'; 
-import AOS from 'aos';
-import 'aos/dist/aos.css';  // Import the CSS for styles
-import Modal from 'react-modal'; 
-import './App.css'; 
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'; 
-import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
-import Subnavbar from './Components/Headfoot/Header/Subnavbar/Subnavbar.js'; 
-import Scrolltotop from './Components/Scroll/Scrolltotop.js'; 
-import Canonical from './Components/Canonical.js'; 
-import SchemaInjector from './Components/SchemaMarkup/SchemaInjector.js';
-import Notfound from './Components/Notfound.js';
-import Footernew from './Components/Headfoot/Footer/Footernew.js';
-import { initFacebookPixel, trackPageView } from './utils/facebookPixel.js';
-
-const About = lazy(() => import('./Components/About/About.js'));
-const Contact = lazy(() => import('./Components/Contact/Contact.js')); 
-const PrecisionGrowAi = lazy(() => import('./Components/Services/PrecisionGrowAi/PrecisionGrowAi.js')); 
-const RegenerativeAgri = lazy(() => import('./Components/Services/RegenerativeAgri/RegenerativeAgri.js')); 
-const ProductTraceability = lazy(() => import('./Components/Services/ProductTraceability/ProductTraceability.js')); 
-const WildfireSolution = lazy(() => import('./Components/Services/WildfireSolution/WildfireSolution.js')); 
-const AgriInsurance = lazy(() => import('./Components/Services/AgriInsurance/AgriInsurance.js')); 
-const AgricLoan = lazy(() => import('./Components/Services/AgricLoan/AgricLoan.js')); 
-const AgriDrone = lazy(() => import('./Components/Services/AgriDrone/AgriDrone.js')); 
-const CropMonitoring = lazy(() => import('./Components/Services/SatelliteMonitoring/CropMonitoring/CropMonitoring.js')); 
-const ServiceFishMonitoring = lazy(() => import('./Components/Services/SatelliteMonitoring/ServiceFishMonitoring/ServiceFishMonitoring.js')); 
-const Policy = lazy(() => import('./Components/Policy/Policy.js')); 
-const Ecrop = lazy(() => import('./Components/Product/Ecrop/Ecrop.js')); 
-const Ecoloo = lazy(() => import('./Components/Product/Ecoloo/Ecoloo.js')); 
-const Sustainability = lazy(() => import('./Components/Sustainability/Sustainability.js')); 
-const FeedbackForm = lazy(() => import('./Components/Feedback/Feedback.js')); 
-const Skywatch = lazy(() => import('./Components/Product/Skywatch/Skywatch.js')); 
-const Farmboundary = lazy(() => import('./Components/Services/Farmboundary/Farmboundary.js')); 
-const Cropadvisory = lazy(() => import('./Components/Services/Cropadvisory/Cropadvisory.js')); 
-const ContactU = lazy(()=>import('./Components/Home/ContactU/ContactU.js'));
-const BlogDetailPg = lazy(()=>import('./Components/Blog/BlogDetailPg.js'));
-const Blog = lazy(()=>import('./Components/Blog/Blog.js'));
-const Home = lazy(() => import('./Components/Home/Home.js')); 
-
-
-
-
-
-
-
-
-
-
-// # Enable URL rewriting
-// RewriteEngine On
-// RewriteBase /
-
-// # Redirect HTTP to HTTPS (Ensure your site is always served over HTTPS)
-// RewriteCond %{HTTPS} off
-// RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-// # Redirect www to non-www for precisiongrow.co.in (If you prefer non-www version)
-// RewriteCond %{HTTP_HOST} ^www\.precisiongrow\.co\.in$ [NC]
-// RewriteRule ^/?$ "http\:\/\/precisiongrow\.co\.in\/" [R=301,L]
-
-// # Redirect any other URLs to the correct path with proper rewrite rules
-// # This rule ensures that any route (like /about, /contact) works correctly in React (SPA)
-// RewriteRule ^index\.html$ - [L]
-// RewriteCond %{REQUEST_FILENAME} !-f
-// RewriteCond %{REQUEST_FILENAME} !-d
-// RewriteRule . /index.html [L]
-
-// # Enable caching for static files to improve site speed
-// <IfModule mod_expires.c>
-//   ExpiresActive On
-//   ExpiresByType text/css "access plus 1 year"
-//   ExpiresByType application/javascript "access plus 1 year"
-//   ExpiresByType image/png "access plus 1 year"
-//   ExpiresByType image/jpeg "access plus 1 year"
-//   ExpiresByType image/svg+xml "access plus 1 year"
-//   ExpiresByType image/gif "access plus 1 year"
-// </IfModule>
-
-// # Enable gzip compression to reduce file sizes and improve load times
-// <IfModule mod_deflate.c>
-//   AddOutputFilterByType DEFLATE text/html
-//   AddOutputFilterByType DEFLATE text/css
-//   AddOutputFilterByType DEFLATE application/javascript
-//   AddOutputFilterByType DEFLATE image/svg+xml
-// </IfModule>
-
-// # Enable HTTP Strict Transport Security (HSTS) - Enforces HTTPS for all subdomains
-// Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
-
-// # Custom 404 fallback
-// ErrorDocument 404 /404.html
-
-
-
-
-
-
-
-
-
-
-
-import React, { useState,useEffect } from 'react'; 
-import { HelmetProvider } from 'react-helmet-async';
-import {Route, Routes, useLocation} from 'react-router-dom'; 
-import AOS from 'aos';
-import 'aos/dist/aos.css';  // Import the CSS for styles
-import Modal from 'react-modal'; 
-import './App.css'; 
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'; 
-import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
-import Home from './Components/Home/Home.js'; 
-import About from './Components/About/About.js'
-import Contact from './Components/Contact/Contact.js'; 
-import Subnavbar from './Components/Headfoot/Header/Subnavbar/Subnavbar.js'; 
-import PrecisionGrowAi from './Components/Services/PrecisionGrowAi/PrecisionGrowAi.js'; 
-import RegenerativeAgri from './Components/Services/RegenerativeAgri/RegenerativeAgri.js'; 
-import ProductTraceability from './Components/Services/ProductTraceability/ProductTraceability.js'; 
-import WildfireSolution from './Components/Services/WildfireSolution/WildfireSolution.js'; 
-import AgriInsurance from './Components/Services/AgriInsurance/AgriInsurance.js'; 
-import AgricLoan from './Components/Services/AgricLoan/AgricLoan.js'; 
-import AgriDrone from './Components/Services/AgriDrone/AgriDrone.js'; 
-import CropMonitoring from './Components/Services/SatelliteMonitoring/CropMonitoring/CropMonitoring.js'; 
-import ServiceFishMonitoring from './Components/Services/SatelliteMonitoring/ServiceFishMonitoring/ServiceFishMonitoring.js'; 
-import Policy from './Components/Policy/Policy.js'; 
-import Ecrop from './Components/Product/Ecrop/Ecrop.js'; 
-import Ecoloo from './Components/Product/Ecoloo/Ecoloo.js'; 
-import Sustainability from './Components/Sustainability/Sustainability.js'; 
-import Scrolltotop from './Components/Scroll/Scrolltotop.js'; 
-import FeedbackForm from './Components/Feedback/Feedback.js'; 
-import Skywatch from './Components/Product/Skywatch/Skywatch.js'; 
-import Farmboundary from './Components/Services/Farmboundary/Farmboundary.js'; 
-import Cropadvisory from './Components/Services/Cropadvisory/Cropadvisory.js'; 
-import Canonical from './Components/Canonical.js'; 
-import ContactU from './Components/Home/ContactU/ContactU.js'
-import BlogDetailPg from './Components/Blog/BlogDetailPg.js';
-import SchemaInjector from './Components/SchemaMarkup/SchemaInjector.js';
-import Blog from './Components/Blog/Blog.js';
-import Notfound from './Components/Notfound.js';
-import Footernew from './Components/Headfoot/Footer/Footernew.js';
-import { initFacebookPixel, trackPageView } from './utils/facebookPixel.js';
-
-// Set the root app element for the modal (for accessibility)
-Modal.setAppElement('#root');
-
-// Define routes at the top level outside the App function
-export const routes = [
-  { path: '/', component: Home },
-  { path: '/about', component: About },
-  { path: '/precision-grow-ai', component: PrecisionGrowAi },
-  { path: '/regenerative-agriculture', component: RegenerativeAgri },
-  { path: '/product-traceability', component: ProductTraceability },
-  { path: '/wildfire-solution', component: WildfireSolution },
-  { path: '/agri-insurance', component: AgriInsurance },
-  { path: '/agri-loan', component: AgricLoan },
-  { path: '/agri-drone', component: AgriDrone },
-  { path: '/sustainability', component: Sustainability },
-  { path: '/contact', component: Contact },
-  { path: '/crop-monitoring', component: CropMonitoring },
-  { path: '/fish-monitoring', component: ServiceFishMonitoring },
-  { path: '/policy', component: Policy },
-  { path: '/ecrop', component: Ecrop },
-  { path: '/ecoloo', component: Ecoloo },
-  { path: '/skywatch', component: Skywatch },
-  { path: '/feedback', component: FeedbackForm },
-  { path: '/farm-boundary', component: Farmboundary },
-  { path: '/crop-advisory', component: Cropadvisory },
-  { path: '/blog', component: Blog },
-  { path: '/Notfound', component: Notfound },
-  { path: '/post/:slug', component: BlogDetailPg },
-  { path: '*', component: Notfound }  // Wildcard route for unknown paths
-  
-
-];
-
-function App() {
-  const location = useLocation(); // ✅ Now it works inside Router
-
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-
-  const openModal = () => setModalIsOpen(true);
-  const closeModal = () => setModalIsOpen(false);
-
-  useEffect(() => {
-    AOS.init(); // Initialize AOS
-    initFacebookPixel(); // Initialize Facebook Pixel on first load
-  }, []);
-
-  useEffect(() => {
-    AOS.refresh(); // Refresh AOS on route change
-    trackPageView(); // Track page view on every route change
-  }, [location]);
-
-
-  return (
-    // <BrowserRouter>
-    <HelmetProvider>
-        <SchemaInjector/>
-
-      <div className="app-wrapper">
-        {/* Feedback Button and Modal */}
-        <div id="FlypopButton" className="flypop-button">
-          <button onClick={openModal}>
-            <span>Give Feedback</span>
-          </button>
-
-          <Modal
-            isOpen={modalIsOpen}
-            onRequestClose={closeModal}
-            contentLabel="Feedback Form"
-            className="Modal"
-            overlayClassName="Overlay">
-            <FeedbackForm />
-            <button onClick={closeModal} className='close-popup'>
-              <i className="fa fa-close"></i>
-            </button>
-          </Modal>
-        </div>
-
-        <Subnavbar />
-        <Scrolltotop />
-
-        {/* Add Canonical component here */}
-        <Canonical /> {/* This will dynamically handle the canonical tag */}
-
-        <Routes>
-          {/* Dynamically create Route elements using the `routes` array */}
-          {routes.map((route, index) => (
-            <Route 
-              key={index} 
-              path={route.path} 
-              element={<route.component />} // JSX for components
-            />
-          ))}
-        </Routes>
-
-        <LocationWrapper />
-      </div>
-      </HelmetProvider>
-    // </BrowserRouter>
-  );
+/* Chakra rotating image */
+.chakra-img {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50px;
+  width: 50px;
+  animation: rotate 4s linear infinite;
+  opacity: 0.8;
+  z-index: 1;
+  pointer-events: none; /* Optional: prevents blocking marquee */
+  z-index: 1201;
+}
+.rakhi-img {
+  position: absolute;
+  top: 100%;
+  right: 10px;
+  transform: translateY(30%);
+  height: 250px;
+  width: auto;
+  z-index: 1211;
+  pointer-events: none;
+}
+html, body {
+  overflow-x: hidden;
 }
 
-const LocationWrapper = () => {
-  const location = useLocation(); // Use the hook here
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+/* ------------------------------------------------- */
+.top-marquee {
+  background: linear-gradient(to bottom, #FF9933, #FFFFFF);
+  white-space: nowrap;
+  padding: 6px 0;
+  /* position: sticky; */
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+}
 
-  // Check if the current route is "/contact"
-  const showFooter = location.pathname !== '/contact'; // Don't show footer on "/contact" page
+.scroll {
+  display: inline-block;
+  min-width: 100%;
+  padding-left: 100%;
+  font-size: 16px;
+  color: white;
+  animation: marquee 18s linear infinite;
+  font-weight: 500;
+  white-space: nowrap;
+  /* overflow: hidden; */
+}
 
-  return (
-    <>
+@keyframes marquee {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
 
-{/* Conditionally render Footer */}
-{showFooter && <ContactU />}
-{showFooter && <Footernew />}
-      
-    </>
-  );
-};
+.highlight {
+  color: orange;
+}
 
-export default App;
+.number {
+  color: #d2ff00;
+}
+@media (max-width: 1026px) and (min-width: 900px) {
+   .rakhi-img {
+    top: 8%;}
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+@media (max-width: 768px) {
+  .scroll {
+    font-size: 13px;
+  }
+  .top-marquee {
+    height: 35px;
+  }
+  .rakhi-img {
+    top: 198%;
+    right: 0px;
+    height: 144px;}
+    .chakra-img {
+  top: 157%;}
+}

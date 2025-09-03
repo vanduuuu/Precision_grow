@@ -69,8 +69,8 @@ const wildfiedata=[
 
     <div>
       <Helmet>
-        <title>Wildfire Solutions for Sustainable Agriculture | Precision Grow</title>
-        <meta name="description" content="Discover Precision Grow's innovative wildfire solutions to protect crops and enhance sustainability. Safeguard your farm today!" />
+        <title>Wildfire Solutions for Smart & Sustainable Farming | Precision Grow</title>
+        <meta name="description" content="Protect your crops with Precision Grow’s wildfire solutions. Leverage smart farming tools and IoT devices to ensure sustainable and resilient agriculture." />
         <meta name="keywords" content="wildfire detection agriculture, satellite-based wildfire alert, farm fire prevention" />
        
         <link rel="canonical" href="https://precisiongrow.co.in/wildfire-solution" />

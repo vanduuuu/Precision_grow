@@ -25,8 +25,8 @@ const RegenerativeAgri = () => {
   return (
     <div>
        <Helmet>
-        <title>Regenerative Agriculture Solutions | Precision Grow</title>
-        <meta name="description" content="Discover Precision Grow's regenerative agriculture practices that enhance soil health, boost yields, and promote sustainability for a better future." />
+        <title>Regenerative Agriculture | Smart Farming by Precision Grow</title>
+        <meta name="description" content="Explore Precision Grow’s regenerative agriculture solutions to restore soil health, improve yields, and support sustainable, smart farming practices." />
         <meta name="keywords" content="regenerative farming practices, sustainable agriculture India, eco-friendly farming" />
           </Helmet>
 

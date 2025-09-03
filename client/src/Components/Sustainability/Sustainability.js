@@ -66,11 +66,11 @@ const Sustainability = () => {
       <Helmet>
         <title>
           {" "}
-          Sustainability at Precision Grow: Innovating Agri-Tech Solutions
+         Sustainable Agriculture with Smart Agri Tools | Precision Grow
         </title>
         <meta
           name="description"
-          content="Discover Precision Grow's innovative sustainability practices that enhance agriculture, boost yields, and promote eco-friendly farming in India."
+          content="Discover how Precision Grow uses smart Agri tools, IoT devices, and smart farming to foster sustainability. Improve farm efficiency and protect natural resources."
         />
         <meta
           name="keywords"

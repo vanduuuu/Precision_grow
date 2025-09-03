@@ -45,8 +45,8 @@ const AgricLoan = () => {
   return (
     <div>
       <Helmet>
-        <title>Agri Loans for Farmers - Precision Grow Solutions</title>
-        <meta name="description" content="Get tailored agri loans to support your farming needs. Boost productivity and sustainability with Precision Grow's financial solutions." />
+        <title>Agri Loans for Smart Farming | Precision Grow Solutions</title>
+        <meta name="description" content="Access flexible Agri loans tailored for smart farming. Precision Grow empowers farmers with financial support, IoT devices, and smart Agri tools to grow better." />
         <meta name="keywords" content="agri loan services, farming finance India, agriculture credit solutions" />
         <link rel="canonical" href="https://precisiongrow.co.in/agri-loan" />
       </Helmet>

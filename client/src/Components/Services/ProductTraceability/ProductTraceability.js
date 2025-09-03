@@ -43,8 +43,8 @@ const ProductTraceability = () => {
   return (
     <>
      <Helmet>
-        <title>Product Traceability Solutions for Sustainable Farming</title>
-        <meta name="description" content="Discover Precision Grow's product traceability solutions to enhance transparency and sustainability in agriculture. Ensure quality from farm to table." />
+        <title>Product Traceability | Smart Farming Solutions by Precision Grow</title>
+        <meta name="description" content="Enhance transparency with Precision Grow’s product traceability tools. Support smart farming and ensure quality across the entire farm-to-table journey." />
         <meta name="keywords" content="agriculture product traceability, farm to fork solutions, food transparency" />
         <link rel="canonical" href="https://precisiongrow.co.in/product-traceability"/>
       </Helmet>

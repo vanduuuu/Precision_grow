@@ -1,7 +1,10 @@
 .liststyleee {
   margin-bottom: 12px;
-  color: #02746a;
+color: var(--list-title-color);
   font-size: 23px;
   border-bottom: 2px dashed #63992373;
   display: inline-block;
+}
+:root {
+  --list-title-color: #02746a; /* apna desired color */
 }

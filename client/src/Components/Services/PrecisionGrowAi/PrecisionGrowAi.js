@@ -55,8 +55,8 @@ const PrecisionGrowAi = () => {
   return (
     <div>
       <Helmet>
-        <title>Revolutionize Farming with Precision Grow AI Solutions</title>
-        <meta name="description" content="Discover Precision Grow AI, enhancing crop management with real-time insights, weather data, and satellite monitoring for sustainable agriculture in India." />
+        <title>Revolutionize Smart Farming with Precision Grow AI Tools</title>
+        <meta name="description" content="Unlock smarter farming with Precision Grow AI—real-time crop insights, weather data, and satellite monitoring for modern agriculture across India." />
         <meta name="keywords" content="AI in agriculture, machine learning farming solutions, predictive agri-tech" />
         <link rel="canonical" href="https://precisiongrow.co.in/precision-grow-ai" />
       </Helmet>
