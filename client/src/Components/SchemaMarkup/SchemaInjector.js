@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { db } from "../Blog/Firebaseconfig.js";
+import { db } from "../../Contexts/Firebaseconfig.js";
 import { doc, getDoc } from "firebase/firestore";
 import useSchemaMarkup from "./useSchemaMarkup.js";
 

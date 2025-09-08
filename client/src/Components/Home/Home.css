@@ -5,6 +5,9 @@
   min-height: 120px;     /* ✅ Required to fix CLS */
   overflow: hidden; 
 }
+.poem ul li{
+  list-style: none;
+}
 .modal-overlay {
   position: fixed;
   top: 0;

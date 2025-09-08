@@ -1,25 +1,38 @@
-import React, { useContext, useState } from 'react';
-import { BlogContext } from './BlogProvider.js';  // Adjust path if needed
+import React, { useContext, useEffect, useState } from "react";
+import { GenericContext } from "../../Contexts/GenericProvider.js";
 import { Container, Row, Col } from "react-bootstrap";
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 
-import '../Blog/Blog.css';
-import Blogcards from './BlogCards.js';
+import "../Blog/Blog.css";
+import Blogcards from "./BlogCards.js";
 
 const Blogs = () => {
-  const { posts, loading } = useContext(BlogContext);
+  const { dataMap, fetchData } = useContext(GenericContext);
   const [currentPage, setCurrentPage] = useState(1);
   const blogsPerPage = 12;
 
-  const category = "Precision Grow";
+  const collectionName = "posts"; // Firestore collection
+  const categoryId = "Precision Grow"; // jo bhi aap use kar rahe ho
+  const key = `${collectionName}_${categoryId}`;
 
-  // Parse Firestore timestamp to JS Date
+  // Data fetch karna
+  useEffect(() => {
+    const unsubscribe = fetchData(collectionName, categoryId, 100); // 100 blogs tak le aayega
+    return () => unsubscribe && unsubscribe();
+  }, [fetchData]);
+
+  const posts = dataMap[key] || [];
+  const loading = !posts || posts.length === 0;
+
+  // Firestore timestamp → JS Date
   const parseTimestamp = (timestamp) => {
     if (!timestamp) return null;
-    return new Date(timestamp.seconds * 1000 + Math.floor(timestamp.nanoseconds / 1000000));
+    return new Date(
+      timestamp.seconds * 1000 + Math.floor(timestamp.nanoseconds / 1000000)
+    );
   };
 
-  // Format Date as "DD MMM YYYY"
+  // Date format
   const formatDate = (date) => {
     if (!date) return "Date not available";
     return date.toLocaleDateString("en-GB", {
@@ -29,14 +42,14 @@ const Blogs = () => {
     });
   };
 
-  // Sort posts by timestamp descending (latest first)
+  // Sort latest → oldest
   const sortedPosts = [...posts].sort((a, b) => {
     const timestampA = a.timestamp?.seconds || 0;
     const timestampB = b.timestamp?.seconds || 0;
     return timestampB - timestampA;
   });
 
-  // Pagination calculations
+  // Pagination
   const totalPages = Math.ceil(sortedPosts.length / blogsPerPage);
   const indexOfLastBlog = currentPage * blogsPerPage;
   const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
@@ -62,35 +75,57 @@ const Blogs = () => {
     return pageNumbers;
   };
 
-  // Current date display (optional, not blog related)
-  const currentDate = new Date().toLocaleDateString('en-GB', {
-    weekday: 'long', day: '2-digit', month: 'long', year: 'numeric'
+  // Current date (UI ke liye)
+  const currentDate = new Date().toLocaleDateString("en-GB", {
+    weekday: "long",
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
   });
 
   return (
     <>
-      <div className='blog-det-outer'>
+      <div className="blog-det-outer">
         <Helmet>
-          <title>Precision Grow Blog: Insights on Smart Farming & Agri-Tech</title>
-          <meta name="description" content="Stay updated with Precision Grow's blog. Explore articles on smart farming, IoT devices, and smart Agri tools to enhance agricultural practices and sustainability." />
-          <meta name="keywords" content="agri-tech trends, sustainable farming news, precision agriculture blog" />
+          <title>
+            Precision Grow Blog: Insights on Smart Farming & Agri-Tech
+          </title>
+          <meta
+            name="description"
+            content="Stay updated with Precision Grow's blog. Explore articles on smart farming, IoT devices, and smart Agri tools to enhance agricultural practices and sustainability."
+          />
+          <meta
+            name="keywords"
+            content="agri-tech trends, sustainable farming news, precision agriculture blog"
+          />
         </Helmet>
 
         <Container className="py-3">
-          {/* Display current date and category */}
+          {/* Date + Category */}
           <div className="d-flex justify-content-between align-items-center mb-3">
-            <div><strong>Date:</strong> {currentDate}</div>
-            <div><strong>Category:</strong> {category}</div>
+            <div>
+              <strong>Date:</strong> {currentDate}
+            </div>
+            <div>
+              <strong>Category:</strong> {categoryId}
+            </div>
           </div>
 
-          <h1 className="text-2xl fw-bold text-start display-4 text-black">Precision Grow | Blogs</h1>
+          <h1 className="text-2xl fw-bold text-start display-4 text-black">
+            Precision Grow | Blogs
+          </h1>
           <p>
             <i>
-              "At Precision Grow, we are pioneering a new era in agriculture, harnessing the power of cutting-edge satellite analytics to revolutionize the way we farm. Our commitment is to empower farmers with precision insights that drive efficiency, sustainability, and unprecedented crop management. Explore the future of agriculture with Precision Grow!"
+              "At Precision Grow, we are pioneering a new era in agriculture,
+              harnessing the power of cutting-edge satellite analytics to
+              revolutionize the way we farm. Our commitment is to empower
+              farmers with precision insights that drive efficiency,
+              sustainability, and unprecedented crop management. Explore the
+              future of agriculture with Precision Grow!"
             </i>
           </p>
 
-          <Row className="justify-content-center">
+             <Row className="justify-content-center">
             {loading ? (
               <h2 className="text-center">Loading...</h2>
             ) : currentBlogs.length > 0 ? (
@@ -119,27 +154,31 @@ const Blogs = () => {
         {/* Pagination */}
         {totalPages > 1 && (
           <div className="pagination-container d-flex justify-content-center my-4">
-            <button 
-              className="pagebtn" 
-              onClick={() => handlePageChange(currentPage - 1)} 
+            <button
+              className="pagebtn"
+              onClick={() => handlePageChange(currentPage - 1)}
               disabled={currentPage === 1}
             >
               Prev
             </button>
 
             {generatePagination().map((page, index) => (
-              <button 
-                key={index} 
-                className={`pagebtn ${currentPage === page ? 'active' : ''}`} 
-                onClick={() => typeof page === "number" && handlePageChange(page)}
+              <button
+                key={index}
+                className={`pagebtn ${
+                  currentPage === page ? "active" : ""
+                }`}
+                onClick={() =>
+                  typeof page === "number" && handlePageChange(page)
+                }
               >
                 {page}
               </button>
             ))}
 
-            <button 
-              className="pagebtn" 
-              onClick={() => handlePageChange(currentPage + 1)} 
+            <button
+              className="pagebtn"
+              onClick={() => handlePageChange(currentPage + 1)}
               disabled={currentPage === totalPages}
             >
               Next

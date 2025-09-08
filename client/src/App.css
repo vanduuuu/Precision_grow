@@ -1,6 +1,8 @@
 /* 189 mb data of assets */
 /* 98.7 mb data of assets */
-
+body {
+  overflow-x: hidden;
+}
 .flypop-button {
     z-index: 999;
     position: fixed;

@@ -7,71 +7,93 @@ import Modal from "react-modal";
 import "./App.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
-// import RegenerativeAgri from "./Components/Services/RegenerativeAgri/RegenerativeAgri.js";
-// import ProductTraceability from "./Components/Services/ProductTraceability/ProductTraceability.js";
-// import WildfireSolution from "./Components/Services/WildfireSolution/WildfireSolution.js";
-// import AgriInsurance from "./Components/Services/AgriInsurance/AgriInsurance.js";
-// import AgricLoan from "./Components/Services/AgricLoan/AgricLoan.js";
-// import AgriDrone from "./Components/Services/AgriDrone/AgriDrone.js";
 import CropMonitoring from "./Components/Services/SatelliteMonitoring/CropMonitoring/CropMonitoring.js";
 import ServiceFishMonitoring from "./Components/Services/SatelliteMonitoring/ServiceFishMonitoring/ServiceFishMonitoring.js";
-// import Policy from "./Components/Policy/Policy.js";
 import Ecrop from "./Components/Product/Ecrop/Ecrop.js";
 import Ecoloo from "./Components/Product/Ecoloo/Ecoloo.js";
 import Scrolltotop from "./Components/Scroll/Scrolltotop.js";
 import Canonical from "./Components/Canonical.js";
 import SchemaInjector from "./Components/SchemaMarkup/SchemaInjector.js";
-// import Notfound from "./Components/Notfound.js";
 import Footernew from "./Components/Headfoot/Footer/Footernew.js";
 import { initFacebookPixel, trackPageView } from "./utils/facebookPixel.js";
 import Navbar from "./Components/Headfoot/Header/Subnavbar/Navbar.js";
-// import KrishakBazar from "./Components/Services/KrishakBazar/KrishakBazar.js";
-// import Agristack from "./Components/Services/Agristack/Agristack.js";
-// import CropConsultancy from "./Components/Services/CropConsultancy/CropConsultancy.js";
-// import SustainableFarmingSolutions from "./Components/Services/SustainableFarmingSolutions/SustainableFarmingSolutions.js";
-// import TechnologyIntegration from "./Components/Services/TechnologyIntegration/TechnologyIntegration.js";
-// import BuyProduct from "./Components/Product/BuyProduct/BuyProduct.js";
-// import Publications from "./Components/Home/Publications/Publications.js";
-import GlobalProvider from "./Contexts/GlobalProvider.js";
 import MoreReads from "./Components/MoreReads/MoreReads.js";
-import mausamlogo from '../src/assets/icons_About/mausamlogo.png'
+import mausamlogo from "../src/assets/icons_About/mausamlogo.png";
 import Ecropcoffe from "./Components/Services/Ecropcoffee/Ecropcoffe.js";
+import { CartProvider } from "./Components/Product/BuyProduct/CartContext.js";
+import MoreReads1 from "./Components/MoreReads/MoreReads1.js";
+import { GenericProvider } from "./Contexts/GenericProvider.js";
 const Home = lazy(() => import("./Components/Home/Home.js"));
 const About = lazy(() => import("./Components/About/About.js"));
 const Contact = lazy(() => import("./Components/Contact/Contact.js"));
-const PrecisionGrowAi = lazy(() => import("./Components/Services/PrecisionGrowAi/PrecisionGrowAi.js"));
-const Blogs = lazy(() => import("./Components/Blog/Blogs.js"));
-const BlogDetailPgs = lazy(() => import("./Components/Blog/BlogDetailPages.js"));
+const PrecisionGrowAi = lazy(() =>
+  import("./Components/Services/PrecisionGrowAi/PrecisionGrowAi.js")
+);
+const Blogs1 = lazy(() => import("./Components/Blog/Blog1.js"));
+const BlogDetailPgs1 = lazy(() =>
+  import("./Components/Blog/Blogdetail1.js")
+);
 const ContactU = lazy(() => import("./Components/Home/ContactU/ContactU.js"));
-const Cropadvisory = lazy(() => import("./Components/Services/Cropadvisory/Cropadvisory.js"));
-const Farmboundary = lazy(() => import("./Components/Services/Farmboundary/Farmboundary.js"));
-const Skywatch = lazy(() => import("./Components/Product/Skywatch/Skywatch.js"));
+const Cropadvisory = lazy(() =>
+  import("./Components/Services/Cropadvisory/Cropadvisory.js")
+);
+const Farmboundary = lazy(() =>
+  import("./Components/Services/Farmboundary/Farmboundary.js")
+);
+const Skywatch = lazy(() =>
+  import("./Components/Product/Skywatch/Skywatch.js")
+);
 const FeedbackForm = lazy(() => import("./Components/Feedback/Feedback.js"));
-const Sustainability = lazy(() => import("./Components/Sustainability/Sustainability.js"));
-const Publications = lazy(() => import("./Components/Home/Publications/Publications.js"));
+const Sustainability = lazy(() =>
+  import("./Components/Sustainability/Sustainability.js")
+);
+const Publications = lazy(() =>
+  import("./Components/Home/Publications/Publications.js")
+);
 
+const RegenerativeAgri = lazy(() =>
+  import("./Components/Services/RegenerativeAgri/RegenerativeAgri.js")
+);
+const ProductTraceability = lazy(() =>
+  import("./Components/Services/ProductTraceability/ProductTraceability.js")
+);
+const WildfireSolution = lazy(() =>
+  import("./Components/Services/WildfireSolution/WildfireSolution.js")
+);
 
-const RegenerativeAgri = lazy(() => import("./Components/Services/RegenerativeAgri/RegenerativeAgri.js"));
-const ProductTraceability = lazy(() => import("./Components/Services/ProductTraceability/ProductTraceability.js"));
-const WildfireSolution = lazy(() => import("./Components/Services/WildfireSolution/WildfireSolution.js"));
+const AgriInsurance = lazy(() =>
+  import("./Components/Services/AgriInsurance/AgriInsurance.js")
+);
+const AgricLoan = lazy(() =>
+  import("./Components/Services/AgricLoan/AgricLoan.js")
+);
+const AgriDrone = lazy(() =>
+  import("./Components/Services/AgriDrone/AgriDrone.js")
+);
 
-const AgriInsurance = lazy(() => import("./Components/Services/AgriInsurance/AgriInsurance.js"));
-const AgricLoan = lazy(() => import("./Components/Services/AgricLoan/AgricLoan.js"));
-const AgriDrone = lazy(() => import("./Components/Services/AgriDrone/AgriDrone.js"));
-
-// const CropMonitoring = lazy(() => import("./Components/Services/SatelliteMonitoring/CropMonitoring/CropMonitoring.js"));
-// const ServiceFishMonitoring = lazy(() => import("./Components/Services/SatelliteMonitoring/ServiceFishMonitoring/ServiceFishMonitoring.js"));
 const Policy = lazy(() => import("./Components/Policy/Policy.js"));
 
-// const Ecrop = lazy(() => import("./Components/Product/Ecrop/Ecrop.js"));
-// const Ecoloo = lazy(() => import("./Components/Product/Ecoloo/Ecoloo.js"));
-const KrishakBazar = lazy(() => import("./Components/Services/KrishakBazar/KrishakBazar.js"));
+const KrishakBazar = lazy(() =>
+  import("./Components/Services/KrishakBazar/KrishakBazar.js")
+);
 
-const Agristack = lazy(() => import("./Components/Services/Agristack/Agristack.js"));
-const CropConsultancy = lazy(() => import("./Components/Services/CropConsultancy/CropConsultancy.js"));
-const SustainableFarmingSolutions = lazy(() => import("./Components/Services/SustainableFarmingSolutions/SustainableFarmingSolutions.js"));
-const TechnologyIntegration = lazy(() => import("./Components/Services/TechnologyIntegration/TechnologyIntegration.js"));
-const BuyProduct = lazy(() => import("./Components/Product/BuyProduct/BuyProduct.js"));
+const Agristack = lazy(() =>
+  import("./Components/Services/Agristack/Agristack.js")
+);
+const CropConsultancy = lazy(() =>
+  import("./Components/Services/CropConsultancy/CropConsultancy.js")
+);
+const SustainableFarmingSolutions = lazy(() =>
+  import(
+    "./Components/Services/SustainableFarmingSolutions/SustainableFarmingSolutions.js"
+  )
+);
+const TechnologyIntegration = lazy(() =>
+  import("./Components/Services/TechnologyIntegration/TechnologyIntegration.js")
+);
+const BuyProduct = lazy(() =>
+  import("./Components/Product/BuyProduct/BuyProduct.js")
+);
 const Notfound = lazy(() => import("./Components/Notfound.js"));
 
 // Set the root app element for the modal (for accessibility)
@@ -94,7 +116,7 @@ export const routes = [
   { path: "/fish-monitoring", component: ServiceFishMonitoring },
   { path: "/policy", component: Policy },
   { path: "/ecrop", component: Ecrop },
-  { path: "/buy-product", component: BuyProduct },
+  // { path: "/buy-product", component: BuyProduct },
   { path: "/ecoloo", component: Ecoloo },
   { path: "/skywatch", component: Skywatch },
   { path: "/feedback", component: FeedbackForm },
@@ -108,11 +130,12 @@ export const routes = [
     component: SustainableFarmingSolutions,
   },
   { path: "/technology-integration", component: TechnologyIntegration },
-  { path: "/publications", component: Publications },
+  // { path: "/publications", component: Publications },
   { path: "/more-reads", component: MoreReads },
+  { path: "/more-reads1", component: MoreReads1 },
   { path: "/ecrop-for-coffee", component: Ecropcoffe },
-  { path: "/blog", component: Blogs },
-  { path: "/post/:slug", component: BlogDetailPgs },
+  // { path: "/blog", component: Blogs },
+  // { path: "/post/:slug", component: BlogDetailPgs },
   { path: "*", component: Notfound }, // Wildcard route for unknown paths
 ];
 
@@ -137,7 +160,6 @@ function App() {
   return (
     // <BrowserRouter>
     <HelmetProvider>
-      <GlobalProvider>
         <SchemaInjector />
 
         <div className="app-wrapper">
@@ -169,6 +191,48 @@ function App() {
 
           <Suspense fallback={<div className="loader">Loading...</div>}>
             <Routes>
+       <Route
+      path="/blogs"
+      element={
+        <GenericProvider>
+          <Blogs1 />
+        </GenericProvider>
+      }
+    />
+    <Route
+  path="/post/:slug"
+  element={
+    <GenericProvider>
+      <BlogDetailPgs1 />
+    </GenericProvider>
+  }
+/>
+    <Route
+      path="/publications"
+      element={
+        <GenericProvider>
+          <Publications />
+        </GenericProvider>
+      }
+    />
+       <Route
+      path="/more-reads"
+      element={
+        <GenericProvider>
+          <MoreReads1 />
+        </GenericProvider>
+      }
+    />
+        <Route
+      path="/buy-product"
+      element={
+        <CartProvider>
+          <BuyProduct />
+        </CartProvider>
+      }
+    /> 
+  
+    {/* -------------------------------------- */}
               {routes.map((route, index) => (
                 <Route
                   key={index}
@@ -179,10 +243,7 @@ function App() {
             </Routes>
           </Suspense>
           <LocationWrapper />
-     
-
         </div>
-      </GlobalProvider>
     </HelmetProvider>
     // </BrowserRouter>
   );
@@ -199,22 +260,20 @@ const LocationWrapper = () => {
       {/* Conditionally render Footer */}
       {showFooter && <ContactU />}
       {showFooter && <Footernew />}
-        {/* Fixed Button */}
-     <a
-  href="https://mausamgpt.co.in"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="btn btn-light border mx-2 border-success position-fixed mausambtn d-flex align-items-center"
->
-  <img
-    src={mausamlogo}  // apna image path yahan lagana
-    alt="MausamGPT"
-    style={{ width: "20px", height: "20px", marginRight: "8px" }}
-  />
-MausamGPT
-</a>
-
-
+      {/* Fixed Button */}
+      <a
+        href="https://mausamgpt.co.in"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="btn btn-light border mx-2 border-success position-fixed mausambtn d-flex align-items-center"
+      >
+        <img
+          src={mausamlogo} // apna image path yahan lagana
+          alt="MausamGPT"
+          style={{ width: "20px", height: "20px", marginRight: "8px" }}
+        />
+        MausamGPT
+      </a>
     </>
   );
 };
