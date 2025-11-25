@@ -56,38 +56,33 @@ const sections = [
 ];
 const cropAFaq = [
   {
-    title: "What is Precision Grows crop advisory service?",
-    content:
+    question: "What is Precision Grows crop advisory service?",
+    answer:
       "Precision Grow provides data-driven, field-specific recommendations to optimize pest control, nutrient use, and water management for sustainable farming.",
-    isOpenInitially: false,
   },
 
   {
-    title: "What tools are used in Precision Grows advisory services?",
-    content:
+    question: "What tools are used in Precision Grows advisory services?",
+    answer:
       "We use advanced satellite imagery, remote sensing, and AI-powered data analysis to deliver real-time, actionable insights.",
-    isOpenInitially: false,
   },
 
   {
-    title: "Can Precision Grow help increase crop yields?",
-    content:
+    question: "Can Precision Grow help increase crop yields?",
+    answer:
       "Yes, our advisory services help farmers adopt sustainable practices, boosting yields and enhancing food security.",
-    isOpenInitially: false,
   },
 
   {
-    title: "What makes Precision Grow's advisory services unique?",
-    content:
+    question: "What makes Precision Grow's advisory services unique?",
+    answer:
       "We combine AI-powered insights, real-time monitoring, and personalized recommendations for efficient and sustainable farming.",
-    isOpenInitially: false,
   },
 
   {
-    title: "How does Precision Grow support farmers in pest management?",
-    content:
+    question: "How does Precision Grow support farmers in pest management?",
+    answer:
       "Our platform offers early pest detection, forecasting, and tailored solutions to prevent outbreaks and reduce crop losses",
-    isOpenInitially: false,
   },
 ];
 const Cropadvisory = () => {

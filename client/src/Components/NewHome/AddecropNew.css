@@ -1,0 +1,155 @@
+    /* MAIN SECTION */
+    .premium-section {
+    position: relative;
+    padding: 30px 0 130px; /* device ke liye space */
+    overflow: hidden;
+    background: linear-gradient(180deg, #c6f2ffa2, #ffffff, #06dee211);
+    }
+
+    /* GRASS AT BOTTOM */
+    .premium-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: url("../../assets/grass.webp") bottom/cover no-repeat;
+    z-index: 10; /* sabse upar */
+    pointer-events: none;
+    }
+
+    /* HEADINGS */
+    .heading-premium {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #024e2a;
+    }
+
+    .sub-premium {
+    font-size: 1.3rem;
+    color: #0d6650;
+    margin-top: 8px;
+    }
+
+    /* GLASS CARD */
+    .glass-box {
+    backdrop-filter: blur(14px);
+    background: rgba(255, 255, 255, 0.65);
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.4);
+    box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+    padding: 20px;
+    }
+
+    /* TEXT STYLES */
+    .label {
+    font-size: 14px;
+    color: #ffffff;
+    text-transform: uppercase;
+    background: #2cba9b;
+    display: inline;
+    padding: 4px;
+    border-radius: 15px;
+    }
+
+    .brand-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #003c20;
+    }
+
+    .brand-title span {
+    color: #89c22e;
+    }
+
+
+
+    .badges span {
+    background: #eaffef;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-right: 8px;
+    color: #084c2c;
+    font-size: 13px;
+    }
+
+    /* LOGO FLEX */
+    .logo-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    }
+
+    .logo-flex img {
+    width: 65px;
+    height: auto;
+    padding: 6px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+
+    /* RIGHT SIDE */
+    .premium-right {
+    position: relative;
+    text-align: center;
+    z-index: 5;
+    }
+.device-holder {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  z-index: 2; /* grass ke peeche */
+}
+
+
+    .device-float {
+    width: 250px;
+    height: auto;
+    object-fit: contain;
+    }
+
+    /* FEATURES GRID */
+    .feature-grid-premium {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 20px;
+    }
+
+    .feature-premium {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 14px 16px;
+    background: #ffffffe0;
+    border-radius: 12px;
+    border: 1px solid #68c4e8;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+    }
+
+    .feature-premium:hover {
+    transform: translateY(-4px);
+    }
+
+    .icon-circle {
+    background: linear-gradient(135deg, #28b487, #3dd5f3);
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+    .heading-premium { font-size: 2.1rem; }
+    .device-float { width: 200px; }
+
+    .feature-grid-premium {
+        grid-template-columns: 1fr;
+    }
+    }

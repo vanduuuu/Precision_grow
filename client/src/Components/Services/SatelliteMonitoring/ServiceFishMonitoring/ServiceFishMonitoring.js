@@ -9,29 +9,24 @@ import Titleunderline from '../../../Reusablecomp/Titleunderline/Titleunderline.
 const ServiceFishMonitoring = () => {
   const fishMFaqs = [
     {
-      title: 'What is the Automatic Identification System (AIS)?',
-      content: 'The Automatic Identification System (AIS) tracks vessels in real time using ground stations and satellites, ensuring continuous monitoring even in remote ocean areas.',
-      isOpenInitially: false
+      question: 'What is the Automatic Identification System (AIS)?',
+      answer: 'The Automatic Identification System (AIS) tracks vessels in real time using ground stations and satellites, ensuring continuous monitoring even in remote ocean areas.',
     },
     {
-      title: ' How does the Vessel Monitoring System (VMS) differ from AIS?',
-      content: 'The Vessel Monitoring System (VMS) works like AIS but is focused on regulatory oversight, helping authorities monitor and enforce fishing regulations.',
-      isOpenInitially: false
+      question: ' How does the Vessel Monitoring System (VMS) differ from AIS?',
+      answer: 'The Vessel Monitoring System (VMS) works like AIS but is focused on regulatory oversight, helping authorities monitor and enforce fishing regulations.',
     },
     {
-      title: 'Can AIS and VMS track all fishing vessels globally?',
-      content: 'AIS and VMS don’t cover every fishing vessel, some lack these systems or disable them. Satellite imagery fills in the gaps by detecting untracked vessels.',
-      isOpenInitially: false
+      question: 'Can AIS and VMS track all fishing vessels globally?',
+      answer: 'AIS and VMS don’t cover every fishing vessel, some lack these systems or disable them. Satellite imagery fills in the gaps by detecting untracked vessels.',
     },
     {
-      title: ' Why is satellite imagery integration important in fish monitoring?',
-      content: 'Satellite imagery fills gaps in monitoring fishing activities by capturing operations that AIS and VMS miss, providing a complete, global view of commercial fishing.',
-      isOpenInitially: false
+      question: ' Why is satellite imagery integration important in fish monitoring?',
+      answer: 'Satellite imagery fills gaps in monitoring fishing activities by capturing operations that AIS and VMS miss, providing a complete, global view of commercial fishing.',
     },
     {
-      title: 'Can fish monitoring systems help in combating illegal fishing?',
-      content: 'AIS, VMS, and satellite imagery combat illegal fishing by tracking vessels, detecting unlawful activities, and aiding enforcement against IUU fishing.',
-      isOpenInitially: false
+      question: 'Can fish monitoring systems help in combating illegal fishing?',
+      answer: 'AIS, VMS, and satellite imagery combat illegal fishing by tracking vessels, detecting unlawful activities, and aiding enforcement against IUU fishing.',
     }
   ]
 
@@ -76,7 +71,7 @@ const ServiceFishMonitoring = () => {
         <FishCardSlider />
       </div>
 
-      <FaqSection data={fishMFaqs} variant="blue" />
+      <FaqSection data={fishMFaqs}/>
     </>
   )
 }

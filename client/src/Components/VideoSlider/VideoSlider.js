@@ -1,117 +1,131 @@
-import React from 'react';
-import { Carousel } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './VideoSlider.css';
+import React, { useState, useMemo } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Link } from "react-router-dom";
+import { RiArrowUpSLine, RiArrowDownSLine } from "react-icons/ri";
+import "./VideoSlider.css";
+import homeimg from "../../assets/pg-banner1.webp";
 
-const VideoSlider = () => {
-  const carouselItems = [
-    { 
-      id: 1, 
-      imgSrc:'https://api.ecrop.co/assets/precisiongrow/precision1.webp', 
-      alt: 'Grow with precision Grow', 
-      title: 'Grow with precision Grow', 
-      title1: 'Advanced Agri-Tech for Sustainable Farming',
-      button: 'Know about us!',
-      link: '/about'
+const VideoSlider = () => { 
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [animateKey, setAnimateKey] = useState(0); // ✅ new key to re-trigger animations
+
+  const slides = [
+    {
+      id: 1,
+      title: "Grow with Precision Grow",
+      desc: "Advanced Agri-Tech for Sustainable Farming.",
+      button: "Know About Us",
+      image: homeimg,
+      link: "/about",
     },
-    { 
-      id: 2, 
-      imgSrc: 'https://api.ecrop.co/assets/precisiongrow/ecrop.webp', 
-      alt: 'Know Your Farm with eCrop', 
-      title: 'Know Your Farm with eCrop', 
-      title1: 'Smart solution for enhanced crop management',
-      button: 'Learn More!', 
-      link: 'https://ecrop.co.in/'
+    {
+      id: 2,
+      title: "Know Your Farm with eCrop",
+      desc: "Smart solutions for enhanced crop management.",
+      button: "Learn More",
+      image: "https://api.ecrop.co/assets/precisiongrow/ecrop.webp",
+      link: "/ecrop",
     },
-    { 
-      id: 3, 
-      imgSrc: 'https://api.ecrop.co/assets/precisiongrow/Skywatch_Lead.webp', 
-      alt: 'Smarter Decisions with SkyWatch', 
-      title: 'Smarter Decisions with SkyWatch', 
-      title1: 'Protecting Every Breath you take with SkyWatch',
-      button: 'Curious to Know More',
-      link: 'https://skywatch.co.in/'
+    {
+      id: 3,
+      title: "Smarter Decisions with SkyWatch",
+      desc: "Protecting every breath you take with SkyWatch.",
+      button: "Explore More",
+      image: "https://api.ecrop.co/assets/precisiongrow/Skywatch_Lead.webp",
+      link: "https://skywatch.co.in/",
     },
-    { 
-      id: 4, 
-      imgSrc: 'https://api.ecrop.co/assets/precisiongrow/Biosense.webp', 
-      alt: 'Forget Labs, Get Biosense', 
-      title: 'Forget Labs, Get Biosense', 
-      title1: 'Soil Testing now made Easy with Biosense',
-      button: 'Upgrade your testing!',
-      link: '/'
+    {
+      id: 4,
+      title: "Forget Labs, Get Biosense",
+      desc: "Soil Testing now made Easy with Biosense.",
+      button: "Upgrade your testing!",
+      image: "https://api.ecrop.co/assets/precisiongrow/Biosense.webp",
+      link: "/biosense",
     },
   ];
 
-  // Helper function to detect external links
-  const isExternal = (url) => {
-    return url.startsWith('http://') || url.startsWith('https://');
-  };
-
-  // Function to colorize title text
-  const colorizeTitle = (title) => {
-    const words = title.split(' ');
-
-    return words.map((word, index) => {
-      let color = '';
-
-      if (index < 2) {
-        color = '#23bfc5'; // First two words
-      } else if (index === words.length - 1) {
-        color = '#23bfc5'; // Last word
-      } else {
-        color = '#fffffc'; // Middle words
-      }
-
-      return (
-        <span key={index} style={{ color }}>
-          {word}{' '}
+  const splitTitle = useMemo(
+    () => (title) =>
+      title.split("").map((char, i) => (
+        <span key={i} style={{ animationDelay: `${i * 0.05}s` }}>
+          {char === " " ? "\u00A0" : char}
         </span>
-      );
-    });
-  };
+      )),
+    []
+  );
 
   return (
-    <Carousel
-      fade
-      interval={3000}
-      indicators
-      controls
-      className="carousels"
-    >
-      {carouselItems.map((item) => (
-        <Carousel.Item key={item.id} className="carousel-item1">
-          <img
-            className="d-block w-100 img-fluid"
-            src={item.imgSrc}
-            alt={item.alt}
-            width="1920"
-            height="800"
-            loading={item.id === 1 ? "eager" : "lazy"}
-          />
-          <Carousel.Caption className="carousel-caption">
-            <h3 className="display-5 fw-bold">{colorizeTitle(item.title)}</h3>
-            <p>{item.title1}</p>
-            {isExternal(item.link) ? (
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn"
+    <div className="banner-slider position-relative">
+      <Swiper
+        direction="vertical"
+        modules={[Autoplay, Navigation]}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }}
+        loop
+        allowTouchMove={false}
+        touchStartPreventDefault={false} // ✅ important
+  touchReleaseOnEdges={true} 
+        onSlideChange={(swiper) => {
+          setActiveIndex(swiper.realIndex);
+          setAnimateKey((prev) => prev + 1); // ✅ re-trigger animations
+        }}
+        className="h-100"
+      >
+        {slides.map((slide, index) => (
+          <SwiperSlide key={slide.id}>
+            <div
+              className="banner-slide d-flex align-items-center text-white"
+              style={{
+                backgroundImage: `url(${slide.image})`,
+              }}
+            >
+              <div
+                key={animateKey + "-" + index} // ✅ unique key to restart animation
+                className={`container banner-content ${
+                  index === activeIndex ? "animate slide" : ""
+                }`}
               >
-                {item.button}
-              </a>
-            ) : (
-              <Link to={item.link} className="btn">
-                {item.button}
-              </Link>
-            )}
-          </Carousel.Caption>
-        </Carousel.Item>
-      ))}
-    </Carousel>
+                <h1 className="display-3 fw-bold mb-3 animate-title text-wrap">
+                  {splitTitle(slide.title)}
+                </h1>
+                <p className="lead fs-2 mb-4 animate-text">{slide.desc}</p>
+
+                {slide.link.startsWith("http") ? (
+                  <a
+                    href={slide.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn border-progress"
+                  >
+                    <span>{slide.button}</span>
+                  </a>
+                ) : (
+                  <Link to={slide.link} className="btn border-progress">
+                    <span>{slide.button}</span>
+                  </Link>
+                )}
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+      <div className="slider-nav-vertical">
+        <button className="swiper-button-prev">
+          <RiArrowUpSLine size={28} />
+        </button>
+        <button className="swiper-button-next">
+          <RiArrowDownSLine size={28} />
+        </button>
+      </div>
+    </div>
   );
 };
 
-export default VideoSlider;
+export default React.memo(VideoSlider);

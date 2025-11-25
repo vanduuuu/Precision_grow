@@ -1,0 +1,52 @@
+
+
+.ecrop-section img {
+  z-index: 0;
+}
+
+.ecrop-section .content-box {
+  position: relative;
+  z-index: 2;
+  backdrop-filter: blur(4px); /* optional for blur effect behind content */
+}
+
+/* Background Section */
+.esg-section {
+  background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), /* Black overlay */
+    url("https://esgconsultants.co.in/static/media/website%20banner_1.3f116c3b7fe4bf5d04df.webp")
+      center/cover no-repeat;
+  background-attachment: fixed;
+}
+
+
+/* Right Image Box */
+.esg-image {
+  width: 100%;
+  height: auto;
+  background: url("https://esgconsultants.co.in/static/media/aboutpage-img1.3abdbe0555dae441b7fe.webp")
+    center/cover no-repeat;
+  /* backdrop-filter: blur(2px); */
+}
+.acteast-wrapper {
+  background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), /* Black overlay */
+    url("../../assets/acteast.webp")
+      center/cover no-repeat;
+      background-attachment: fixed;
+}
+
+.glass-card {
+  max-width: 900px;
+  border-radius: 24px;
+  backdrop-filter: blur(12px);
+  background: #be123c30;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+}

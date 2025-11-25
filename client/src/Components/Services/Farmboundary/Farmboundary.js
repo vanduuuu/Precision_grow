@@ -7,33 +7,32 @@ import Featurecard from "../../Reusablecomp/Featurecard/Featurecard.js";
 import Titleunderline from "../../Reusablecomp/Titleunderline/Titleunderline.js";
 import Arrowcard from "../../Reusablecomp/Arrowcard/Arrowcard.js";
 import CardBorderGrid from "../../Reusablecomp/CardBorderGrid/CardBorderGrid.js";
-import f1 from '../../../assets/icons_About/f1.webp'
-import f2 from '../../../assets/icons_About/f2.webp'
-import f3 from '../../../assets/icons_About/f3.webp'
+import f1 from "../../../assets/icons_About/f1.webp";
+import f2 from "../../../assets/icons_About/f2.webp";
+import f3 from "../../../assets/icons_About/f3.webp";
 const Farmboundary = () => {
-
-const tourData = [
-  {
-    title: "8+ Years of Historical Data",
-    description:
-      "We offer historical field data dating back to 2015, along with in-season data including seeded acres, providing valuable insights for long-term planning and analysis.",
-  },
-  {
-    title: "0.95 IoU Score",
-    description:
-      "Our Field Delineation Model boasts an Intersection over Union (IoU) accuracy score of 0.94-0.96, ensuring highly reliable field boundary data.",
-  },
-  {
-    title: "200M+ Hectares",
-    description:
-      "We have delineated over 200 million hectares of agricultural fields and seeded acres using Sentinel-2 imagery at 1m resolution, offering unparalleled accuracy and coverage.",
-  },
-  {
-    title: "4 Query Types",
-    description:
-      "We offer historical field data dating back to 2015, along with in-season data including seeded acres, providing valuable insights for long-term planning and analysis.",
-  },
-];
+  const tourData = [
+    {
+      title: "8+ Years of Historical Data",
+      description:
+        "We offer historical field data dating back to 2015, along with in-season data including seeded acres, providing valuable insights for long-term planning and analysis.",
+    },
+    {
+      title: "0.95 IoU Score",
+      description:
+        "Our Field Delineation Model boasts an Intersection over Union (IoU) accuracy score of 0.94-0.96, ensuring highly reliable field boundary data.",
+    },
+    {
+      title: "200M+ Hectares",
+      description:
+        "We have delineated over 200 million hectares of agricultural fields and seeded acres using Sentinel-2 imagery at 1m resolution, offering unparalleled accuracy and coverage.",
+    },
+    {
+      title: "4 Query Types",
+      description:
+        "We offer historical field data dating back to 2015, along with in-season data including seeded acres, providing valuable insights for long-term planning and analysis.",
+    },
+  ];
 
   const boundarydata = [
     {
@@ -115,41 +114,36 @@ const tourData = [
 
   const farmBFaq = [
     {
-      title: "What is farm boundary mapping?",
-      content:
+      question: "What is farm boundary mapping?",
+      answer:
         "Farm boundary mapping uses satellite imagery to provide precise land boundary data for accurate land management.",
-      isOpenInitially: false,
     },
 
     {
-      title: "Can the solution be customized for different farm sizes?",
-      content:
+      question: "Can the solution be customized for different farm sizes?",
+      answer:
         "Yes, our solutions are flexible and tailored to fit farms of any scale or unique land dimensions.",
-      isOpenInitially: false,
     },
 
     {
-      title: "What are the benefits of accurate boundary mapping?",
-      content:
+      question: "What are the benefits of accurate boundary mapping?",
+      answer:
         "It increases efficiency, reduces costs, and supports sustainable farming practices.",
-      isOpenInitially: false,
     },
 
     {
-      title: "What tools are needed to use this service?",
-      content:
+      question: "What tools are needed to use this service?",
+      answer:
         "No additional tools are needed; our data integrates with your existing farm management systems.",
-      isOpenInitially: false,
     },
 
     {
-      title: "How does farm boundary data integrate with my tools?",
-      content:
+      question: "How does farm boundary data integrate with my tools?",
+      answer:
         "Our boundary data seamlessly integrates with your existing farm management software and tools.",
-      isOpenInitially: false,
     },
   ];
-  const Boundaries=[
+  const Boundaries = [
     {
       title: "Wholesale and Retail Market",
       description:
@@ -192,7 +186,7 @@ const tourData = [
       aos: "fade-up",
       duration: "1000",
     },
-  ]
+  ];
   return (
     <>
       <Helmet>
@@ -207,7 +201,10 @@ const tourData = [
           name="keywords"
           content="farm boundary mapping, satellite farm mapping, digital farm layout"
         />
-        <link rel="canonical" href="https://precisiongrow.co.in/farm-boundary" />
+        <link
+          rel="canonical"
+          href="https://precisiongrow.co.in/farm-boundary"
+        />
       </Helmet>
       {/* -----------------------------------------------banner section farmboundary-------------------------------------------------------------------------------------*/}
 
@@ -225,17 +222,21 @@ const tourData = [
             use more efficient and productivity.
           </p>
         </section>
-        <Titleunderline title="Key Features"  tag="h1"/>
+        <Titleunderline title="Key Features" tag="h1" />
         <div className="row">
           <div className="col-lg-8">
             <div className="features-container1 d-flex flex-wrap justify-content-center p-4">
               {features.map((item, index) => (
-                <Featurecard key={item.title} {...item} customClass="card-height1" />
+                <Featurecard
+                  key={item.title}
+                  {...item}
+                  customClass="card-height1"
+                />
               ))}
             </div>
           </div>
           <div className="col-lg-4">
-            <Titleunderline title="Benefits"  tag="h3"/>
+            <Titleunderline title="Benefits" tag="h3" />
 
             <div className="my-3">
               <img
@@ -298,10 +299,10 @@ const tourData = [
           </p>
         </section>
         {/* ---------------------------------------------------global coverage------------------------------------------------------------------ */}
-        <Titleunderline title="Global Coverage"  tag="h2"/>
+        <Titleunderline title="Global Coverage" tag="h2" />
         <p className="text-center fs-5">
           Proud to expand to new regions, including France, Spain, Brazil, USA,
-          Australia, Germany, and many more. Currently, we’re operating in over
+          Australia, Germany, and many more. Currently, we're operating in over
           30 countries and have exciting plans for even more global expansion.
         </p>
         <section className="position-relative">
@@ -311,7 +312,7 @@ const tourData = [
             className="img-fluid w-100 d-block"
             loading="lazy"
             width="1385"
-                height="733"
+            height="733"
           />
 
           <div
@@ -322,7 +323,7 @@ const tourData = [
               {global.map((item, index) => (
                 <div className="col-lg-4 col-md-6 mb-4" key={index}>
                   <Featurecard
-                  key={item.title}
+                    key={item.title}
                     title={item.title}
                     description={item.description}
                     aos={item.aos}
@@ -338,36 +339,34 @@ const tourData = [
           </div>
         </section>
         {/* ----------------------------------------------------------model work--------------------------------------------------------- */}
-        <Titleunderline title="How The Field Delineation Modal Works"  tag="h5"/>
-
-        
-              <p className="text-center fs-5 mb-5">
-                We accurately delineate field boundaries and measure seeded
-                acres during the growing season using super-resolved Sentinel-2
-                imagery at 1m per pixel resolution. With RGB + NIR 4-band
-                technology, we provide the most up-to-date data, delivered
-                through our API or as Shape, KML, or GeoJSON files. This data is
-                essential for in-season analysis and planning.
-              </p>
-        
+        <Titleunderline
+          title="How The Field Delineation Modal Works"
+          tag="h5"
+        />
+        <p className="text-center fs-5 mb-5">
+          We accurately delineate field boundaries and measure seeded acres
+          during the growing season using super-resolved Sentinel-2 imagery at
+          1m per pixel resolution. With RGB + NIR 4-band technology, we provide
+          the most up-to-date data, delivered through our API or as Shape, KML,
+          or GeoJSON files. This data is essential for in-season analysis and
+          planning.
+        </p>
         {/* -------------------------------------------------------SCHEDULE A TOUR WITH US--------------------------------------------------------- */}
         <div className="overview-outers">
-          <Titleunderline title="Schedule a Tour With Us"  tag="h4"/>
+          <Titleunderline title="Schedule a Tour With Us" tag="h4" />
 
           <div className="tour row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-0">
-  {tourData.map((item, index) => (
-    <div className="col1" key={item.title}>
-      <Arrowcard
-        title={item.title}
-        description={item.description}
-        isFirst={index === 0}
-        isLast={index === tourData.length - 1}
-      />
-    </div>  
-  ))}
-</div>
-
-         
+            {tourData.map((item, index) => (
+              <div className="col1" key={item.title}>
+                <Arrowcard
+                  title={item.title}
+                  description={item.description}
+                  isFirst={index === 0}
+                  isLast={index === tourData.length - 1}
+                />
+              </div>
+            ))}
+          </div>
         </div>
         {/* -----------------------------------------------------------Field boundary data delivery--------------------------------------------------------------*/}
         <div className="outer3">
@@ -376,34 +375,37 @@ const tourData = [
               className="datadelivery p-2 p-lg-5 aos-init aos-animate"
               data-aos="fade-up"
             >
-            
-              <Titleunderline title="Our Sustainability Mission" tag="h2" titleClass="green-title" />
-
+              <Titleunderline
+                title="Our Sustainability Mission"
+                tag="h2"
+                titleColor="#ffffff"
+              />
 
               <p>
                 We provide detailed field boundary data through our API,
-                including everything farmers need. They’ll receive field
+                including everything farmers need. They'll receive field
                 boundaries in GeoJSON format, whether it's for a specific point,
                 a bounding box (bbox), or a field ID. Start with low-resolution
                 data to select the fields, then easily access high-resolution
                 data for deeper insights.
               </p>
-            
-              <Titleunderline title="Our API provides several endpoints for easy access" tag="h2" titleClass="green-title" />
 
-               <div className=" m-auto">
-                   
-                        
-                        <CardBorderGrid
-  cardinfo={boundarydata}
-  colsLg={4}
-  titleClass="custom-title-white"
-  textClass="subhead-white"
-/>
-                      </div>
+              <Titleunderline
+                title="Our API provides several endpoints for easy access"
+                tag="h2"
+                titleColor="#ffffff"
+              />
+
+              <div className=" m-auto">
+                <CardBorderGrid
+                  cardinfo={boundarydata}
+                  colsLg={4}
+                  titleClass="custom-title-white"
+                  textClass="subhead-white"
+                />
+              </div>
               <div className="boundaries py-1 mt-3">
-               
-              <Titleunderline title="Explore Field Boundaries" tag="h3" />
+                <Titleunderline title="Explore Field Boundaries" tag="h3" />
 
                 <p className="fs-5 fw-bold">
                   Explore over 25 regions with thousands of pre-mapped field
@@ -415,49 +417,71 @@ const tourData = [
           </section>
         </div>
         <Titleunderline title="Why Accurate Field Boundaries Matter" tag="h2" />
-        <p className="text-center fs-5" >
-        With more than 570 million farmers and growers around the world, accurate field boundaries and data play a key role in benefiting the entire agricultural supply chain. By providing precise boundary data, we help reduce input costs and improve efficiency across the industry.
-      </p>
-  <div className="row pt-5">
-    <div className="col-lg-3 position-relative image-stack-container">
-      <div className="image-wrapper">
-        <img src={f2} alt="farm-whole-sale" className="img-fluid img-stacked" loading="lazy" width="100"
-                height="100"/>
-      </div>
-      <div className="image-wrapper image-middle">
-        <img src={f3} alt="farm-pre-production" className="img-fluid img-stacked" loading="lazy"/>
-      </div>
-      <div className="image-wrapper">
-        <img src={f1} alt="farm-insurance" className="img-fluid img-stacked" loading="lazy"/>
-      </div>
-    </div>
-    <div className="col-lg-8 offset-lg-1">
-  <div className="row">
-    {Boundaries.map((item, index) => (
-      <div className="col-md-6 col-12 mb-4" key={index}>
-        <Featurecard
-          title={item.title}
-          description={item.description}
-          aos={item.aos}
-          duration={item.duration}
-          customClass="card-height2"
-          bgColor="#f5ffdc"
-          descColor="black"
-          titleColor="#00695c"
-        />
-      </div>
-    ))}
-  </div>
-</div>
+        <p className="text-center fs-5">
+          With more than 570 million farmers and growers around the world,
+          accurate field boundaries and data play a key role in benefiting the
+          entire agricultural supply chain. By providing precise boundary data,
+          we help reduce input costs and improve efficiency across the industry.
+        </p>
+        <div className="row pt-5">
+          <div className="col-lg-3 position-relative image-stack-container">
+            <div className="image-wrapper">
+              <img
+                src={f2}
+                alt="farm-whole-sale"
+                className="img-fluid img-stacked"
+                loading="lazy"
+                width="100"
+                height="100"
+              />
+            </div>
+            <div className="image-wrapper image-middle">
+              <img
+                src={f3}
+                alt="farm-pre-production"
+                className="img-fluid img-stacked"
+                loading="lazy"
+              />
+            </div>
+            <div className="image-wrapper">
+              <img
+                src={f1}
+                alt="farm-insurance"
+                className="img-fluid img-stacked"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div className="col-lg-8 offset-lg-1">
+            <div className="row">
+              {Boundaries.map((item, index) => (
+                <div className="col-md-6 col-12 mb-4" key={index}>
+                  <Featurecard
+                    title={item.title}
+                    description={item.description}
+                    aos={item.aos}
+                    duration={item.duration}
+                    customClass="card-height2"
+                    bgColor="#f5ffdc"
+                    descColor="black"
+                    titleColor="#00695c"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="boundaries p-3 text-white text-center">
+          <Titleunderline title="Edit, Split, and Merge Boundaries" tag="h2" />
 
-  </div>
-  <div className="boundaries p-3 text-white text-center">
-      <Titleunderline title="Edit, Split, and Merge Boundaries"  tag="h2"/>
-
-      <p className="fs-5">We also offer an easy-to-use editor that lets you modify field boundaries by splitting, merging, or adding/removing sections. This gives you more flexibility to manage your farm just the way you need it.</p>
-    </div>
-
-        <FaqSection data={farmBFaq} variant="lightblue" />;
+          <p className="fs-5">
+            We also offer an easy-to-use editor that lets you modify field
+            boundaries by splitting, merging, or adding/removing sections. This
+            gives you more flexibility to manage your farm just the way you need
+            it.
+          </p>
+        </div>
+        <FaqSection data={farmBFaq}/>;
       </div>
     </>
   );

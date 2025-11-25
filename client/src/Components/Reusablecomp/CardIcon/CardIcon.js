@@ -1,9 +1,9 @@
 // CardIcon.js
 import React from "react";
-
+import '../../Services/CropConsultancy/CropConsultancy.css'
 const CardIcon = ({ id, image, title, description, icon: Icon }) => {
   return (
-    <div className="card border-0 h-100">
+    <div className="card border-0 h-100 bg-transparent">
       {/* Image + Icon wrapper */}
       {(image || Icon) && (
         <div className="position-relative">
@@ -16,7 +16,7 @@ const CardIcon = ({ id, image, title, description, icon: Icon }) => {
             />
           )}
           {Icon && (
-            <div className="bottom-left-icon bg-success text-white d-flex align-items-center justify-content-center">
+            <div className="bottom-left-icon text-white d-flex align-items-center justify-content-center">
               <Icon className="icon" />
             </div>
           )}

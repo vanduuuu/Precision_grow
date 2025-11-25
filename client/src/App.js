@@ -2,6 +2,8 @@ import React, { useState, useEffect, lazy, Suspense } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import { Route, Routes, useLocation } from "react-router-dom";
 import AOS from "aos";
+import { FaWhatsapp } from "react-icons/fa"; // ✅ Add this import at top
+
 import "aos/dist/aos.css"; // Import the CSS for styles
 import Modal from "react-modal";
 import "./App.css";
@@ -17,12 +19,14 @@ import SchemaInjector from "./Components/SchemaMarkup/SchemaInjector.js";
 import Footernew from "./Components/Headfoot/Footer/Footernew.js";
 import { initFacebookPixel, trackPageView } from "./utils/facebookPixel.js";
 import Navbar from "./Components/Headfoot/Header/Subnavbar/Navbar.js";
-import MoreReads from "./Components/MoreReads/MoreReads.js";
+// import MoreReads from "./Components/MoreReads/MoreReads.js";
 import mausamlogo from "../src/assets/icons_About/mausamlogo.png";
 import Ecropcoffe from "./Components/Services/Ecropcoffee/Ecropcoffe.js";
 import { CartProvider } from "./Components/Product/BuyProduct/CartContext.js";
 import MoreReads1 from "./Components/MoreReads/MoreReads1.js";
 import { GenericProvider } from "./Contexts/GenericProvider.js";
+import Biosense from "./Components/Product/Biosense/Biosense.js";
+import Home2 from "./Components/NewHome/Home2.js";
 const Home = lazy(() => import("./Components/Home/Home.js"));
 const About = lazy(() => import("./Components/About/About.js"));
 const Contact = lazy(() => import("./Components/Contact/Contact.js"));
@@ -102,6 +106,7 @@ Modal.setAppElement("#root");
 // Define routes at the top level outside the App function
 export const routes = [
   { path: "/", component: Home },
+  { path: "/home2", component: Home2 },
   { path: "/about", component: About },
   { path: "/precision-grow-ai", component: PrecisionGrowAi },
   { path: "/regenerative-agriculture", component: RegenerativeAgri },
@@ -118,6 +123,7 @@ export const routes = [
   { path: "/ecrop", component: Ecrop },
   // { path: "/buy-product", component: BuyProduct },
   { path: "/ecoloo", component: Ecoloo },
+  { path: "/biosense", component: Biosense },
   { path: "/skywatch", component: Skywatch },
   { path: "/feedback", component: FeedbackForm },
   { path: "/farm-boundary", component: Farmboundary },
@@ -131,8 +137,8 @@ export const routes = [
   },
   { path: "/technology-integration", component: TechnologyIntegration },
   // { path: "/publications", component: Publications },
-  { path: "/more-reads", component: MoreReads },
-  { path: "/more-reads1", component: MoreReads1 },
+  // { path: "/more-reads", component: MoreReads },
+  { path: "/more-reads", component: MoreReads1 },
   { path: "/ecrop-for-coffee", component: Ecropcoffe },
   // { path: "/blog", component: Blogs },
   // { path: "/post/:slug", component: BlogDetailPgs },
@@ -147,10 +153,17 @@ function App() {
   const openModal = () => setModalIsOpen(true);
   const closeModal = () => setModalIsOpen(false);
 
-  useEffect(() => {
-    AOS.init(); // Initialize AOS
-    initFacebookPixel(); // Initialize Facebook Pixel on first load
-  }, []);
+useEffect(() => {
+  AOS.init({
+    duration: 1000,         // animation duration (1s looks smooth)
+    once: false,              // run animation only once (no re-trigger)
+    easing: "ease-in-out",   // smooth transition
+    offset: 80,              // start animation a bit before element fully visible
+    mirror: false,           // don’t animate again on scroll up
+  });
+  initFacebookPixel();
+}, []);
+
 
   useEffect(() => {
     AOS.refresh(); // Refresh AOS on route change
@@ -161,29 +174,30 @@ function App() {
     // <BrowserRouter>
     <HelmetProvider>
         <SchemaInjector />
-
+<GenericProvider>
         <div className="app-wrapper">
           {/* Feedback Button and Modal */}
-          <div id="FlypopButton" className="flypop-button">
-            <button onClick={openModal}>
-              <span>Give Feedback</span>
-            </button>
+         <div id="FlypopButton" className="flypop-button">
+      {/* Floating Button */}
+      <button onClick={openModal}>
+        <span>Give Feedback</span>
+      </button>
 
-            <Modal
-              isOpen={modalIsOpen}
-              onRequestClose={closeModal}
-              contentLabel="Feedback Form"
-              className="Modal"
-              overlayClassName="Overlay"
-            >
-              <Suspense fallback={<div>Loading Feedback Form...</div>}>
-                <FeedbackForm />
-              </Suspense>
-              <button onClick={closeModal} className="close-popup">
-                <i className="fa fa-close"></i>
-              </button>
-            </Modal>
-          </div>
+      {/* Modal */}
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        contentLabel="Feedback Form"
+        className="Modal"
+        overlayClassName="Overlay"
+      >
+      
+
+        <Suspense fallback={<div>Loading Feedback Form...</div>}>
+          <FeedbackForm onClose={closeModal} />
+        </Suspense>
+      </Modal>
+    </div>
           <Navbar />
           <Scrolltotop />
           {/* Add Canonical component here */}
@@ -192,35 +206,32 @@ function App() {
           <Suspense fallback={<div className="loader">Loading...</div>}>
             <Routes>
        <Route
-      path="/blogs"
+      path="/blog"
       element={
-        <GenericProvider>
-          <Blogs1 />
-        </GenericProvider>
-      }
+        
+          <Blogs1 />}
     />
     <Route
   path="/post/:slug"
   element={
-    <GenericProvider>
+   
       <BlogDetailPgs1 />
-    </GenericProvider>
-  }
+     }
 />
     <Route
       path="/publications"
       element={
-        <GenericProvider>
+       
           <Publications />
-        </GenericProvider>
+       
       }
     />
        <Route
       path="/more-reads"
       element={
-        <GenericProvider>
+       
           <MoreReads1 />
-        </GenericProvider>
+       
       }
     />
         <Route
@@ -244,6 +255,7 @@ function App() {
           </Suspense>
           <LocationWrapper />
         </div>
+        </GenericProvider>
     </HelmetProvider>
     // </BrowserRouter>
   );
@@ -261,6 +273,16 @@ const LocationWrapper = () => {
       {showFooter && <ContactU />}
       {showFooter && <Footernew />}
       {/* Fixed Button */}
+            {/* ✅ WhatsApp Floating Icon Button */}
+      <a
+  href="https://wa.me/918097283444" // <-- replace with your WhatsApp number
+  target="_blank"
+  rel="noopener noreferrer"
+  className="whatsapp-float"
+>
+  <FaWhatsapp size={24} />
+</a>
+
       <a
         href="https://mausamgpt.co.in"
         target="_blank"

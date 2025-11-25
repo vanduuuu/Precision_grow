@@ -1,0 +1,55 @@
+.rotating-bg {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  /* transform: translate(-50%, -50%); */
+  z-index: 1;
+  animation: rotate360 20s linear infinite; 
+}
+
+/* Main image on top */
+.main-img {
+  position: relative;
+  z-index: 2;
+}
+
+
+.sustain-card1:hover {
+  border-radius: 25px; 
+  border-color: #02746a; /* blue border */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* optional shadow */
+  transform: translateY(-4px);
+}
+.sustain-card1 {
+  position: relative;
+  background-color: aliceblue;
+  transition: all 0.3s ease-in-out;
+  padding: 15px;
+    border: 2px solid #fff;
+}
+
+.sustain-card1::before {
+  content: attr(data-index);
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  color: #02746a24;
+  font-size: 79px;
+  font-weight: bold;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Animation keyframes */
+@keyframes rotate360 {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

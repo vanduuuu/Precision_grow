@@ -1,8 +1,29 @@
-/* 189 mb data of assets */
-/* 98.7 mb data of assets */
 body {
   overflow-x: hidden;
 }
+
+[data-aos] {
+  opacity: 0;
+  visibility: hidden;
+  transition-property: transform, opacity;
+  will-change: transform, opacity;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+/* Optional - reduce movement distance for smoother fade-left/right */
+[data-aos="fade-right"] {
+  transform: translateX(-40px);
+}
+
+[data-aos="fade-left"] {
+  transform: translateX(40px);
+}
+
 .flypop-button {
     z-index: 999;
     position: fixed;
@@ -60,12 +81,27 @@ background: linear-gradient(to right, #158047, #84cc16);
     border-radius:50px!important;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.652);
 }
-/* .fixed-flag-gif {
+/* WhatsApp Floating Icon */
+.whatsapp-float {
   position: fixed;
-  bottom: 15px;
-  left: 15px;
-  width: 120px; 
-  height: auto;
-  z-index: 9999;
-  pointer-events: none;
-} */
+  bottom: 140px; /* 👆 appears above MausamGPT button */
+  right: 25px;
+  width: 45px;
+  height: 45px;
+  background-color: #25d366; /* WhatsApp green */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1100;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Optional hover animation */
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  text-decoration: none;
+  color: white;
+}

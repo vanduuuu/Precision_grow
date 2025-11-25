@@ -78,7 +78,7 @@ const SustainableFarmingSolutions = () => {
               <img
                 src={soilhealthh}
                 alt="soilhealthh"
-                className="aifarming"
+                className="aifarming w-100 h-100"
                 loading="lazy"
               />
             </div>
@@ -86,7 +86,7 @@ const SustainableFarmingSolutions = () => {
               <h1 className="mt-2 boldlook greentxt3">
                 Importance Of Soil Health
               </h1>
-              <p className="lead text-secondary">
+              <p className="fs-5 text-secondary">
                 Soil health is essential for maintaining crop yields, fertility,
                 and overall plant productivity. It's vital for maintaining the
                 quality of the soil, supporting plant growth, and preventing
@@ -105,16 +105,16 @@ const SustainableFarmingSolutions = () => {
             <h2 class="mb-3 boldlook greentxt3">
               Water Conservation Techniques
             </h2>
-            <p class="mb-3 lead text-secondary">
+            <p class="mb-3 fs-5 text-secondary">
               Water conservation is crucial for maintaining soil health and
               ensuring the long-term sustainability of your farming operations.
               Here are some techniques you can implement:
             </p>
             <ul class="p-0 fs-5 text-secondary">
-              <li class="mb-2">(1) Rainwater harvesting systems</li>
-              <li class="mb-2">(2) Drip irrigation methods</li>
-              <li class="mb-2">(3) Mulching for moisture retention</li>
-              <li>(4) Timely irrigation scheduling</li>
+              <li class="mb-2">Rainwater harvesting systems</li>
+              <li class="mb-2">Drip irrigation methods</li>
+              <li class="mb-2">Mulching for moisture retention</li>
+              <li>Timely irrigation scheduling</li>
             </ul>
           </div>
 
@@ -153,7 +153,7 @@ const SustainableFarmingSolutions = () => {
           </div>
           <div className="col-lg-6">
             <h5 className="boldlook greentxt3">Integrated Pest Management</h5>
-            <p className="lead text-secondary">
+            <p className="fs-5 text-secondary">
               Integrated pest management (IPM) involves combining traditional
               and modern pest control methods to minimize the impact of pests on
               crops. This approach combines the benefits of traditional methods
@@ -162,20 +162,20 @@ const SustainableFarmingSolutions = () => {
               pesticide formulations.
             </p>
             <ul class="p-0 fs-5 text-secondary">
-              <li class="mb-2">(1) Monitor and control pests regularly</li>
+              <li class="mb-2">Monitor and control pests regularly</li>
               <li class="mb-2">
-                (2) Use biological control agents to minimize the impact of
+                Use biological control agents to minimize the impact of
                 pests
               </li>
               <li class="mb-2">
-                (3) Implement electronic pest control systems
+                Implement electronic pest control systems
               </li>
-              <li class="mb-2">(4) Use advanced pesticide formulations</li>
+              <li class="mb-2">Use advanced pesticide formulations</li>
               <li class="mb-2">
-                (5) Train farmers and staff in IPM techniques
+                Train farmers and staff in IPM techniques
               </li>
               <li>
-                (6) Monitor and adjust IPM strategies based on pest management
+                Monitor and adjust IPM strategies based on pest management
                 needs
               </li>
             </ul>
@@ -185,7 +185,7 @@ const SustainableFarmingSolutions = () => {
           {/* LEFT COLUMN: Featurecard grid */}
           <div className="col-lg-6">
             <h5 className="boldlook greentxt3">Crop Diversity and Rotation</h5>
-            <p className="lead text-secondary">
+            <p className="fs-5 text-secondary">
               Crop diversity and rotation are essential for maintaining soil
               health, fertility, and overall plant productivity. By growing a
               variety of crops in different seasons, you can reduce the risk of

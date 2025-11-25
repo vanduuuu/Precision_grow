@@ -30,20 +30,20 @@ const Ecoloo = () => {
     }
   ];
   const ecolooFaq = [
-    { title: '	What is ECOLOO? ',
-       content: 'ECOLOO is a sustainable, waterless, and energy-free toilet solution that uses special bacteria to treat human waste and transform urine into natural liquid fertilizer. It provides a hygienic, eco-friendly, and efficient alternative to conventional toilets.', isOpenInitially: false },
+    { question: '	What is ECOLOO? ',
+       answer: 'ECOLOO is a sustainable, waterless, and energy-free toilet solution that uses special bacteria to treat human waste and transform urine into natural liquid fertilizer. It provides a hygienic, eco-friendly, and efficient alternative to conventional toilets.'},
    
-       { title: '	How does ECOLOO work? ',
-       content: 'ECOLOO is made of a two-tier box system. The upper box collects urine and waste, while the lower box stores treated liquid that has gone through a nitrification process, transforming it into odor-free, pathogen-free, and nutrient-rich natural fertilizer.', isOpenInitially: false },
+       { question: '	How does ECOLOO work? ',
+       answer: 'ECOLOO is made of a two-tier box system. The upper box collects urine and waste, while the lower box stores treated liquid that has gone through a nitrification process, transforming it into odor-free, pathogen-free, and nutrient-rich natural fertilizer.'},
     
-       { title: 'Can ECOLOO be used in all climates?',
-       content: 'Yes, ECOLOO comes in various designs and can be used both indoors and outdoors, making it suitable for all climate conditions.', isOpenInitially: false },
+       { question: 'Can ECOLOO be used in all climates?',
+       answer: 'Yes, ECOLOO comes in various designs and can be used both indoors and outdoors, making it suitable for all climate conditions.'},
       
-       { title: "	How does ECOLOO help conserve water?",
-        content:"ECOLOO eliminates the need for water-based flushing, significantly reducing water consumption in areas where water is scarce or for individuals looking to reduce their overall water use.", isOpenInitially: false },
+       { question: "	How does ECOLOO help conserve water?",
+        answer:"ECOLOO eliminates the need for water-based flushing, significantly reducing water consumption in areas where water is scarce or for individuals looking to reduce their overall water use."},
     
-        { title: "Is the fertilizer produced by ECOLOO safe? ",
-          content:"Yes, the liquid fertilizer produced is pathogen-free, nutrient-rich, and completely safe to use in agricultural applications.", isOpenInitially: false }
+        { question: "Is the fertilizer produced by ECOLOO safe? ",
+          answer:"Yes, the liquid fertilizer produced is pathogen-free, nutrient-rich, and completely safe to use in agricultural applications."}
       ];
  
   return (

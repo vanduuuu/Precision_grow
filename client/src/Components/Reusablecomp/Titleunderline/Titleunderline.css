@@ -1,26 +1,111 @@
-.underline {
-    width: 70px;
-    height: 3px;
-    /* background: linear-gradient(to right, #3ca55c, #b5ac49); Green-yellow gradient */
-background: linear-gradient(
-  to left,
-    rgba(19, 143, 65, 0.9),   /* Light Green */
-  rgb(255, 255, 255),  /* White */
-  rgba(255, 153, 51, 0.875) /* Light Saffron */
-);
-    border-radius: 2px;
-  }
-  
-  .heading-style {
-  font-size: 38px;
-  font-weight: 700;
+/* ========== Modern Eco Title Style ========== */
+
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
   text-align: center;
-  color: rgba(53, 127, 130);
+  position: relative;
 }
-.green-title {
-  color: #ffffff;
+
+.text-left {
+  justify-content: flex-start;
 }
-@media(max-width:600px){
+
+.text-right {
+  justify-content: flex-end;
+}
+
+/* Default Gradient (applies if titleColor prop is not given) */
+.modern-gradient {
+  background: linear-gradient(90deg, #052011, #009688, #1b5b35);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textSlide 1s ease;
+}
+
+@keyframes textSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Gradient lines */
+.title-line {
+  width: 50px;
+  height: 3px!important;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #a8e063, #56ab2f);
+  opacity: 0.7;
+  animation: growLine 1.2s ease forwards;
+}
+
+.title-line.left {
+  background: linear-gradient(90deg, #357f82, #a8e063);
+}
+
+.title-line.right {
+  background: linear-gradient(90deg, #a8e063, #357f82);
+}
+
+@keyframes growLine {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 50px;
+    opacity: 1;
+  }
+}
+
+/* Icon Styling */
+.title-icon {
+  max-width: 32px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(1px 0px 0px green);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.right-icon {
+  transform: rotateY(180deg);
+}
+
+/* Fade Animation */
+.fade-in {
+  animation: fadeInIcon 0.9s ease;
+}
+
+@keyframes fadeInIcon {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
   .heading-style {
-    font-size: 26px;}
+    font-size: 26px;
+  }
+
+  .title-line {
+    display: none;
+  }
+
+  .title-icon {
+    max-width: 26px;
+  }
 }

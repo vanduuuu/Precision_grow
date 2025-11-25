@@ -1,19 +1,41 @@
+import "./Titleunderline.css";
+import cropImg from "../../../assets/icons_About/icon-heading.png";
 
-
-import './Titleunderline.css';
-
-const Titleunderline = ({ title, tag = "h2", titleClass = "", titleColor = "#357f82" }) => {
+const Titleunderline = ({
+  title,
+  tag = "h2",
+  titleClass = "",
+  titleColor = "", // now optional; will use gradient by default
+  align = "center",
+}) => {
   const HeadingTag = tag;
 
   return (
-    <div className="text-center my-4">
+    <div className={`title-container my-4 text-${align}`} data-aos="fade-up">
+      <div className="title-line left"></div>
+
+      <img
+        src={cropImg}
+        alt="eco leaf"
+        className="title-icon fade-in"
+        loading="lazy"
+      />
+
       <HeadingTag
-        className={`heading-style ${titleClass}`}
-        style={{ color: titleColor }}
+        className={`fs-1 fw-bold heading-style ${!titleColor ? "modern-gradient" : ""} ${titleClass}`}
+        style={titleColor ? { color: titleColor } : {}}
       >
         {title}
       </HeadingTag>
-      <div className="underline mx-auto mt-2"></div>
+
+      <img
+        src={cropImg}
+        alt="eco leaf right"
+        className="title-icon right-icon fade-in"
+        loading="lazy"
+      />
+
+      <div className="title-line right"></div>
     </div>
   );
 };

@@ -1,60 +1,70 @@
-/* Gradient applied only to the image container */
-.faqimg-container.green {
-  background: linear-gradient(to right, #179a49, #ffffff); /* Green gradient */
-}
-.faqimg-container.blue {
-  background: linear-gradient(to right, #046d7b, #ffffff); /* Green gradient */
-}
-.faqimg-container.lightblue {
-  background: linear-gradient(to right, #1ca2c0, #ffffff); /* Green gradient */
-}
-.faqimg-container.lightgreen {
-  background: linear-gradient(to right, #60c01c, #ffffff); /* Green gradient */
-}
-.faq-imgg{
-  width: 100%;
-  height: 580px;
-  /* height:100%; */
-}
-.faq-imgg img{
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-}
-.accordion-item {
-  margin-bottom: 10px;
-  background-color: transparent;
-  color: rgb(71, 67, 67);
-  border: none;
+/* ==============================
+   FAQ Section
+============================== */
+.faq-section {
+    background-color: #f9f9f9; /* plain background */
 }
 
-.accordion-header {
-  padding: 15px;
+/* FAQ Title */
+.faq-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1b4332;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* FAQ Question */
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  border-left: 4px solid #8bc34a;
+  padding: 8px 16px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1b4332;
+  text-align: left;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(53, 127, 130, 0.3);
+  transition: all 0.3s ease;
 }
 
-.accordion-content{
-  padding: 15px;
-}
-.icon {
-  font-size: 18px;
-  transition: transform 0.3s ease;
+.faq-question:hover {
+  background-color: #f1f8f4;
+  color: #8bc34a;
 }
 
-.icon.fas.fa-plus {
-  transform: rotate(0);
+.faq-question.active {
+  background-color: #e8f5e9;
 }
 
-.icon.fas.fa-minus {
-  transform: rotate(180deg);
+
+
+/* FAQ Answer */
+.faq-answer {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  padding-left: 16px;
 }
-@media(max-width:600px){
-  .accordion-header {
-   padding: 0px;}
-   .faq-imgg {
-    height: 100%;}
+
+.faq-answer.open {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 8px;
+}
+
+.faq-answer p {
+  color: #444;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.faq-answer span {
+  font-weight: 600;
+  margin-right: 4px;
 }

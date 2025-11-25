@@ -8,7 +8,7 @@ const Banner = ({ imageSrc, heading, subheading }) => {
       <div className="banner-overlay"></div>
       <div className="text-overlay1">
         <h3 className="heading text-white">{heading}</h3>
-        <p className="subheading text-white">{subheading}</p>
+        <p className="subheading heading-style text-white">{subheading}</p>
       </div>
     </div>
   );

@@ -12,6 +12,11 @@ function stripHtmlTags(html) {
 
 // ✅ Service Pages Data (Static)
 const serviceData = {
+  "ecrop-for-coffee": {
+    serviceType: "eCrop - World's First AI Solution for Coffee | Precision Grow",
+    description: "Discover eCrop - the world's first AI-powered agronomist for coffee. Empowering farmers with real-time satellite insights, predictive analytics, and sustainable farming solutions to boost yield, quality, and global market access.",
+    url:"https://precisiongrow.co.in/ecrop-for-coffee",
+  },
   "crop-monitoring": {
     serviceType: "Crop Monitoring Solutions - Precision Grow Agri-Tech",
     description: "Enhance crop yield with Precision Grow's innovative crop monitoring solutions. Leverage satellite technology for smarter, sustainable farming practices.",
@@ -80,7 +85,7 @@ const serviceData = {
   },
   "krishak-bazar": {
     serviceType: "Shop Fresh Farm Produce Online at Krishak Bazar Now!",
-    description: "Buy directly from farmers! Explore Krishak Bazar for fresh produce, agri tools, and top deals. Shop smart, support farmers",
+    description: "Buy directly from farmers! Explore Krishak Bazar for fresh produce, agri tools, and top deals. Shop smart, support farmers",
     url:"https://precisiongrow.co.in/krishak-bazar"
   },
     "agriStack": {
@@ -90,17 +95,17 @@ const serviceData = {
   },
     "crop-consultancy": {
     serviceType: "Smart Crop Consultancy for Sustainable Farming | Precision Grow",
-    description: "Get expert crop consultancy with agri‑tech insights to boost yield, save water & reduce pests. Easy tips for eco‑friendly farming success!",
+    description: "Get expert crop consultancy with agri-tech insights to boost yield, save water & reduce pests. Easy tips for eco-friendly farming success!",
     url:"https://precisiongrow.co.in/crop-consultancy"
   },
   "sustainable-farming-solutions": {
     serviceType: "Smart Sustainable Farming Solutions for Higher Yields",
-    description: "Discover eco‑friendly farming tools & techniques to boost crop yield, cut costs, and protect soil—all in easy steps!",
+    description: "Discover eco-friendly farming tools & techniques to boost crop yield, cut costs, and protect soil—all in easy steps!",
     url:"https://precisiongrow.co.in/sustainable-farming-solutions"
   },
    "technology-integration": {
     serviceType: "Tech-Driven Farming: AI & IoT Boost Yields Fast",
-    description: "Discover how Precision Grow’s AI, IoT & satellite tools help farmers make smarter, greener decisions for higher yields. Easy agri-tech made simple!",
+    description: "Discover how Precision Grow's AI, IoT & satellite tools help farmers make smarter, greener decisions for higher yields. Easy agri-tech made simple!",
     url:"https://precisiongrow.co.in/technology-integration"
   },
 };
@@ -121,9 +126,15 @@ const productData = {
   },
   "ecoloo": {
     productType: "Ecoloo: Sustainable Solutions for Eco-Friendly Farming",
-    description: "Discover Ecoloo's innovative solutions for sustainable farming that enhance productivity while protecting the environment. Join the eco-friendly revolution!",
+    description: "Biosence offers smart Agri tools and IoT devices to improve crop health and support sustainable farming practices across India.",
     image:"https://precisiongrow.co.in/static/media/ecoloo.ec57a81ea19b31c6322b.webp",
     url:"https://precisiongrow.co.in/ecoloo"
+  },
+  "biosense": {
+    productType: "Biosence: Smart Farming & IoT Solutions for Sustainable Agri",
+    description: "Discover Ecoloo's innovative solutions for sustainable farming that enhance productivity while protecting the environment. Join the eco-friendly revolution!",
+    image:"https://precisiongrow.co.in/static/media/bio-sense.56c60f59d9eba9b014a6.png",
+    url:"https://precisiongrow.co.in/biosense"
   },
 };
 

@@ -1,9 +1,19 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;600;900;1,500;600&display=swap');
-
-body{
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;600;900;1,500;600&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@0,500;600;900;1,500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
+.heading-style {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400; /* Normal weight */
+}
+/* body{
     background-color:#ffffff;
     font-family:'Montserrat', sans-serif;
+} */
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #333; /* easy to read on white background */
 }
 .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
     --bs-gutter-x: 1.5rem;
@@ -12,7 +22,7 @@ section{
     padding: 21px 0;
 }
 
-h1, h2, h3, h4, h5, h6{font-family:'Montserrat', sans-serif;}
+/* h1, h2, h3, h4, h5, h6{font-family:'Montserrat', sans-serif;} */
 
 h1{
     font-weight: bold;
@@ -20,10 +30,9 @@ h1{
 }
 p{
   text-transform: none;
-  font-weight: 500;
-  /* font-size: 16px; */
+  font-size: 18px;
   hyphens: auto;
-    font-family:'Montserrat', sans-serif;
+    /* font-family:'Montserrat', sans-serif; */
 
 }
 /* p.h2{ color: #ffffff;

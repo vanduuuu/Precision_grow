@@ -1,0 +1,65 @@
+/* CARD BASE */
+.wave-card {
+  background: #ffffff;
+  border-radius: 20px;
+  position: relative;
+  overflow: visible !important;
+  border-top: 5px solid #89c22e;
+  transition: all 0.3s ease;
+  height: 300px;              /* 🔥 FIXED HEIGHT */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 30px;
+}
+
+/* TOP ICON */
+.wave-icon {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #89c22e;
+  color: #fff;
+  font-size: 26px;
+  padding: 12px;
+  border: 5px solid white;
+  z-index: 20;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* CONTENT */
+.card-content1 {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  flex: 1;
+  overflow: hidden;
+  padding: 70px 20px 0px;
+}
+
+/* WAVE at BOTTOM ALWAYS */
+.card-wave {
+  position: absolute;
+  bottom: 0;      
+  left: 0;
+  width: 100%;
+  height: 100px; 
+  z-index: 1;
+}
+
+.card-wave svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* HOVER EFFECT */
+.wave-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 7px 8px #89c22e;
+}
+
+.wave-card:hover .wave-icon {
+  transform: translateX(-50%) scale(1.1);
+}

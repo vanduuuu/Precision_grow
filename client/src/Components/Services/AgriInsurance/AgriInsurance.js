@@ -8,20 +8,20 @@ import Banner from "../../Reusablecomp/Banner/Banner.js";
 
 const AgriInsurance = () => {
   const agriIFaq = [
-    { title: 'How does agri insurance support green farming?',
-       content: 'It encourages modern farming practices while safeguarding your future.', isOpenInitially: false },
+    { question: 'How does agri insurance support green farming?',
+       answer: 'It encourages modern farming practices while safeguarding your future.'},
    
-       { title: 'What risks are covered under crop insurance?',
-       content: 'It covers risks like droughts, floods, pests, and other natural calamities.', isOpenInitially: false },
+       { question: 'What risks are covered under crop insurance?',
+       answer: 'It covers risks like droughts, floods, pests, and other natural calamities.'},
     
-       { title: 'Who benefits from your services?',
-       content: 'Thousands of farmers have already benefited from our trusted and reliable services..', isOpenInitially: false },
+       { question: 'Who benefits from your services?',
+       answer: 'Thousands of farmers have already benefited from our trusted and reliable services.'},
       
-       { title: "How do I file a claim?",
-        content:"Claims can be filed online or through our customer support for quick processing.", isOpenInitially: false },
+       { question: "How do I file a claim?",
+        answer:"Claims can be filed online or through our customer support for quick processing."},
     
-        { title: "How does Precision Grow empower farming communities?",
-          content:"Precision Grow empowers farming communities by providing reliable insurance solutions that secure income, promote modern practices, and build resilience for a sustainable future", isOpenInitially: false }
+        { question: "How does Precision Grow empower farming communities?",
+          answer:"Precision Grow empowers farming communities by providing reliable insurance solutions that secure income, promote modern practices, and build resilience for a sustainable future"}
       ];
 
   const cardData = [

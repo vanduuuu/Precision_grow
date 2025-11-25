@@ -1,0 +1,43 @@
+.logo-icon {
+  width: 77px;
+  opacity: 0;
+  transform: scale(0.3);
+  transition: opacity 0.4s ease-out;
+}
+
+/* Continuous Pulse */
+.logo-visible {
+  animation: pulseBounce 1.5s ease-in-out infinite;
+}
+
+/* smooth pulsing bounce */
+@keyframes pulseBounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.18); }
+  100% { transform: scale(1); }
+}
+
+.logo-label {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  color: #fff;
+  font-weight: bold;
+  background-color: #357f82bf;
+  border-radius: 20px;
+  padding: 0 20px;
+position: absolute;
+    top: 15px;
+    left: 70px;}
+@media (max-width:768px){
+  .logo-icon {
+  width: 60px;}
+  .logo-label {
+    top: 17px;
+    left: 50px;}
+}
+@media (max-width:600px){
+  .logo-icon {
+  width: 40px;}
+  .logo-label {
+    font-size: 13px!important;}
+}

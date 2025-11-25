@@ -1,0 +1,1139 @@
+
+.Modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 800px;
+    height: auto; 
+    max-height: 80vh; 
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1000;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+ 
+}
+
+/* Remove extra space inside the modal */
+#container {
+    margin: 0px auto;
+    background-color: #ffffffd9; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+/* Adjust form padding */
+#container form {
+    padding: 25px 80px;
+    max-height: 55vh;
+    overflow-y: auto;
+}
+
+/* Reduce excess padding and margin inside input fields */
+.main_container1 input,
+textarea {
+    padding: 10px;
+    margin-bottom: 10px; 
+}
+
+/* Avoid excess space for the submit button */
+.submit {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+/* Adjust modal overlay to be more precise */
+.Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 999;
+}
+
+
+/* Close Button Styling */
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: rgb(18, 56, 56);
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+.main_container1 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+   
+}
+
+/* button {
+    overflow: visible;
+} */
+
+/* button, */
+
+.feedbackType select {
+    text-transform: none;
+}
+
+/* button, */
+.main_container1  input,
+select,
+textarea {
+    color: #5A5A5A;
+    font: inherit;
+    margin: 0;
+}
+
+#contact_form input {
+    line-height: normal;
+}
+
+.message textarea {
+    overflow: auto;
+    /* margin: 0px; */
+}
+
+#container {
+    margin: 0px auto;
+    position: relative;
+    background-color: #ffffffd9; 
+   
+}
+
+#container form {
+    padding:25px 80px;
+}
+
+.rateof{
+margin:0px; 
+color: rgb(111, 133, 11);
+font-weight: 700;
+font-size: 18px !important;
+}
+
+.main_container1 h1 {
+    color: #123838;;
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 7px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 20px;
+    margin: 0;
+}
+
+.main_container1 h1::after {
+    content: "";
+    height: 3px;
+    width: 15%;
+    display: block;
+    background: #153700;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.main_container1 h4,
+.main_container1 h5 {
+    color: #6e8320;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing:0.6px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+
+.icon_wrapper {
+    margin: 50px auto 0;
+    width: 100%;
+}
+
+/* .icon {
+    display: block;
+    fill: #153700;
+    height: 50px;
+    margin: 0 auto;
+    width: 50px;
+    height:20px;
+    
+} */
+
+.email {
+    float: right;
+    width: 45%;
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+.main_container1 input[type='text'],
+.main_container1 input[type='email'],
+.main_container1 select,
+.main_container1 textarea {
+  background: none;
+  border: none;
+  border-bottom: solid 2px #153700;
+  color: #153700;
+  font-size: 1.000em;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 0em 0 1.875em 0;
+  padding: 0 0 0.875em 0;
+  text-transform: capitalize;
+  width: 100%;
+}
+
+
+
+
+.main_container1 input[type='text']:focus,
+[type='email']:focus,
+textarea:focus {
+    outline: none;
+    padding: 0 0 0.875em 0;
+}
+
+.message {
+    float: none;
+    margin-top: 19px;
+}
+
+.name {
+    float: left;
+    width: 45%;
+    margin-top: 4px;
+}
+
+.main_container1 select {
+    outline: none;
+}
+
+.main_container1 select::-ms-expand {
+    display: none;
+}
+
+.telephone {
+    float: left;
+    width: 45%;
+}
+
+.feedbackType {
+    float: right;
+    width: 45%;
+}
+
+.friend {
+   
+    width: 100%;
+    margin: 2% auto 0 auto;
+    text-align: center;
+}
+
+/* emoji */
+.feedback-container {
+    width: 100%;
+    min-height: 180px;
+    position: relative;
+    margin: 0 auto 7% auto;
+}
+
+.rate {
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    top: 11%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.emoji-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 45%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    overflow: hidden;
+
+}
+
+.far {
+    margin: 1px;
+    transform: translateX(0);
+    transition: 0.3s;
+}
+
+
+.rating-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0%;
+    text-align: center;
+}
+
+.fa-star {
+    color: rgb(201, 204, 189);
+    cursor: pointer;font-size: 30px;
+}
+
+.fa-star.active {
+    color: gold;
+}
+
+/* emoji end */
+
+.main_container1 textarea {
+    line-height: 150%;
+    height: 90px;
+    resize: none;
+    width: 100%;
+    margin: 0px;
+    padding:15px !important;
+}
+
+
+.main_container1 ::-webkit-input-placeholder {
+    color: #d4d4d4;
+}
+
+.main_container1 :-moz-placeholder {
+    color: #153700;
+    opacity: 1;
+}
+
+.main_container1 ::-moz-placeholder {
+    color: #153700;
+    opacity: 1;
+}
+
+.main_container1 :-ms-input-placeholder {
+    color: #153700;
+}
+
+#form_button {
+    background: none;
+    background-color: #153700;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.875em;
+    font-weight: bold;
+    outline: none;
+    padding: 15px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    width: 45%;
+    margin: 8% auto 3% auto;
+}
+
+#form_button:hover {
+    background: #6f850b;
+    color: #fff;
+}
+.label:hover{background-color: #6f850b;color: #fff;}
+
+
+/*  */
+
+.switchFilter {
+    width: 0;
+    display: inline-block;
+    background-color: #153700;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: all 0.4s cubic-bezier(0, 0, 0.25, 1);
+}
+
+.label {
+    cursor: pointer;
+    text-transform: uppercase;
+    border:2px solid #153700;
+    color: #153700;
+    width: 66px;
+    padding: 5px 0px;
+    text-align: center;
+    display: inline-block;
+    transition: all 0.4s;
+    margin-right: 18px;
+}
+/* 
+.switch {
+    position: absolute;
+    z-index: 1;
+} */
+
+.switch input[type="radio"] {
+    visibility: hidden;
+    position: absolute;
+    height: 100%;
+}
+
+.switch input[type="radio"]#yes:checked~label[for="yes"] {
+    color: white;
+
+}
+
+.switch input[type="radio"]#yes:checked~.switchFilter {
+    left: 0;
+    opacity: 1;
+    width: 68px;
+}
+
+.switch input[type="radio"]#no:checked~label[for="no"] {
+    color: white;
+
+}
+
+.switch input[type="radio"]#no:checked~.switchFilter {
+    left: 88px;
+    width: 68px;
+    opacity: 1;
+}
+
+/*  */
+
+
+.button {
+    background: none;
+    border: solid 2px #153700;
+    color: #153700;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 0.875em;
+    font-weight: bold;
+    outline: none;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.button:hover {
+    background: #153700;
+    color: #F2F3EB;
+}
+
+.button::after {
+    background: #153700;
+    color: #F2F3EB;
+}
+
+.clear{clear: both;}
+@media only screen and (max-width: 769px) {
+
+    #container {
+        /* margin: 20px auto; */
+        width:100%;
+    }
+    #container form {padding: 30px;    max-height:75vh;
+        overflow-y: auto;}
+    .main_container1 h4 {
+        margin-bottom: 12px !important;
+    }
+
+    .name {
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .email {
+        width: 100%;
+        margin:0em 0 1.875em 0;
+    }
+
+    .telephone {
+        width: 100%;
+    }
+
+    .feedbackType {
+        width: 100%;
+    }
+
+    .message {
+        float: none;
+        margin-top: 0px;
+    }
+
+    .submit {
+        margin-top: 15px;
+    }
+
+    .message textarea {
+        height: 64px;
+    }
+    .feedback-container {
+        height: 230px;
+
+    }
+
+    .emoji-container {
+        top: 45%;
+
+    }
+
+    .rating-container {
+        width: 100%;
+        top: 75%;
+        left: 50%;
+        
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .main_container1 h1 {
+        font-size: 26px;
+    }
+
+
+    #form_button {
+        padding: 15px 25px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 426px) {
+
+    #container {
+        margin: 20px auto;
+        width: 100%;
+    }
+
+
+    .main_container1 h4,
+    h5 {
+        letter-spacing: 0px;
+        /* padding: 0px 7px 30px 7px; */
+
+    }
+
+    .feedback-container {
+        height: 169px;
+
+    }
+
+    .emoji-container {
+        top: 34%;
+
+    }
+
+    .rating-container {
+        width: 100%;
+        top: 66%;
+        left: 50%;
+        transform: translateX(-50%);
+        /* bottom: 0%; */
+    }
+
+    .name {
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .email {
+        width: 100%;
+        margin:0em 0 1.875em 0;
+    }
+
+    .telephone {
+        width: 100%;
+    }
+
+    .feedbackType {
+        width: 100%;
+    }
+
+    .message {
+        float: none;
+        margin-top: 0px;
+    }
+
+    .submit {
+        margin-top: 15px;
+    }
+
+    .message textarea {
+        height: 64px;
+    }
+
+    .icon {
+        height: 35px;
+        width: 35px;
+    }
+
+
+
+    .main_container1 input[type='text'],
+    [type='email'],
+    select,
+    textarea {
+        font-size: 0.875em;
+    }
+}
+
+@media only screen and (max-width: 377px) {
+    .rating-container {
+        left: 63%;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    .main_container1 h1 {
+        letter-spacing: 2px;
+    }
+
+    /* .underline {
+        width: 117px;
+    } */
+
+    .rating-container {
+        top: 66%;
+        left: 54%;
+    }
+
+    .emoji-container {
+        top: 34%;
+
+    }
+
+    .rate {
+        width: 301px;
+    }
+
+}
+
+
+
+
+
+
+
+
+ 
+
+import React, { useState } from 'react';
+import './Feedback.css';
+import axios from 'axios';
+import Modal from 'react-modal';
+
+
+const FeedbackForm = () => {
+  const [rating, setRating] = useState(0);
+  const [recommendation, setRecommendation] = useState('');
+  
+  // Handle star click for rating
+  const handleStarClick = (index) => {
+    setRating(index + 1);
+  };
+
+  // Handle recommendation
+  const handleRecommendationChange = (value) => {
+    setRecommendation(value);
+  };
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    feedbackType: '',
+    message: '',
+    recommendation: '',
+    domain:'Feedback', // Add recommendation to formData
+    rating: 0  
+  });
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+ 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Include recommendation and rating in formData
+    const dataToSubmit = {
+      ...formData,
+      recommendation,
+      rating
+    };
+
+    try {
+      const response = await axios.post('https://contact-backend-876634281438.asia-south1.run.app/api/feedback/submit', dataToSubmit);
+
+      if (response.status === 200) {
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          feedbackType: '',
+          message: '',
+          recommendation: '',
+          rating: 0
+        });
+        setModalIsOpen(true); // Open modal on success
+      }
+    } catch (error) {
+      console.error('Error:', error.response ? error.response.data : error.message);
+    }
+  };
+
+  return (
+    <div className="main_container1">
+      <div id="container">
+      
+        <form onSubmit={handleSubmit} id="contact_form">
+        <div id="feed-heading">
+        <h1>&bull; Feedback Form &bull;</h1>
+        <h4 style={{ marginBottom: "30px" }}>
+          We would appreciate it if you could take a moment <br />
+          to give us your feedback on our services.
+        </h4>
+        </div>
+          <div className="feedback-container">
+            <div className="rate">
+              <h5 style={{ margin: "0px" }}>
+                Overall, how satisfied are you with our services?
+              </h5>
+              <p className='rateof'>
+                Rate the quality of service
+              </p>  
+            </div>
+            <div className='clear'></div>
+            <div className="emoji-container">
+              <i
+                className="far fa-regular fa-face-angry fa-3x"
+                style={{ transform: `translateX(-${(rating - 1) * 50}px)`, color: rating >= 1 ? 'red' : 'rgb(18, 56, 56)' }}
+              ></i>
+              <i
+                className="far fa-regular fa-face-frown fa-3x"
+                style={{ transform: `translateX(-${(rating - 1) * 50}px)`, color: rating >= 2 ? 'orange' : 'rgb(18, 56, 56)' }}
+              ></i>
+              <i
+                className="far fa-regular fa-face-meh fa-3x"
+                style={{ transform: `translateX(-${(rating - 1) * 50}px)`, color: rating >= 3 ? '#146E6F' : 'rgb(18, 56, 56)' }}
+              ></i>
+              <i
+                className="far fa-regular fa-face-smile fa-3x"
+                style={{ transform: `translateX(-${(rating - 1) * 50}px)`, color: rating >= 4 ? '#06aa84' : 'rgb(18, 56, 56)' }}
+              ></i>
+              <i
+                className="far fa-regular fa-face-laugh fa-3x"
+                style={{ transform: `translateX(-${(rating - 1) * 50}px)`, color: rating >= 5 ? 'green' : 'rgb(18, 56, 56)' }}
+              ></i>
+            </div>
+            <div className='clear'></div>
+            <div className="rating-container">
+              {Array.from({ length: 5 }, (_, index) => (
+                <i
+                  key={index}
+                  className={`fas fa-regular fa-star ${rating > index ? 'active' : ''}`}
+                  onClick={() => handleStarClick(index)}
+                ></i>
+              ))}
+            </div>
+
+            <input type="hidden" name="rating" id="rating" value={rating} />
+          </div>
+
+
+          <div className='clear'></div>
+
+          <div>
+          <div className="name">
+            <input 
+            type="text" 
+            placeholder="Full Name" 
+            name="name" 
+            id="name_input" 
+            required 
+            value={formData.name}
+            onChange={handleChange}
+            />
+          </div>
+          <div className="email">
+            <input 
+            type="email" 
+            placeholder="E-mail" 
+            name="email" 
+            id="email_input" 
+            required
+            value={formData.email}
+            onChange={handleChange}
+            />
+          </div>
+          <div className='clear'></div>
+          <div className="telephone">
+            <input 
+            type="text" 
+            placeholder="Contact Number" 
+            name="phone" 
+            id="telephone_input" 
+            required
+            value={formData.phone}
+            onChange={handleChange}
+            />
+          </div>
+          <div className="feedbackType">
+            <select 
+            name="feedbackType" 
+            id="feedbackType" 
+            required
+            value={formData.feedbackType}
+            onChange={handleChange}
+            >
+              <option disabled hidden>
+                Type of Feedback
+              </option>
+              <option>General Feedback</option>
+              <option>Complaint</option>
+              <option>Suggestions</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div className='clear'></div>
+          <div className="message">
+            <textarea 
+            name="message" 
+            placeholder="Please share your experience or Suggestions with us." 
+            id="message_input" 
+            cols="30" rows="5" 
+            required
+            value={formData.message}
+            onChange={handleChange}
+            ></textarea>
+          </div>
+          <div className="friend">
+            <p style={{ margin: "19px 0px 7px 0px;" }}>Would you recommend us to your friends?</p>
+            <div className="switch">
+              <input
+                type="radio"
+                name="recommendation"
+                className="button"
+                id="yes"
+                checked={recommendation === "Yes"}
+                onChange={() => handleRecommendationChange("Yes")}
+              />
+              <label className="label" htmlFor="yes">Yes</label>
+              <input
+                type="radio"
+                name="recommendation"
+                className="button"
+                id="no"
+                checked={recommendation === "No"}
+                onChange={() => handleRecommendationChange("No")}
+              />
+              <label className="label" htmlFor="no">No</label>
+              <span className="switchFilter"></span>
+            </div>
+          </div>
+          <div className="submit" style={{ alignSelf: "center", display: "grid" }}>
+            <input type="submit" value="Submit Review" id="form_button" />
+          </div>
+          </div>
+        </form>
+        <div className='clear'></div>
+      </div>
+       {/* Modal for success message */}
+       <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={() => setModalIsOpen(false)}
+        contentLabel="Success Message"
+        className="Modal"
+        overlayClassName="Overlay"
+      >
+        <h2>Thank You!</h2>
+        <p>Your message has been sent successfully.</p>
+        <button onClick={() => setModalIsOpen(false)}>Close</button>
+      </Modal>
+    </div>
+  );
+};
+
+export default FeedbackForm;
+
+ 
+
+working code
+import React, { useState } from 'react';
+import './Feedback.css';
+import axios from 'axios';
+import Modal from 'react-modal';
+import {
+  FaRegAngry,
+  FaRegFrown,
+  FaRegMeh,
+  FaRegSmile,
+  FaRegLaugh,
+  FaStar,
+  FaTimes, // 👈 Close icon import
+} from 'react-icons/fa';
+
+Modal.setAppElement('#root');
+
+const FeedbackForm = ({ onClose }) => { // 👈 onClose prop add (for form close)
+  const [rating, setRating] = useState(0);
+  const [recommendation, setRecommendation] = useState('');
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    feedbackType: '',
+    message: '',
+    recommendation: '',
+    domain: 'Feedback',
+    rating: 0,
+  });
+
+  const handleStarClick = (index) => setRating(index + 1);
+  const handleRecommendationChange = (value) => setRecommendation(value);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const dataToSubmit = { ...formData, recommendation, rating };
+    try {
+      const response = await axios.post(
+        'https://api.ecrop.co/api/feedback/submit',
+        dataToSubmit
+      );
+      if (response.status === 200) {
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          feedbackType: '',
+          message: '',
+          recommendation: '',
+          rating: 0,
+          domain: 'Feedback',
+        });
+        setRating(0);
+        setRecommendation('');
+        setModalIsOpen(true);
+      }
+    } catch (error) {
+      console.error(
+        'Error:',
+        error.response ? error.response.data : error.message
+      );
+    }
+  };
+
+  return (
+    <div className="main_container">
+      <div id="container" className="container position-relative">
+        
+        {/* 👇 Form close button (top-right) */}
+        <button
+          onClick={onClose}
+          className="close-popup"
+          aria-label="Close Feedback Form"
+        >
+          <FaTimes size={20} />
+        </button>
+
+        <form onSubmit={handleSubmit} role="form" id="contact_form">
+          <div id="feed-heading" className="text-center mb-4">
+            <h1>&bull; Feedback Form &bull;</h1>
+            <h4>
+              We would appreciate it if you could take a moment <br />
+              to give us your feedback on our services.
+            </h4>
+          </div>
+
+          {/* Feedback Emoji & Stars */}
+          <div className="feedback-container position-relative mb-5">
+            <div className="rate text-center">
+              <h5>Overall, how satisfied are you with our services?</h5>
+              <p className="rateof">Rate the quality of service</p>
+            </div>
+
+            <div className="emoji-container d-flex justify-content-center gap-2 mt-3">
+              <FaRegAngry size={40} color={rating >= 1 ? 'red' : 'rgb(18, 56, 56)'} />
+              <FaRegFrown size={40} color={rating >= 2 ? 'orange' : 'rgb(18, 56, 56)'} />
+              <FaRegMeh size={40} color={rating >= 3 ? '#146E6F' : 'rgb(18, 56, 56)'} />
+              <FaRegSmile size={40} color={rating >= 4 ? '#06aa84' : 'rgb(18, 56, 56)'} />
+              <FaRegLaugh size={40} color={rating >= 5 ? 'green' : 'rgb(18, 56, 56)'} />
+            </div>
+
+            <div className="rating-container text-center mt-3">
+              {Array.from({ length: 5 }, (_, index) => (
+                <FaStar
+                  key={index}
+                  size={30}
+                  className={rating > index ? 'active text-warning' : 'text-secondary'}
+                  onClick={() => handleStarClick(index)}
+                />
+              ))}
+            </div>
+
+            <input type="hidden" name="rating" id="rating" value={rating} />
+          </div>
+
+          {/* Inputs */}
+          <div className="row g-3 mb-3">
+            <div className="col-md-6 col-12">
+              <input
+                type="text"
+                placeholder="Full Name"
+                name="name"
+                required
+                value={formData.name}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="col-md-6 col-12">
+              <input
+                type="email"
+                placeholder="E-mail"
+                name="email"
+                required
+                value={formData.email}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+
+          <div className="row g-3 mb-3">
+            <div className="col-md-6 col-12">
+              <input
+                type="text"
+                placeholder="Contact Number"
+                name="phone"
+                required
+                value={formData.phone}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="col-md-6 col-12">
+              <select
+                name="feedbackType"
+                required
+                value={formData.feedbackType}
+                onChange={handleChange}
+                className="form-select"
+              >
+                <option disabled hidden>Type of Feedback</option>
+                <option>General Feedback</option>
+                <option>Complaint</option>
+                <option>Suggestions</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div className="mb-3">
+            <textarea
+              name="message"
+              placeholder="Please share your experience or Suggestions with us."
+              required
+              value={formData.message}
+              onChange={handleChange}
+              rows={5}
+            ></textarea>
+          </div>
+
+          {/* Yes / No Recommendation */}
+          <div className="friend text-center mb-4">
+            <p>Would you recommend us to your friends?</p>
+            <div className="d-flex justify-content-center gap-4">
+              <div className="form-check">
+                <input
+                  type="radio"
+                  className="form-check-input"
+                  name="recommendation"
+                  id="yes"
+                  checked={recommendation === 'Yes'}
+                  onChange={() => handleRecommendationChange('Yes')}
+                />
+                <label className="form-check-label" htmlFor="yes">
+                  Yes
+                </label>
+              </div>
+
+              <div className="form-check">
+                <input
+                  type="radio"
+                  className="form-check-input"
+                  name="recommendation"
+                  id="no"
+                  checked={recommendation === 'No'}
+                  onChange={() => handleRecommendationChange('No')}
+                />
+                <label className="form-check-label" htmlFor="no">
+                  No
+                </label>
+              </div>
+            </div>
+          </div>
+
+          {/* Submit Button */}
+          <div className="submit text-center">
+            <input
+              type="submit"
+              value="Submit Review"
+              className="btn btn-success px-4 py-2"
+            />
+          </div>
+        </form>
+      </div>
+
+      {/* Modal */}
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={() => setModalIsOpen(false)}
+        contentLabel="Success Message"
+        className="Modal"
+        overlayClassName="Overlay"
+      >
+        {/* 👇 Modal close button */}
+        <button
+          onClick={() => setModalIsOpen(false)}
+          className="close-popup"
+        >
+          <FaTimes size={20} />
+        </button>
+
+        <h2>Thank You!</h2>
+        <p>Your message has been sent successfully.</p>
+      </Modal>
+    </div>
+  );
+};
+
+export default FeedbackForm;

@@ -4,23 +4,91 @@ import { Helmet } from 'react-helmet-async';
 import Roadmap from './Roadmap.js'
 import FaqSection from "../../Faqcomp/FaqSection.js";
 import Banner from "../../Reusablecomp/Banner/Banner.js";
-
+import Titleunderline from "../../Reusablecomp/Titleunderline/Titleunderline.js";
 const RegenerativeAgri = () => {
+  const roadmapData = [
+  {
+    id: 1,
+    title: "Cover Crops",
+    description: "Planting cover crops to protect and enrich the soil, prevent erosion, and enhance biodiversity.",
+    image: "https://api.ecrop.co/assets/precisiongrow/Regenerative_1.webp",
+  },
+  {
+    id: 2,
+    title: "Reduced Tillage",
+    description: "Minimizing soil disturbance to maintain soil structure and preserve soil microorganisms.",
+    image: "https://api.ecrop.co/assets/precisiongrow/Regenerative_2.webp",
+  },
+  {
+    id: 3,
+    title: "Diverse Crop Rotations",
+    description: "Implementing diverse crop rotations to break pest and disease cycles, improving soil structure and biodiversity.",
+    image: "https://api.ecrop.co/assets/precisiongrow/Regenerative_3.webp",
+  },
+  {
+    id: 4,
+    title: "Agroforestry",
+    description: "Integrating trees and shrubs into agricultural landscapes to provide habitat for wildlife and improve soil and water health.",
+    image: "https://api.ecrop.co/assets/precisiongrow/Regenerative_4.webp",
+  },
+  {
+    id: 5,
+    title: "Water Management",
+    description: "Implementing practices such as rainwater harvesting, efficient irrigation systems, and contour farming.",
+    image: "https://api.ecrop.co/assets/precisiongrow/Regenerative_5.webp",
+  },
+  {
+    id: 6,
+    title: "Integrated Pest Management (IPM)",
+    description: "Using natural predators, diversified planting, and biological controls to manage pests and reduce chemical pesticides.",
+    image: "https://api.ecrop.co/assets/precisiongrow/Regenerative_6.webp",
+  },
+  {
+    id: 7,
+    title: "Long-Term Fire Statistics",
+    description: "Exporting historical fire data analytics for long term fire statistics and risk assessment.",
+    image: "https://api.ecrop.co/assets/precisiongrow/Regenerative_7.webp",
+  },
+  {
+    id: 8,
+    title: "Managed Grazing",
+    description: "Utilizing planned rotational grazing to improve soil health and reduce carbon sequestration.",
+    image: "https://api.ecrop.co/assets/precisiongrow/Regenerative_8.webp",
+  },
+  {
+    id: 9,
+    title: "Composting and Organic Amendments",
+    description: "Adding compost or organic matter to enhance soil fertility and microbial activity.",
+    image: "https://api.ecrop.co/assets/precisiongrow/Regenerative_9.webp",
+  },
+  {
+    id: 10,
+    title: "Soil Health",
+    description: "Emphasizing increased soil organic matter and improving nutrient cycling, water retention, and carbon sequestration.",
+    image: "https://api.ecrop.co/assets/precisiongrow/Regenerative_10.webp",
+  },
+  {
+    id: 11,
+    title: "Local and Community Focus",
+    description: "Supporting local food systems and fostering community involvement to create more resilient agriculture.",
+    image: "https://api.ecrop.co/assets/precisiongrow/Regenerative_11.webp",
+  }
+];
   const RegFaqs = [
-    { title: 'Why is Regenerative Agriculture important?',
-       content: 'It stops ecosystem degradation, improves soil health, and supports sustainable farming practices.', isOpenInitially: false },
+    { question: 'Why is Regenerative Agriculture important?',
+       answer: 'It stops ecosystem degradation, improves soil health, and supports sustainable farming practices.'},
    
-       { title: 'How do diverse crop rotations benefit farming?',
-       content: 'They break pest cycles, improve soil structure, and boost biodiversity.', isOpenInitially: false },
+       { question: 'How do diverse crop rotations benefit farming?',
+       answer: 'They break pest cycles, improve soil structure, and boost biodiversity.'},
     
-       { title: 'What is Integrated Pest Management (IPM)?',
-       content: 'Using natural predators and biological controls to reduce chemical pesticide use..', isOpenInitially: false },
+       { question: 'What is Integrated Pest Management (IPM)?',
+       answer: 'Using natural predators and biological controls to reduce chemical pesticide use.'},
       
-       { title: "How does Regenerative Agriculture address climate change?",
-        content:"By sequestering carbon, improving soil health, and reducing greenhouse gas emissions", isOpenInitially: false },
+       { question: "How does Regenerative Agriculture address climate change?",
+        answer:"By sequestering carbon, improving soil health, and reducing greenhouse gas emissions"},
     
-        { title: "What is the focus of soil health in Regenerative Agriculture?",
-          content:"Increasing organic matter, nutrient cycling, water retention, and carbon sequestration.", isOpenInitially: false }
+        { question: "What is the focus of soil health in Regenerative Agriculture?",
+          answer:"Increasing organic matter, nutrient cycling, water retention, and carbon sequestration."}
       ];
   return (
     <div>
@@ -67,11 +135,16 @@ const RegenerativeAgri = () => {
  {/* ----------------------------------------------------------------------renerative agriculture--------------------------------------------------------------------- */}   
       
   <div className="red-outer-div snake mb-5"data-aos="fade-up" data-aos-duration="3000">
-       <p className="h2 text-center">Here are some key principles and practices associated with regenerative agriculture</p>
-          <Roadmap />
-</div> 
+               <Titleunderline title="Here are some key principles and practices associated with regenerative agriculture" tag="h2" align="center" />
 
-              <FaqSection data={RegFaqs} variant="lightgreen" />;
+<Roadmap
+        cards={roadmapData}
+        animation="fade-up"
+        duration={1500}
+        colClass="col-lg-3 col-md-4 col-sm-6" 
+      /></div> 
+
+              <FaqSection data={RegFaqs}/>;
       
     </div>
   );

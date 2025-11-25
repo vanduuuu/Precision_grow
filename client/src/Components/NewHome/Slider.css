@@ -1,0 +1,71 @@
+/* === Left Image Section === */
+/* .slider-outer{
+background: linear-gradient(to bottom, #bcf1f5,#1a8b93);
+} */
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-left: 3px solid #0f7178;
+}
+
+.visit-btn {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.4s ease;
+  background-color: #0f7178;
+  color: white;
+  border-radius: 20px;
+  box-shadow: 2px 4px 1px white;
+}
+
+
+/* === Right Content === */
+.feature-item {
+  position: relative;
+  border-color: #dee2e6;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+/* Description and Progress */
+.progress-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 0;
+  background-color: #0f7178;
+  animation: growLine 4s linear forwards;
+}
+
+@keyframes growLine {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .image-wrapper {
+    height: 280px;
+  }
+
+  .visit-btn {
+    right: 10px;
+    font-size: 12px;
+  }
+}

@@ -1,12 +1,12 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { getFirestore, collection, getDocs,query, where } from "firebase/firestore";
 import dotenv from "dotenv";
 import { SitemapStream, streamToPromise } from "sitemap";
 import fs from "fs";  // To write to the file system
 import path from "path";  // To handle file paths
 
 dotenv.config();  // Load environment variables from .env file
-
+// 1497
 // Firebase configuration
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -18,30 +18,39 @@ const firebaseConfig = {
   measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 
-// Initialize Firebase app
+// Initialize Firebase app  
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// Function to fetch slugs from Firestore
+
+// Function to fetch slugs only from "Precision Grow" categoryId
 const fetchSlugs = async () => {
   try {
-    console.log("Fetching slugs from Firebase...");  // Added log
-    const querySnapshot = await getDocs(collection(db, "posts"));
+    console.log("Fetching Precision Grow slugs from Firebase...");
+    const q = query(
+      collection(db, "posts"),
+      where("categoryId", "==", "Precision Grow") // only Precision Grow blogs
+    );
+    const querySnapshot = await getDocs(q);
+
     const slugs = [];
-    querySnapshot.forEach((doc) => {
-      const data = doc.data();
-      if (data.slug) {
-        console.log("Found slug:", data.slug);  // Debugging log
-        slugs.push(data.slug);  // Add the slug to the list
-      }
-    });
-    console.log("Slugs fetched from Firestore:", slugs);  // Debugging log
+  querySnapshot.forEach((doc) => {
+  console.log("Document data:", doc.data()); // Check all fields
+  const data = doc.data();
+  if (data.slug && data.categoryId === "Precision Grow") {
+    slugs.push(data.slug);
+  }
+});
+
+
+    console.log("Precision Grow slugs fetched:", slugs);
     return slugs;
   } catch (error) {
     console.error("Error fetching slugs: ", error);
     return [];
   }
 };
+
 
 // Function to generate sitemap
 const generateSitemap = async () => {
@@ -80,9 +89,11 @@ const generateSitemap = async () => {
     "/feedback",
     "/ecrop",
     "/ecoloo",
+    "/biosense",
     "/skywatch",
     "/policy",
     "/krishak-bazar",
+    "/ecrop-for-coffee",
     "/agristack",
     "/crop-consultancy",
     "/sustainable-farming-solutions",

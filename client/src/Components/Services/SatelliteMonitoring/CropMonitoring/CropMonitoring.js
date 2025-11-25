@@ -11,38 +11,37 @@ import machine2 from "../../../../assets/icons_About/machine2.webp"
 const CropMonitoring = () => {
   const cropMFaqs = [
     {
-      title: "What is water stress level monitoring, and how does it help?",
-      content:
+      question: "What is water stress level monitoring, and how does it help?",
+      answer:
         "Water stress monitoring pinpoints irrigation needs, ensuring optimal water use and healthy crops.",
-      isOpenInitially: false,
     },
 
     {
-      title:
+      question:
         " How does Soil Organic Carbon (SOC) information improve soil health?",
-      content:
+      answer:
         "SOC information helps assess soil health by measuring the amount of organic carbon in the soil, which is crucial for soil fertility, structure, and its ability to retain water and nutrients.",
       isOpenInitially: false,
     },
 
     {
-      title: "How much area does one eCrop device cover?",
-      content:
+      question: "How much area does one eCrop device cover?",
+      answer:
         "10 acres of land, and we can expand the area by adding additional soil sensors.",
       isOpenInitially: false,
     },
 
     {
-      title:
+      question:
         " Is this service suitable for all types of crops and farming practices?",
-      content:
+      answer:
         "Yes, the service is designed to be adaptable to various types of crops and farming practices, including row crops, orchards, vineyards, and mixed farming systems.",
       isOpenInitially: false,
     },
 
     {
-      title: "How secure is my data with the crop advisory service?",
-      content:
+      question: "How secure is my data with the crop advisory service?",
+      answer:
         "Data security is a top priority for most crop advisory services. They typically use advanced encryption and security protocols to ensure that your data is protected and confidential.",
       isOpenInitially: false,
     },
@@ -275,7 +274,7 @@ const features = [
         <Titleunderline title="Our Key Parameters" tag="h3"/>
         <div className="key-parameters position-relative">
           <div className="container py-5">
-            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-1">
+            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 justify-content-center g-1">
               {parameters.map((param, index) => (
                 <div className="col" key={index}>
                   <div
@@ -302,7 +301,11 @@ const features = [
           </div>
         </div>
       </section>
-      <FaqSection data={cropMFaqs} variant="blue" />;
+      {/* <FaqSection data={cropMFaqs} variant="blue" />; */}
+       <FaqSection
+      data={cropMFaqs}
+      // image={faqImg}
+    />
     </>
   );
 };

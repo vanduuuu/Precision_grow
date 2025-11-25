@@ -1,4 +1,7 @@
 /* model css */
+.buyproui li{
+  list-style: none;
+}
 .payment-success-modal {
   position: fixed;
   top: 0;

@@ -1,0 +1,97 @@
+.service-icon {
+  width: 90px;
+  height: 90px;
+  min-width: 90px; /* ensures circle doesn't shrink */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0; /* prevents shrinking on small screens */
+  background-color: #25958e; /* default secondary bg */
+  color: #fff;
+  z-index: 2;
+      border: 7px solid #F1F8E9
+}
+.fade-inn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.nav-link1.active .service-icon {
+  background-color: #8bc34a !important;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+/* Smooth transition for h4 */
+.nav-link1 h3{
+  transition: color 0.3s ease;
+  color:  #25958e;
+}
+
+/* Active tab */
+/* .nav-link1.active h4 {
+  color: #0f534e;
+  font-weight: 600;
+} */
+
+/* Hover state */
+.nav-link1:hover h4 {
+  color: #8bc34a; /* your hover color */
+}
+.nav-link1:hover .service-icon {
+  transform: scale(1.1);
+}
+
+.service-desc {
+  line-height: 1.5;
+  color: #858080;
+}
+.slant-item{
+    margin-bottom: 30px;
+}
+/* Slanted right menu */
+.slant-item.slant-2 { margin-left: -2.6rem; }
+.slant-item.slant-3 { margin-left: -5.5rem; }
+
+/* Tablet / Medium screens adjustments */
+@media (max-width: 1199px) {
+  .overlap-icon {
+    position: relative; /* keep icons aligned with content */
+    left: 0;
+    top: 0;
+  }
+}
+
+/* Mobile adjustments: hide left image, reset slant */
+@media (max-width: 991px) {
+  .slant-item { margin-left: 0 !important; }
+  .overlap-icon { position: static; }
+}
+.slant-item{
+    margin-bottom: 0px;
+}
+/* Ensure tab images transition nicely */
+.tab-pane img {
+  transition: opacity 0.5s ease-in-out;
+  width: 100%;
+  border-radius: 8px;
+}
+.tab-pane:not(.show) img {
+  opacity: 0;
+}
+.tab-pane.show img {
+  opacity: 1;
+}
+
+
+

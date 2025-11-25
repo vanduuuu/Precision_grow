@@ -1,99 +1,107 @@
-/* Background Section */
-.ecrop-outer {
-  background-image: url('../../../assets/icons_About/Your_Own_Agriculture.webp');
-  background-repeat: no-repeat;
+.addecrop-section {
+  position: relative;
+  background-image: url("../../../assets/agri.webp");
   background-size: cover;
   background-position: center;
-  min-height: 1000px; /* Important for CLS */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+  overflow: hidden;
+  background-attachment: fixed;
 }
 
+.addecroptxt h2,.addecroptxt h5{
+  text-shadow: 2px 2px 2px black;
+  color: #1d7c67;
+}
+.txtt-color1{
+  color: #1d7c67;
+}
+.device-img {
+  bottom: 0;
+  right: -2%;
+  width: 200px;
+  max-width: 100%;
+  object-fit: contain;
+  z-index: 2;
+}
+
+/* Ensure parent allows absolute positioning */
+.position-relative {
+  position: relative;
+}
+
+/* Optional — make sure content stays readable */
+@media (max-width: 992px) {
+  .device-img {
+    position: static;
+    margin-top: 1.5rem;
+    width: 70%;
+  }
+}
+
+.addecrop-section .container {
+  position: relative;
+  z-index: 2;
+}
 
 /* Headings */
-.addecrop h5,
-.addecrop,
-.h2 {
-  color: #164e4c;
-  margin-top: 30px;
-}
-
 .textt-color {
   color: #88b939;
 }
 
-/* Styled Pill Text */
-p.t1 {
+.t1 {
   background: #5b8616;
   display: inline-block;
-  padding: 6px 16px;
-  border-radius: 28px;
+  padding: 6px 18px;
+  border-radius: 30px;
   color: white;
-  font-size: 22px;
+  font-size: 18px;
   margin-bottom: 1rem;
-  white-space: nowrap;
+}
+.t2{
+  border: 2px solid #5b8616;
+   padding: 6px 18px;
+  border-radius: 30px;
+}
+.info-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
 }
 
-/* Agri List Section */
-.agri {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-}
-
-.agri ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  max-width: 320px;
-  width: 100%;
+/* Feature Cards */
+.feature-grid {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
 }
 
-.agri ul li {
-  background-color: #17726c;
-  color: #fff;
-  font-weight: 500;
-  font-size: 16px;
-  padding: 14px 16px 14px 50px;
-  position: relative;
-  border-radius: 12px;
+.feature-card {
   display: flex;
   align-items: center;
-  min-height: 80px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
+  background: linear-gradient(135deg, #daecbd 0%, #a9ded3 100%);
+  border-radius: 18px;
+  padding: 18px 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+  border-bottom: 5px solid #1d7c67;
 }
 
-.agri ul li:hover {
-  background-color: #145c57;
+.feature-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.9);
 }
 
-.agri ul li span {
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #063640;
-  color: #fff;
-  height: 32px;
-  width: 32px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 16px;
-  box-shadow: 0 2px 8px rgba(0, 255, 234, 0.7);
+.icon-wrapper {
+  font-size: 26px;
+  color: #1d7c67;
+  margin-right: 14px;
 }
 
 /* Logo List */
-.logo-list {
-  margin-top: 5%;
-  text-align: center;
+.logo-list ul {
+  list-style: none;
+  padding: 0;
 }
 
 .logo-list ul li {
@@ -102,18 +110,21 @@ p.t1 {
 }
 
 .logo-list img {
-  width: 80px;
-  height: auto;
-  max-width: 100%;
+  width: 70px;
+  transition: transform 0.3s ease;
 }
 
-/* Certification Icons */
+.logo-list img:hover {
+  transform: scale(1.1);
+}
+
+/* Certification Logos */
 .ceritified-icon {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.5);
   margin-top: 5%;
   text-align: center;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .ceritified-icon ul li {
@@ -121,78 +132,50 @@ p.t1 {
   margin: 0 10px;
 }
 
-/* UL Pills (Generic Use) */
-.ecrop_ul li {
-  display: inline-block;
-  padding: 8px 14px;
-  color: #000;
-  background-color: rgba(255, 255, 255, 0.75);
-  border-radius: 20px;
-  margin: 5px;
+.ceritified-icon img {
+  width: 70px;
+  transition: transform 0.3s ease;
 }
 
-/* Media Queries */
+.ceritified-icon img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive */
+
+@media (max-width: 1240px) {
+.device-img{
+  width: 116px;
+}
+}
 @media (max-width: 991px) {
-  p.t1 {
-    font-size: 20px;
+  .feature-grid {
+    margin-top: 2rem;
   }
 }
 
 @media (max-width: 768px) {
-  .agri ul {
-    max-width: 90%;
-  }
-
-  .agri ul li {
+  .feature-card {
     font-size: 15px;
-    padding: 12px 16px 12px 46px;
+    padding: 14px 16px;
   }
-
-  .agri ul li span {
-    height: 30px;
-    width: 30px;
-    font-size: 14px;
-  }
-
-  .logo-list img {
-    width: 60px;
-  }
-
-  .ceritified-icon {
-    margin-top: 8%;
-  }
-
-  .logo-list {
-    margin-top: 8%;
+  .icon-wrapper {
+    font-size: 22px;
   }
 }
 
-@media (max-width: 600px) {
-  .agri ul li {
-    font-size: 14px;
-    padding: 10px 14px 10px 44px;
+@media (max-width: 576px) {
+  .addecrop-section {
+    padding: 60px 0;
   }
-
-  .agri ul li span {
-    height: 28px;
-    width: 28px;
-    font-size: 13px;
-    left: 12px;
+  .feature-grid {
+    gap: 14px;
   }
-
-  .logo-list img {
-    width: 50px;
+  .feature-card {
+    padding: 12px 14px;
   }
-
+  .logo-list img,
   .ceritified-icon img {
-    width: 50px;
-  }
-
-  p.t1 {
-    font-size: 17px;
-  }
-
-  .logo-list {
-    margin: 10% 5%;
+    width: 55px;
   }
 }

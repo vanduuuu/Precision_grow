@@ -1,15 +1,6 @@
-import React, { useState } from "react";
-import { Container, Row, Col, Collapse } from "react-bootstrap";
-import './Footernew.css';
-import india from '../../../assets/PG_Flag/India.webp'
-import brazil from '../../../assets/PG_Flag/Brazil.webp'
-import france from '../../../assets/PG_Flag/France.webp'
-import uae from '../../../assets/PG_Flag/UAE.webp'
-import israel from '../../../assets/PG_Flag/Israel.webp'
-import russia from '../../../assets/PG_Flag/Russia.webp'
-import indonesia from '../../../assets/PG_Flag/Indonesia.webp'
-import southafrica from '../../../assets/PG_Flag/SouthAfrica.webp'
-import vietman from '../../../assets/PG_Flag/Vietman.webp'
+import React from "react";
+import "./Footernew.css";
+import { Link } from "react-router-dom";
 import {
   BloggerIcon,
   FacebookIcon,
@@ -19,44 +10,19 @@ import {
   TwitterIcon,
   YoutubeIcon,
 } from "../../../assets/svgicons/icons.js";
-import { Link } from "react-router-dom";
-import rice from '../../../assets/icons_About/rice.png'
-// import icar from '../../../assets/icons_About/ICAR1.webp'
-// import ctcri from '../../../assets/icons_About/CTCRI-Logo-02.webp'
+import india from "../../../assets/PG_Flag/India.webp";
+import brazil from "../../../assets/PG_Flag/Brazil.webp";
+import france from "../../../assets/PG_Flag/France.webp";
+import uae from "../../../assets/PG_Flag/UAE.webp";
+import israel from "../../../assets/PG_Flag/Israel.webp";
+import russia from "../../../assets/PG_Flag/Russia.webp";
+import indonesia from "../../../assets/PG_Flag/Indonesia.webp";
+import southafrica from "../../../assets/PG_Flag/SouthAfrica.webp";
+import vietman from "../../../assets/PG_Flag/Vietman.webp";
+
 const Footernew = () => {
-  const [showSections, setShowSections] = useState(false);
-
-  const handleFooter = () => {
-    setShowSections(!showSections);
-  };
-
-  const PartnerLogos = () => (
-    <Row className="text-center justify-content-center">
-      {[
-        "https://api.ecrop.co/assets/precisiongrow/Assocham_India.webp",
-        "https://api.ecrop.co/assets/precisiongrow/cii.webp",
-        "https://api.ecrop.co/assets/precisiongrow/ficci.webp",
-        "https://api.ecrop.co/assets/precisiongrow/ifoam.webp",
-        "https://api.ecrop.co/assets/precisiongrow/ESC.webp",
-        "https://api.ecrop.co/assets/precisiongrow/nasscom.webp",
-        // icar,
-        // ctcri
-      ].map((img, idx) => (
-        <Col key={idx} xs={6} sm={4} md={2} lg={6} className="mb-3">
-          <img
-            src={img}
-            alt={`Partner ${idx + 1}`}
-            className="img-fluid rounded border p-2 bg-white"
-            loading="lazy"
-             width="141" height="65"
-          />
-        </Col>
-      ))}
-    </Row>
-  );
-
   const exploreLinks = [
-    { label: "About us", path: "/about" },
+    { label: "About Us", path: "/about" },
     { label: "Services", path: "/crop-monitoring" },
     { label: "Products", path: "/ecrop" },
     { label: "Sustainability", path: "/sustainability" },
@@ -64,269 +30,179 @@ const Footernew = () => {
     { label: "Policy", path: "/policy" },
   ];
 
+  const partners = [
+    "https://api.ecrop.co/assets/precisiongrow/Assocham_India.webp",
+    "https://api.ecrop.co/assets/precisiongrow/cii.webp",
+    "https://api.ecrop.co/assets/precisiongrow/ficci.webp",
+    "https://api.ecrop.co/assets/precisiongrow/ifoam.webp",
+    "https://api.ecrop.co/assets/precisiongrow/ESC.webp",
+    "https://api.ecrop.co/assets/precisiongrow/nasscom.webp",
+  ];
+
+  const flags = [
+    india,
+    brazil,
+    france,
+    uae,
+    israel,
+    russia,
+    indonesia,
+    southafrica,
+    vietman,
+  ];
+
   return (
-    <footer className="text-white">
-      <Container className="pt-3">
-        <Row className="text-center">
-          <h3 className="heading1 mb-4 text-center fw-bolder">
+    <>
+     <svg
+  className="top-wave1"
+  viewBox="0 0 5950 380"
+  xmlns="http://www.w3.org/2000/svg"
+  preserveAspectRatio="none"
+>
+  <path
+    fillRule="evenodd"
+    clipRule="evenodd"
+    d="M0 293.923V393.09H330.556H1983.33H3966.67L5950 393.091L5950 203.02C5288.89 244.34 4627.78 194.756 3966.67 128.645C3878.52 119.83 3790.37 110.722 3702.22 101.613C3129.26 42.4069 2556.3 -16.7992 1983.33 4.6869C1322.22 29.4786 661.111 161.701 330.556 227.812L0 293.923Z"
+    fill="#02746a"
+  />
+</svg>
+
+         <footer className="footer-modern text-white">
+      <div className="container">
+        {/* Header line */}
+        <div className="footer-top-strip text-center mb-3">
+          <h3 className="journey-title">
             Get in Touch and Start Your Journey to Success
           </h3>
+        </div>
 
-          {/* Logo Column */}
-          <Col md={4} lg={2} sm={12} xs={12} className="mb-4">
-            <div className="xs-flex-row">
-              <div className="img1 bg-white p-1 rounded-1 mb-0 mb-md-3 h-sm-50 w-sm-25">
-                <img
-                  src="https://api.ecrop.co/assets/precisiongrow/Precision-Grow-Logo-new.webp"
-                  alt="Precision Grow Logo"
-                  loading="lazy"
-                  className="img-fluid"
-                   width="360" height="120"
-                />
-              </div>
-              <div className="img2 rounded-1">
-                <img
-                  src="https://api.ecrop.co/assets/precisiongrow/dun-logo.webp"
-                  alt="Dun Logo"
-                  className="img-fluid"
-                  loading="lazy"
-                   width="300" height="250"
-                />
-              </div>
-            </div>
-          </Col>
+        {/* Footer Content */}
+        <div className="row gy-4">
+          {/* Logo + badges */}
+          <div className="col-lg-4 col-md-6 text-center text-lg-start d-flex flex-column align-items-center align-items-lg-start">
+  <img
+    src="https://api.ecrop.co/assets/precisiongrow/Precision-Grow-Logo-new.webp"
+    alt="Precision Grow"
+    className="footer-logo bg-white p-2 mb-2"
+    loading="lazy"
+  />
 
-          {/* Address Section */}
-          <Col md={8} lg={4} sm={6} xs={12}>
-            <ul className="list-unstyled text-center px-md-3 px-lg-4 px-0">
-              <li className="address-li">
-                <h6 className="hover-border-bottom">CORPORATE OFFICE</h6>
-                <p>
-                  Unit No 22, Building No. 2(A3), Sector 1, Millennium Business
-                  Park, Mahape, Navi Mumbai, 400710
-                </p>
-              </li>
-              <li className="address-li">
-                <h6 className="hover-border-bottom">REGD. OFFICE</h6>
-                <p>
-                  Plot No 80/81, Shop No 155, Vashi Plaza, Sector 17 Vashi,
-                  Mumbai, 400703
-                </p>
-              </li>
-              <li className="address-li">
-                <h6 className="hover-border-bottom">CITY OFFICE</h6>
-                <p>
-                  61, City Tower, Unit No 2, Dr. S.S. Rao Road, Parel, Mumbai,
-                  400012
-                </p>
-              </li>
-            </ul>
-          </Col>
+  <p className="footer-tagline mb-3 text-center text-lg-start">
+    Empowering agriculture through innovation, technology & sustainability.
+  </p>
 
-          {/* Explore Links (desktop only) */}
-          <Col
-            md={2}
-            lg={2}
-            sm={6}
-            xs={6}
-            className="mb-4 d-none d-lg-block explorelist"
-          >
-            <h6 className="hover-border-bottom m-0">EXPLORE</h6>
-            <ul className="list-unstyled">
-              {exploreLinks.map((item, idx) => (
-                <li key={idx}>
-                  <Link
-                    to={item.path}
-                    className="text-white text-decoration-none d-block-inline mb-2 a-hover-border-bottom"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </Col>
-
-          {/* Toggle Button (mobile only) */}
-          <Col md={12} className="d-block d-lg-none text-center">
-            <div
-              onClick={handleFooter}
-              className="d-inline-block px-4 py-2 mobbtn text-white font-weight-bold rounded shadow-sm text-center"
-            >
-              {showSections ? "Hide Sections" : "View More"}
-            </div>
-          </Col>
-
-          {/* Collapsible Section (mobile only) */}
-          <Collapse in={showSections}>
-            <div className="w-100 d-lg-none">
-              <Row className="my-4">
-                <Col xs={5} md={3}>
-                  <h6 className="pb-2">EXPLORE</h6>
-                  <ul className="list-unstyled mt-3">
-                    {exploreLinks.map((item, idx) => (
-                      <li key={idx}>
-                        <Link
-                          to={item.path}
-                          className="text-white text-decoration-none d-block mb-2"
-                        >
-                          {item.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </Col>
-
-                <Col xs={7} md={9}>
-                  <PartnerLogos />
-
-                  {/* ✅ Great Place to Work logo visible only after toggle in mobile */}
-                  <div className="text-center mt-3">
-                    <img
-                      src="https://api.ecrop.co/assets/precisiongrow/great-place-to-work.webp"
-                      alt="Great Place to Work"
-                      className="img-fluid w-25"
-                      loading="lazy"
-                       width="85" height="145"
-                    />
-                  </div>
-                </Col>
-              </Row>
-            </div>
-          </Collapse>
-
-          {/* Partner Logos and Great Place to Work (desktop only) */}
-          <Col
-            lg={3}
-            className="order-lg-2 order-4 d-none d-lg-block"
-          >
-            <PartnerLogos />
-          </Col>
-          <Col
-            lg={1}
-            className="order-lg-2 order-4 d-none d-lg-block"
-          >
-            <img
-              src="https://api.ecrop.co/assets/precisiongrow/great-place-to-work.webp"
-              alt="great place to work"
-              loading="lazy"
-              className="img-fluid"
-              width="85"
-              height="145"
-            />
-          </Col>
-        </Row>
-      </Container>
-<div className="container">
-<h2 className="heading1 text-center fw-bolder">
-  Precision <span className="text-success grow-with-icon">GROW
-    <img src={rice} alt="rice icon" className="rice-icon" width="167" height="238"/>
-  </span> Global
-</h2>
-  <div className="row">
-    <div className="col d-flex flex-wrap justify-content-center align-items-center gap-3 py-2">
-      <img src={india} alt="India" className="flag-logo" width="209" height="209" />
-      <img src={brazil} alt="Brazil" className="flag-logo" width="209" height="209" />
-      <img src={france} alt="France" className="flag-logo" width="209" height="209" />
-      <img src={uae} alt="UAE" className="flag-logo" width="209" height="209" />
-      <img src={russia} alt="Russia" className="flag-logo" width="209" height="209" />
-      <img src={israel} alt="Israel" className="flag-logo" width="209" height="209" />
-      <img src={indonesia} alt="Indonesia" className="flag-logo" width="209" height="209" />
-      <img src={southafrica} alt="South Africa" className="flag-logo" width="209" height="209" />
-      <img src={vietman} alt="Vietman" className="flag-logo" width="209" height="209" />
-    </div>
+  <div className="d-flex justify-content-center justify-content-lg-start flex-wrap gap-2">
+    <img
+      src="https://api.ecrop.co/assets/precisiongrow/great-place-to-work.webp"
+      alt="Great Place to Work"
+      className="badge-logo"
+    />
+    <img
+      src="https://api.ecrop.co/assets/precisiongrow/dun-logo.webp"
+      alt="DUN Registered"
+      className="badge-logo dun-logo-fix"
+    />
   </div>
 </div>
 
 
+          {/* Explore Links */}
+          <div className="col-lg-2 col-md-6 col-6">
+            <h5 className="footer-heading">Explore</h5>
+            <ul className="footer-links">
+              {exploreLinks.map((item, idx) => (
+                <li key={idx}>
+                  <Link to={item.path}>{item.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-      {/* Bottom Bar */}
-      <div className="copyRightArea py-1">
-        <Container>
-          <Row className="align-items-center justify-content-between">
-            <Col lg={6} xs={12}>
-              <h6 className="mb-0">
-                &copy; 2024. All Rights Reserved by&nbsp;
-                <a
-                  href="https://precisiongrow.co.in/"
-                  className="text-primary fw-semibold"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Precision Grow (A Unit of Tech Visit IT Pvt Ltd)
-                </a>
-              </h6>
-            </Col>
-            <Col lg={6} xs={12}>
-              <ul className="list-inline viewmore mb-0 mt-1 mt-lg-0 d-flex justify-content-lg-end justify-content-center-lg gap-2">
-                <li className="list-inline-item bg-white">
-                  <a
-                    href="https://www.facebook.com/PrecisionGrow/"
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
-                  >
-                    <FacebookIcon size={25} bgColor="white" />
-                  </a>
-                </li>
-                <li className="list-inline-item bg-white">
-                  <a
-                    href="https://x.com/precision_grow"
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
-                  >
-                    <TwitterIcon size={25} bgColor="white" />
-                  </a>
-                </li>
-                <li className="list-inline-item bg-white">
-                  <a
-                    href="https://www.linkedin.com/company/precision-grow/"
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
-                  >
-                    <LinkedinIcon size={25} bgColor="white" />
-                  </a>
-                </li>
-                <li className="list-inline-item bg-white">
-                  <a
-                    href="https://www.instagram.com/precisiongrow_/"
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
-                  >
-                    <InstagramIcon size={25} bgColor="white" />
-                  </a>
-                </li>
-                <li className="list-inline-item bg-white">
-                  <a
-                    href="https://www.youtube.com/channel/UCt1nu8YiUMjnvckNLfepa5g"
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
-                  >
-                    <YoutubeIcon size={25} bgColor="white" />
-                  </a>
-                </li>
-                <li className="list-inline-item bg-white">
-                  <a
-                    href="https://precisiongrowindia.blogspot.com/"
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
-                  >
-                    <BloggerIcon size={25} bgColor="white" />
-                  </a>
-                </li>
-                <li className="list-inline-item bg-white">
-                  <a
-                    href="https://www.threads.net/@precisiongrow_"
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
-                  >
-                    <ThreadsIcon size={25} bgColor="white" />
-                  </a>
-                </li>
-              </ul>
-            </Col>
-          </Row>
-        </Container>
+          {/* Address Section */}
+          <div className="col-lg-3 col-md-6">
+            <h5 className="footer-heading">Contact Us</h5>
+            <ul className="footer-address">
+              <li>
+                <strong>Corporate Office:</strong>
+                <br />
+                Unit No 22, Millennium Business Park, Mahape, Navi Mumbai
+              </li>
+              <li>
+                <strong>Regd. Office:</strong>
+                <br />
+                Plot No 80/81, Shop No 155, Vashi Plaza, Sector 17, Vashi
+              </li>
+              <li>
+                <strong>City Office:</strong>
+                <br />
+                61, City Tower, Dr. S.S. Rao Road, Parel, Mumbai
+              </li>
+            </ul>
+          </div>
+
+          {/* Partners + Social */}
+          <div className="col-lg-3 col-md-6">
+            <h5 className="footer-heading">Our Partners</h5>
+            <div className="partner-logos">
+              {partners.map((img, idx) => (
+                <img key={idx} src={img} alt={`Partner ${idx}`} loading="lazy" />
+              ))}
+            </div>
+
+            <h5 className="footer-heading mt-4">Social Media</h5>
+           <div className="social-icons">
+  <a href="https://www.facebook.com/PrecisionGrow/" target="_blank" rel="noopener noreferrer">
+    <FacebookIcon size={22} />
+  </a>
+  <a href="https://x.com/precision_grow" target="_blank" rel="noopener noreferrer">
+    <TwitterIcon size={22} />
+  </a>
+  <a href="https://www.linkedin.com/company/precision-grow/" target="_blank" rel="noopener noreferrer">
+    <LinkedinIcon size={22} />
+  </a>
+  <a href="https://www.instagram.com/precisiongrow_/" target="_blank" rel="noopener noreferrer">
+    <InstagramIcon size={22} />
+  </a>
+  <a href="https://www.youtube.com/channel/UCt1nu8YiUMjnvckNLfepa5g" target="_blank" rel="noopener noreferrer">
+    <YoutubeIcon size={22} />
+  </a>
+  <a href="https://precisiongrowindia.blogspot.com/" target="_blank" rel="noopener noreferrer">
+    <BloggerIcon size={22} />
+  </a>
+  <a href="https://www.threads.net/@precisiongrow_" target="_blank" rel="noopener noreferrer">
+    <ThreadsIcon size={22} />
+  </a>
+</div>
+
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="footer-divider my-3"></div>
+
+        {/* Global Section */}
+        <div className="footer-global text-center">
+          <h4>
+            Precision <span className="highlight-text">GROW</span> Global
+          </h4>
+          <div className="flags-scroll">
+            {flags.map((flag, idx) => (
+              <img key={idx} src={flag} alt="Flag" className="flag-icon" />
+            ))}
+          </div>
+        </div>
+
+        {/* Bottom */}
+        <div className="footer-bottom text-center">
+          <p className="m-0 small">
+            © 2024 Precision Grow (A Unit of Tech Visit IT Pvt Ltd). All Rights
+            Reserved.
+          </p>
+        </div>
       </div>
     </footer>
+    </>
+ 
   );
 };
 

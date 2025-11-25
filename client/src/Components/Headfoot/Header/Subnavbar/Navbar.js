@@ -18,7 +18,39 @@ const Subnavbar = () => {
   const [openSubDropdownIndex, setOpenSubDropdownIndex] = useState(null);
   const location = useLocation();
   const navRef = useRef(null);
+ const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const scrollTimeout = useRef(null);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Clear timeout when user is scrolling
+      if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
+
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down
+        setShowNavbar(false);
+      } else {
+        // Scrolling up
+        setShowNavbar(true);
+      }
+
+      // Show navbar again when user stops scrolling for 500ms
+      scrollTimeout.current = setTimeout(() => {
+        setShowNavbar(true);
+      }, 500);
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
+    };
+  }, [lastScrollY]);
   // Throttled resize listener
   useEffect(() => {
     const handleResize = () => {
@@ -121,6 +153,7 @@ const Subnavbar = () => {
           { label: "eCrop(Smart Farming With electronic Crop)", path: "/ecrop" },
           { label: "Buy Product", path: "/buy-product" },
           { label: "SkyWatch", path: "/skywatch" },
+          { label: "Biosense", path: "/biosense" },
           { label: "ECOLOO", path: "/ecoloo" },
         ],
       },
@@ -137,7 +170,7 @@ const Subnavbar = () => {
     <>
     <Topbar/>
        <nav
-      className="sticky navigation"
+      className={`sticky navigation ${!showNavbar ? "hidden" : ""}`}
       role="navigation"
       aria-label="Main Navigation"
       ref={navRef}

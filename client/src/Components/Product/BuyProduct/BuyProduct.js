@@ -132,7 +132,7 @@ const products = [
  {/* New Nested Grid Row */}
         <Row className="my-1 g-4">
           <Col md={7}>
-             <ul className="ps-0 mb-5">
+             <ul className="ps-0 mb-5 buyproui">
       <li className="mb-3"><FaCheckCircle className="me-2 text-success" /> All-in-One Farm Monitoring: Tracks 12+ critical parameters (soil, weather, pests).</li>
       <li className="mb-3"><FaCheckCircle className="me-2 text-success" /> AI-Powered Insights: Get personalized recommendations for irrigation, fertilization & pest control.</li>
       <li><FaCheckCircle className="me-2 text-success" /> Easy-to-Use Mobile App: Manage your farm anytime, anywhere.</li>
@@ -155,7 +155,7 @@ const products = [
           </Col>
         </Row>
         <h3 className="boldlook mt-3 fs-1">Key benefits of eCrop</h3>
-        <ul className="product-features ps-0 mb-4">
+        <ul className="product-features ps-0 mb-4 buyproui">
           <li className="mb-2"><FaCheckCircle className="me-2 text-success" /> Simplifies Crop Management</li>
           <li className="mb-2"><FaCheckCircle className="me-2 text-success" /> Accurate Weather Insights</li>
           <li className="mb-2"><FaCheckCircle className="me-2 text-success" /> Real-time NPK monitoring</li>
@@ -184,7 +184,7 @@ const products = [
         <h3 className="boldlook fs-1">Install the Device</h3>
         <h3 className="prrice mb-3 bg-light">Place the eCrop device in your field</h3>
         
-        <ul className="product-features ps-0 mb-4">
+        <ul className="product-features buyproui ps-0 mb-4">
           <li className="mb-3">
             <FaCheckCircle className="me-2 text-success" /> 
             <b>Get Real-Time Data:</b> Monitor soil moisture, NPK, pH, weather forecasts, pest risks & more on your phone.

@@ -3,6 +3,14 @@ import { Helmet } from "react-helmet-async";
 import InfoCardGroup from "../Reusablecomp/InfoCardGroup.js";
 import Titleunderline from "../Reusablecomp/Titleunderline/Titleunderline.js";
 import Banner from "../Reusablecomp/Banner/Banner.js";
+import Roadmap from "../Services/RegenerativeAgri/Roadmap.js";
+import ListItem from "../Reusablecomp/ListItem.js";
+import abtimg from '../../assets/icons_About/abt-img.webp'
+import abtimg1 from '../../assets/icons_About/about-bg.png'
+import './About.css'
+// import ArrowCardsSection from "../Reusablecomp/ArrowCardsSection/ArrowCardsSection.js";
+import { FaIndustry, FaSatellite, FaHandsHelping } from "react-icons/fa";
+import { Col, Row } from "react-bootstrap";
 
 const About = () => {
   const cardData = [
@@ -43,7 +51,54 @@ const About = () => {
       bgColor: "linear-gradient(to top, rgb(172, 236, 159), white)",
     },
   ];
-
+const AboutData = [
+  {
+    id: 1,
+    title: "AI-Boosted Wisdom",
+    description: "Our AI tools amplify your expertise, translating complex data into simple, actionable steps - whether you’re just starting out or a seasoned expert.",
+    image: "https://api.ecrop.co/assets/precisiongrow/Regenerative_1.webp",
+  },
+  {
+    id: 2,
+    title: "Sustainability at Heart",
+    description: "Use resources wisely, maximize yields, and reduce your environmental impact - all while nurturing the planet you depend on.",
+    image: "https://api.ecrop.co/assets/precisiongrow/Regenerative_2.webp",
+  },
+  {
+    id: 3,
+    title: "Nature, Nurtured by Numbers/ Less Waste, More Yield",
+    description: "Use exactly the right amount of water and nutrients—no more, no less. Good for harvests, and great for the planet.",
+    image: "https://api.ecrop.co/assets/precisiongrow/Regenerative_3.webp",
+  }
+]
+const listData = [
+  {
+    iconComponent: <FaIndustry size={50} color="#76bc01" />, // react-icon
+    title: "Precision Meets Compliance:",
+    label:
+      "SkyWatch sets the new benchmark for pollution monitoring, combining advanced sensors with real-time IoT analytics to ensure industries meet environmental standards effortlessly.",
+    bgClass: "bg-lightgreen",
+  },
+  {
+    iconComponent: <FaSatellite size={50} color="#76bc01" />, // react-icon
+    title: "Satellite-Powered Insight:",
+    label:
+      "By integrating real-time satellite data, SkyWatch offers a comprehensive, regional view of environmental health, helping you see the bigger picture.",
+    bgClass: "bg-lightblue",
+  },
+  {
+    iconComponent: <FaHandsHelping size={50} color="#76bc01" />,
+    title: "Partner in Progress:",
+    label:
+      "From installation to ongoing support, SkyWatch guides businesses with expert solutions, bridging technology and environmental responsibility for a cleaner future.",
+    bgClass: "bg-lightyellow",
+  },
+];
+  const cardsData = [
+    { title: "Sense", label: "We gather real-time data from satellites, IoT-enabled field sensors, and industrial devices like SkyWatch for pollution monitoring."},
+    { title: "Understand", label: "Our AI-powered models unify and analyze diverse data streams to detect patterns, forecast risks, and optimize agricultural and environmental performance." },
+    { title: "Recommend", label: "We deliver clear, prioritized insights and actionable advice directly via mobile and web platforms - helping growers and industries make smarter, sustainable decisions quickly." }
+  ];
   return (
     <div>
       <Helmet>
@@ -69,55 +124,63 @@ const About = () => {
           heading="About Us"
           subheading="Cultivating Innovation for Sustainable Growth"
         />
-        <section>
-          {/*-------------------------------------Aboutsection -----------------------------------------------------*/}
-          <div className="container">
-            <p className="txt1 text-center">
-              At Precision Grow, we’re not just building tools - we’re
-              cultivating a revolution. Our goal is simple: to empower farmers
-              with the technology they need to thrive in a changing world. By
-              combining satellite data, IoT devices, and AI-driven insights,
-              we’re transforming the way crops are grown, monitored, and
-              harvested. We believe in a future where farming is smarter, more
-              sustainable, and more rewarding. A future where every farmer has
-              access to real-time data that helps them make better decisions,
-              increase yields, and reduce their environmental footprint. But our
-              vision doesn’t stop at agriculture. With our IoT-based solutions
-              for industries, we’re helping businesses monitor real-time gas
-              emissions, optimize their operations, and significantly reduce
-              their carbon footprint. By providing actionable insights, we’re
-              enabling industries to meet sustainability goals, comply with
-              regulations, and contribute to a healthier planet. This isn’t just
-              about technology - it’s about people. It’s about ensuring that
-              farmers, the backbone of our world, have the tools they need to
-              succeed. Together, we’re not just growing crops; we’re growing
-              possibilities.
-            </p>
-          </div>
-        </section>
+        <section className="about-section py-5">
+  <div className="container">
+  <div className="row align-items-center justify-content-center position-relative">
+  {/* Left side image with rotating background */}
+  <div className="col-lg-6 mb-4 mb-lg-0 position-relative">
+    {/* Rotating background image */}
+    <div className="rotating-bg d-none d-lg-block">
+      <img
+        src={abtimg1} // your rotating background image
+        alt="rotating background"
+      />
+    </div>
+
+    {/* Main image */}
+    <img
+      src={abtimg}
+      alt="Farming illustration"
+      className="img-fluid rounded main-img"
+    />
+  </div>
+
+  {/* Right side content */}
+  <div className="col-lg-6">
+    <Titleunderline title="Get to Know Us!" tag="h2" align="left" />
+    
+    <p>
+      Farming has always been about passion, perseverance, and progress. At Precision Grow, we blend the timeless wisdom of the fields with the smart power of data and innovation for every generation of grower, innovator, and dreamer.
+    </p>
+    <p>
+      At Precision Grow, we build the intelligence layer for land and industry. We fuse satellite imagery, field level IoT, and AI to turn raw data into decisions - so growers and operators can boost yields, cut inputs, and shrink emissions without guessing.
+    </p>
+    <p>
+      We’re here for the people who feed and power the world. Our job is to make their work simpler, more sustainable, and more rewarding.
+    </p>
+  </div>
+</div>
+
+  </div>
+</section>
+
       </div>
       {/*------------------------------------- What Makes Us Different? -----------------------------------------------------*/}
-      <Titleunderline title="What Makes Us Different?" tag="h1"/>
+  <section className="about-roadmap-section bg-light position-relative py-5">
+  <Titleunderline title="Precision Agriculture Solutions" tag="h1" />
 
-      <section className="container col-lg-8 content-about">
-        <div className="text-center cont ">
-          <p>
-            We don’t just farm — we revolutionize. By combining our intelligent
-            farming technology with commitment to sustainability, we redefine
-            agriculture for a smarter, greener tomorrow. Our precision-driven
-            solutions maximize yields, minimize waste, and harmonize with
-            nature, ensuring a balanced ecosystem. With excellence as our
-            promise and sustainability as our mission, we’re not just growing
-            crops - we’re cultivating a future where farming and the planet
-            thrive together. Join us in shaping a world that grows smarter, not
-            harder.
-          </p>
-        </div>
-      </section>
+  <Roadmap
+    cards={AboutData}
+    animation="fade-up"
+    duration={1500}
+    colClass="col-lg-4 col-md-6 col-sm-12"
+  />
+</section>
+
 
       {/*------------------------------------- WHAT WE WANT TO DO-----------------------------------------------------*/}
       <section>
-        <Titleunderline title="What We Want To Do" tag="h2"/>
+        <Titleunderline title="We Thrive To" tag="h2"/>
 
         <div data-aos="fade-up" data-aos-duration="3000" className="mx-auto px-5">
           <InfoCardGroup cardData={cardData} />
@@ -127,6 +190,60 @@ const About = () => {
           sustainable future for farming.
         </p>
       </section>
+       <section>
+      <div className="container">
+                        <Titleunderline title="SkyWatch: Industrial Emissions Intelligence" tag="h2"/>
+
+        <div className="row align-items-center">
+          {/* Left side: List items */}
+          <div className="col-lg-6">
+            {listData.map((item, index) => (
+              <ListItem
+                key={index}
+                iconComponent={item.iconComponent}
+                title={item.title}
+                label={item.label}
+                bgClass={item.bgClass}
+                index={index}
+              />
+            ))}
+          </div>
+
+          {/* Right side: Image */}
+          <div className="col-lg-6 text-center">
+            <img
+              src="https://api.ecrop.co/assets/precisiongrow/skywatchmodel.webp"
+              alt="Illustration"
+              className="img-fluid rounded"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    
+                        <Titleunderline title="How We Work: Our Three-Step Process" tag="h2"/>
+          {/* <ArrowCardsSection cardsData={cardsData} /> */}
+             <Row className="justify-content-center mx-3">
+                    {cardsData.map((item, index) => (
+                     <Col
+  key={index}
+  lg={3}
+  md={5}
+  sm={12}
+  className="mb-4 mx-3 sustain-card1"
+  data-index={index + 1}  // pass number to CSS
+>
+  <ListItem
+    icon={item.icon}
+    label={item.label}
+    title={item.title}
+    index={index}
+  />
+</Col>
+
+                    ))}
+                  </Row>
+
     </div>
   );
 };

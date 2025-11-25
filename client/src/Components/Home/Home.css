@@ -1,20 +1,101 @@
-/* Home.css */
 
-/* Modal Styles */
-.poem {
-  min-height: 120px;     /* ✅ Required to fix CLS */
-  overflow: hidden; 
+.testono{
+  background-color: #b5e1ce;
 }
-.poem ul li{
-  list-style: none;
+/* Quote Icons */
+.quote-left {
+  position: absolute;
+  top: -10px;
+  left: 8px;
+  font-size: 2rem;
+  color: #5d8d04;
 }
+
+.quote-right {
+  position: absolute;
+  bottom: 30px;
+  right: 8px;
+  font-size: 2rem;
+  color: #5d8d04;
+}
+/* ==============================
+   News Section
+============================== */
+.news-section-inner1 {
+  background-image: url('../../assets/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.vertical-border {
+  border-right: 2px solid white;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+
+/* ==============================
+   Precision Section
+============================== */
+.precision-section {
+  background: linear-gradient(to bottom,#17726cc4, #aef2de,  #fff);
+}
+
+.precision-section h3 {
+  border-left: 4px solid #fff;
+  padding-left: 0.75rem;
+}
+
+.precision-section p {
+  line-height: 1.6;
+}
+
+/* ==============================
+   Objective Section (Redesigned)
+============================== */
+.objective-section {
+  background-image: 
+    url('../../assets/agri-bg.webp');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+  color: #ffffff;
+  background-attachment: fixed;
+}
+/* 🌑 Dark Overlay */
+.overlay6 {
+  position: absolute;
+  inset: 0;
+  background: #0000007a;
+  backdrop-filter: brightness(0.8) blur(1px);
+  z-index: 1;
+  border-radius: 40px 0 40px 0;
+}
+.bg-light-green{
+  border-bottom:5px solid #8ca62f;
+    border-top:5px solid #8ca62f;
+    background-color: #ffffff;
+    border-radius: 50px 0;
+    color: black;
+}
+
+.objective-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* ==============================
+   Modal Styling
+============================== */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8); /* Black overlay */
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,24 +113,27 @@
   text-align: center;
 }
 
-/* Close Button Styles */
+/* Close Button */
 .close-button {
   position: absolute;
-  top: -34px; /* Default position for desktop screens */
+  top: -34px;
   right: -7px;
-  font-size: 22px; /* Smaller font for mobile */
+  font-size: 22px;
   cursor: pointer;
   border: none;
   padding: 5px;
   color: white;
   background-color: transparent;
-  border-radius: 50%; /* Circular button */
+  border-radius: 50%;
   z-index: 1;
 }
 
+/* ==============================
+   Image Slider
+============================== */
 .image-slider {
   width: 100%;
-  height: auto; /* Adjust the height as needed */
+  height: auto;
   overflow: hidden;
   position: relative;
 }
@@ -60,17 +144,10 @@
   object-fit: contain;
   transition: opacity 1s ease-in-out;
 }
-.cont {
-  padding: 2rem;
-  font-size: 20px;
-  font-weight: 500;
-  color: #2e3a2c;
-  background: #e8f5e9; /* Light green background */
-  border-radius: 40px 0 40px 0;
-  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
-  text-align: center;
-}
 
+/* ==============================
+   eCropToday Section
+============================== */
 .ecroptoday {
   position: relative;
   width: 100%;
@@ -83,21 +160,18 @@
   display: block;
 }
 
-/* Button Styling */
 .ecroptoday a {
   text-decoration: none;
 }
-
 .ecroptoday button {
   position: absolute;
-  bottom: 15px;
-  left: 70%;
+  bottom:-27px; /* Adjust as needed */
+  left: 50%;
   transform: translateX(-50%);
   padding: 10px 24px;
   font-size: 14px;
   border: 1px solid white;
-  /* background-color: rgba(53, 127, 130, 0.9); */
-  background-color: rgba(255, 153, 51, 0.907);
+  background-color: #17726c;
   color: white;
   transition: all 0.3s ease;
   z-index: 2;
@@ -109,32 +183,42 @@
   font-weight: 700;
   border: 2px solid rgba(53, 127, 130);
 }
-
-/* Media Query for Mobile Screens */
+/* ==============================
+   Responsive
+============================== */
 @media (max-width: 768px) {
   .modal-page {
-    max-width: 70%; /* Full width for smaller screens */
+    max-width: 70%;
   }
+
   .close-button {
     top: -42px;
     right: -52px;
   }
-  .ecroptoday button {
+
+ .ecroptoday button {
     padding: 8px 16px;
     font-size: 13px;
+    bottom: -29px;
+  }
+
+  .objective-card {
+    padding: 1.5rem;
+  }
+
+  .objective-section {
+    border-radius: 15px;
   }
 }
 
 @media (max-width: 600px) {
   .modal-page {
-    max-width: 90%; /* Full width for smaller screens */
+    max-width: 90%;
   }
-  .ecroptoday button {
-    padding: 3px;
-    font-size: 11px;
-    left: 86%;
-}
-.poem li{
-  font-size: 15px;
-}
+
+ .ecroptoday button {
+    bottom: -27px; /* Adjust for mobile view */
+    padding: 6px 12px;
+    font-size: 12px;
+  }
 }

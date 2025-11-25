@@ -17,20 +17,20 @@ const ProductTraceability = () => {
       { icon: 'https://api.ecrop.co/assets/precisiongrow/Product6.webp', label: 'Operational Efficient' },
     ];
   const proTFaq = [
-    { title: 'What is traceability?',
-       content: 'Traceability is the ability to track the origin, processing, and journey of a product from start to finish.', isOpenInitially: false },
+    { question: 'What is traceability?',
+       answer: 'Traceability is the ability to track the origin, processing, and journey of a product from start to finish.'},
    
-       { title: 'Why is traceability important?',
-       content: 'It ensures transparency, builds trust, and helps consumers make informed, sustainable choices.', isOpenInitially: false },
+       { question: 'Why is traceability important?',
+       answer: 'It ensures transparency, builds trust, and helps consumers make informed, sustainable choices.', },
     
-       { title: 'How does traceability benefit consumers?',
-       content: 'It empowers shoppers with data to make smarter, more ethical purchasing decisions.', isOpenInitially: false },
+       { question: 'How does traceability benefit consumers?',
+       answer: 'It empowers shoppers with data to make smarter, more ethical purchasing decisions.', },
       
-       { title: "How can I access traceability information?",
-        content:"Use our tool to explore the story and data behind every product you buy.", isOpenInitially: false },
+       { question: "How can I access traceability information?",
+        answer:"Use our tool to explore the story and data behind every product you buy."},
     
-        { title: "Who benefits from traceability besides consumers?",
-          content:"Producers and brands gain credibility by showcasing their commitment to transparency.", isOpenInitially: false }
+        { question: "Who benefits from traceability besides consumers?",
+          answer:"Producers and brands gain credibility by showcasing their commitment to transparency.", }
       ];
        const points = [
     "Welcome to a revolutionary product experience that unveils the journey of your favorite products from farm to store! Our innovative solution brings transparency and insight into every step of the manufacturing process, offering you a unique and immersive product journey.",
@@ -143,7 +143,7 @@ const ProductTraceability = () => {
   </div>
 </div>
 
-<FaqSection data={proTFaq} variant="lightgreen" />;
+<FaqSection data={proTFaq}/>;
     </section>
      </div>
 </>

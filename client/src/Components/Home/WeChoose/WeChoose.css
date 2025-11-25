@@ -11,7 +11,7 @@
     position: relative;
 }
 
-
+/* ----------infocardgroup.css---------- */
 
 .info-block {
   position: relative;
@@ -19,7 +19,7 @@
   padding: 60px 20px 20px 20px;
   border-radius: 20px;
   text-align: center;
-  box-shadow: 0 -4px 5px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 -4px 5px rgba(0, 0, 0, 0.681);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 

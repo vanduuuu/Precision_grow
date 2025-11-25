@@ -117,38 +117,33 @@ const Skywatch = () => {
   ];
   const skyWFaq = [
     {
-      title: "What is SkyWatch? ",
-      content:
+      question: "What is SkyWatch? ",
+      answer:
         "SkyWatch is a cutting-edge industrial pollution monitoring device developed by Precision Grow (A Unit of Tech Visit IT Pvt. Ltd.). It provides real-time environmental data, including air quality, weather conditions, and pollution levels, to help industries stay compliant with regulations and reduce their environmental footprint.",
-      isOpenInitially: false,
     },
 
     {
-      title: "How does SkyWatch work? ",
-      content:
+      question: "How does SkyWatch work? ",
+      answer:
         "SkyWatch uses advanced sensors to monitor environmental conditions like air quality, weather, and pollution levels in real time. It sends this data directly to a mobile app, allowing users to track and analyze pollution metrics and make informed decisions to optimize their industrial processes.",
-      isOpenInitially: false,
     },
 
     {
-      title: "Is SkyWatch easy to install and use? ",
-      content:
+      question: "Is SkyWatch easy to install and use? ",
+      answer:
         "Yes, SkyWatch is designed to be user-friendly, both in terms of installation and operation. The device is easy to set up and can be controlled through an intuitive Android mobile app.",
-      isOpenInitially: false,
     },
 
     {
-      title: "Does SkyWatch comply with environmental regulations? ",
-      content:
+      question: "Does SkyWatch comply with environmental regulations? ",
+      answer:
         "Yes, SkyWatch helps businesses comply with environmental regulations by tracking pollution levels and providing actionable insights to reduce emissions and improve operations.",
-      isOpenInitially: false,
     },
 
     {
-      title: "What kind of alerts does SkyWatch provide? ",
-      content:
+      question: "What kind of alerts does SkyWatch provide? ",
+      answer:
         "SkyWatch provides real-time alerts when pollution levels or environmental conditions exceed predetermined thresholds. These alerts help businesses take immediate action to avoid violations or risks.",
-      isOpenInitially: false,
     },
   ];
 

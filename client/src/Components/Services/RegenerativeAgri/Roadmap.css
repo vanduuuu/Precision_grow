@@ -1,56 +1,72 @@
-.roadmaps{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 20px;
-  }
-  
-  .card-grouppp {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-  }
-  
-  .roadmap-card {
-    width: 280px;
-    background: white;
-    border: 3px dotted ;
-    border-image: linear-gradient(to top left, rgb(53,127,130), rgb(136,187,64)) 1;
-    border-radius:0px 100px 0px 100px;
-    overflow: hidden;
-    text-align: center;
-    padding: 15px;
-   
+/* Card styling */
+.roadmap-card {
+  display: flex;
+  flex-direction: column; /* stack image and content vertically */
+  justify-content: flex-start;
+  background: white;
+  border: 3px dotted;
+  border-image: linear-gradient(to top left, rgb(53,127,130), rgb(136,187,64)) 1;
+  border-radius: 0px 100px 0px 100px;
+  overflow: hidden;
+  padding: 15px;
+  height: 100%; /* full height of column */
+  transition: transform 0.5s ease, background 0.5s ease, box-shadow 0.5s ease;
+}
 
-  }
-  .roadmap-card:hover{
-    background: linear-gradient(45deg, rgb(218, 252, 172), rgb(166, 204, 206));
-   
-  }
-  
+/* Hover effect */
+.roadmap-card:hover {
+  background: linear-gradient(45deg, rgb(218, 252, 172), rgb(166, 204, 206));
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Image styling */
+.roadmap-img {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  display: block;
+  padding: 5px;
+}
+
+/* Card content */
+.roadmap-content {
+  flex: 1; /* take remaining space to make all cards equal height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.roadmap-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgba(53, 127, 130);
+  margin-top: 10px;
+}
+
+.roadmap-description {
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
   .roadmap-img {
-    width: 100px; 
-    height: 100px;
-    margin: 0 auto;
-    display: block;
-    padding: 5px;
+    width: 90px;
+    height: 90px;
   }
-  
-  .roadmap-content {
-    padding: 15px;
+}
+
+@media (max-width: 600px) {
+  .roadmap-img {
+    width: 80px;
+    height: 80px;
   }
-  
   .roadmap-title {
-    font-size: 18px;
-    font-weight: bold;
-    color: rgba(53, 127, 130);
-    margin-top: 10px;
+    font-size: 16px;
   }
-  
   .roadmap-description {
-    font-size: 14px;
-    color: #555;
-    margin-top: 5px;
+    font-size: 13px;
   }
-  
+}

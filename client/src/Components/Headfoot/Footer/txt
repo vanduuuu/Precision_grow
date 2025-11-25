@@ -1,0 +1,527 @@
+import React, { useState } from "react";
+import { Container, Row, Col, Collapse } from "react-bootstrap";
+import './Footernew.css';
+import india from '../../../assets/PG_Flag/India.webp'
+import brazil from '../../../assets/PG_Flag/Brazil.webp'
+import france from '../../../assets/PG_Flag/France.webp'
+import uae from '../../../assets/PG_Flag/UAE.webp'
+import israel from '../../../assets/PG_Flag/Israel.webp'
+import russia from '../../../assets/PG_Flag/Russia.webp'
+import indonesia from '../../../assets/PG_Flag/Indonesia.webp'
+import southafrica from '../../../assets/PG_Flag/SouthAfrica.webp'
+import vietman from '../../../assets/PG_Flag/Vietman.webp'
+import {
+  BloggerIcon,
+  FacebookIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  ThreadsIcon,
+  TwitterIcon,
+  YoutubeIcon,
+} from "../../../assets/svgicons/icons.js";
+import { Link } from "react-router-dom";
+import rice from '../../../assets/icons_About/rice.png'
+// import icar from '../../../assets/icons_About/ICAR1.webp'
+// import ctcri from '../../../assets/icons_About/CTCRI-Logo-02.webp'
+const Footernew = () => {
+  const [showSections, setShowSections] = useState(false);
+
+  const handleFooter = () => {
+    setShowSections(!showSections);
+  };
+
+  const PartnerLogos = () => (
+    <Row className="text-center justify-content-center">
+      {[
+        "https://api.ecrop.co/assets/precisiongrow/Assocham_India.webp",
+        "https://api.ecrop.co/assets/precisiongrow/cii.webp",
+        "https://api.ecrop.co/assets/precisiongrow/ficci.webp",
+        "https://api.ecrop.co/assets/precisiongrow/ifoam.webp",
+        "https://api.ecrop.co/assets/precisiongrow/ESC.webp",
+        "https://api.ecrop.co/assets/precisiongrow/nasscom.webp",
+        // icar,
+        // ctcri
+      ].map((img, idx) => (
+        <Col key={idx} xs={6} sm={4} md={2} lg={6} className="mb-3">
+          <img
+            src={img}
+            alt={`Partner ${idx + 1}`}
+            className="img-fluid rounded border p-2 bg-white"
+            loading="lazy"
+             width="141" height="65"
+          />
+        </Col>
+      ))}
+    </Row>
+  );
+
+  const exploreLinks = [
+    { label: "About us", path: "/about" },
+    { label: "Services", path: "/crop-monitoring" },
+    { label: "Products", path: "/ecrop" },
+    { label: "Sustainability", path: "/sustainability" },
+    { label: "Blog", path: "/blog" },
+    { label: "Policy", path: "/policy" },
+  ];
+
+  return (
+    <footer className="text-white">
+      <Container className="pt-3">
+        <Row className="text-center">
+          <h3 className="heading1 mb-4 text-center fw-bolder">
+            Get in Touch and Start Your Journey to Success
+          </h3>
+
+          {/* Logo Column */}
+          <Col md={4} lg={2} sm={12} xs={12} className="mb-4">
+            <div className="xs-flex-row">
+              <div className="img1 bg-white p-1 rounded-1 mb-0 mb-md-3 h-sm-50 w-sm-25">
+                <img
+                  src="https://api.ecrop.co/assets/precisiongrow/Precision-Grow-Logo-new.webp"
+                  alt="Precision Grow Logo"
+                  loading="lazy"
+                  className="img-fluid"
+                   width="360" height="120"
+                />
+              </div>
+              <div className="img2 rounded-1">
+                <img
+                  src="https://api.ecrop.co/assets/precisiongrow/dun-logo.webp"
+                  alt="Dun Logo"
+                  className="img-fluid"
+                  loading="lazy"
+                   width="300" height="250"
+                />
+              </div>
+            </div>
+          </Col>
+
+          {/* Address Section */}
+          <Col md={8} lg={4} sm={6} xs={12}>
+            <ul className="list-unstyled text-center px-md-3 px-lg-4 px-0">
+              <li className="address-li">
+                <h6 className="hover-border-bottom">CORPORATE OFFICE</h6>
+                <p>
+                  Unit No 22, Building No. 2(A3), Sector 1, Millennium Business
+                  Park, Mahape, Navi Mumbai, 400710
+                </p>
+              </li>
+              <li className="address-li">
+                <h6 className="hover-border-bottom">REGD. OFFICE</h6>
+                <p>
+                  Plot No 80/81, Shop No 155, Vashi Plaza, Sector 17 Vashi,
+                  Mumbai, 400703
+                </p>
+              </li>
+              <li className="address-li">
+                <h6 className="hover-border-bottom">CITY OFFICE</h6>
+                <p>
+                  61, City Tower, Unit No 2, Dr. S.S. Rao Road, Parel, Mumbai,
+                  400012
+                </p>
+              </li>
+            </ul>
+          </Col>
+
+          {/* Explore Links (desktop only) */}
+          <Col
+            md={2}
+            lg={2}
+            sm={6}
+            xs={6}
+            className="mb-4 d-none d-lg-block explorelist"
+          >
+            <h6 className="hover-border-bottom m-0">EXPLORE</h6>
+            <ul className="list-unstyled">
+              {exploreLinks.map((item, idx) => (
+                <li key={idx}>
+                  <Link
+                    to={item.path}
+                    className="text-white text-decoration-none d-block-inline mb-2 a-hover-border-bottom"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </Col>
+
+          {/* Toggle Button (mobile only) */}
+          <Col md={12} className="d-block d-lg-none text-center">
+            <div
+              onClick={handleFooter}
+              className="d-inline-block px-4 py-2 mobbtn text-white font-weight-bold rounded shadow-sm text-center"
+            >
+              {showSections ? "Hide Sections" : "View More"}
+            </div>
+          </Col>
+
+          {/* Collapsible Section (mobile only) */}
+          <Collapse in={showSections}>
+            <div className="w-100 d-lg-none">
+              <Row className="my-4">
+                <Col xs={5} md={3}>
+                  <h6 className="pb-2">EXPLORE</h6>
+                  <ul className="list-unstyled mt-3">
+                    {exploreLinks.map((item, idx) => (
+                      <li key={idx}>
+                        <Link
+                          to={item.path}
+                          className="text-white text-decoration-none d-block mb-2"
+                        >
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </Col>
+
+                <Col xs={7} md={9}>
+                  <PartnerLogos />
+
+                  {/* ✅ Great Place to Work logo visible only after toggle in mobile */}
+                  <div className="text-center mt-3">
+                    <img
+                      src="https://api.ecrop.co/assets/precisiongrow/great-place-to-work.webp"
+                      alt="Great Place to Work"
+                      className="img-fluid w-25"
+                      loading="lazy"
+                       width="85" height="145"
+                    />
+                  </div>
+                </Col>
+              </Row>
+            </div>
+          </Collapse>
+
+          {/* Partner Logos and Great Place to Work (desktop only) */}
+          <Col
+            lg={3}
+            className="order-lg-2 order-4 d-none d-lg-block"
+          >
+            <PartnerLogos />
+          </Col>
+          <Col
+            lg={1}
+            className="order-lg-2 order-4 d-none d-lg-block"
+          >
+            <img
+              src="https://api.ecrop.co/assets/precisiongrow/great-place-to-work.webp"
+              alt="great place to work"
+              loading="lazy"
+              className="img-fluid"
+              width="85"
+              height="145"
+            />
+          </Col>
+        </Row>
+      </Container>
+<div className="container">
+<h2 className="heading1 text-center fw-bolder">
+  Precision <span className="text-success grow-with-icon">GROW
+    <img src={rice} alt="rice icon" className="rice-icon" width="167" height="238"/>
+  </span> Global
+</h2>
+  <div className="row">
+    <div className="col d-flex flex-wrap justify-content-center align-items-center gap-3 py-2">
+      <img src={india} alt="India" className="flag-logo" width="209" height="209" />
+      <img src={brazil} alt="Brazil" className="flag-logo" width="209" height="209" />
+      <img src={france} alt="France" className="flag-logo" width="209" height="209" />
+      <img src={uae} alt="UAE" className="flag-logo" width="209" height="209" />
+      <img src={russia} alt="Russia" className="flag-logo" width="209" height="209" />
+      <img src={israel} alt="Israel" className="flag-logo" width="209" height="209" />
+      <img src={indonesia} alt="Indonesia" className="flag-logo" width="209" height="209" />
+      <img src={southafrica} alt="South Africa" className="flag-logo" width="209" height="209" />
+      <img src={vietman} alt="Vietman" className="flag-logo" width="209" height="209" />
+    </div>
+  </div>
+</div>
+
+
+
+      {/* Bottom Bar */}
+      <div className="copyRightArea py-1">
+        <Container>
+          <Row className="align-items-center justify-content-between">
+            <Col lg={6} xs={12}>
+              <h6 className="mb-0">
+                &copy; 2024. All Rights Reserved by&nbsp;
+                <a
+                  href="https://precisiongrow.co.in/"
+                  className="text-primary fw-semibold"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Precision Grow (A Unit of Tech Visit IT Pvt Ltd)
+                </a>
+              </h6>
+            </Col>
+            <Col lg={6} xs={12}>
+              <ul className="list-inline viewmore mb-0 mt-1 mt-lg-0 d-flex justify-content-lg-end justify-content-center-lg gap-2">
+                <li className="list-inline-item bg-white">
+                  <a
+                    href="https://www.facebook.com/PrecisionGrow/"
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                  >
+                    <FacebookIcon size={25} bgColor="white" />
+                  </a>
+                </li>
+                <li className="list-inline-item bg-white">
+                  <a
+                    href="https://x.com/precision_grow"
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                  >
+                    <TwitterIcon size={25} bgColor="white" />
+                  </a>
+                </li>
+                <li className="list-inline-item bg-white">
+                  <a
+                    href="https://www.linkedin.com/company/precision-grow/"
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                  >
+                    <LinkedinIcon size={25} bgColor="white" />
+                  </a>
+                </li>
+                <li className="list-inline-item bg-white">
+                  <a
+                    href="https://www.instagram.com/precisiongrow_/"
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                  >
+                    <InstagramIcon size={25} bgColor="white" />
+                  </a>
+                </li>
+                <li className="list-inline-item bg-white">
+                  <a
+                    href="https://www.youtube.com/channel/UCt1nu8YiUMjnvckNLfepa5g"
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                  >
+                    <YoutubeIcon size={25} bgColor="white" />
+                  </a>
+                </li>
+                <li className="list-inline-item bg-white">
+                  <a
+                    href="https://precisiongrowindia.blogspot.com/"
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                  >
+                    <BloggerIcon size={25} bgColor="white" />
+                  </a>
+                </li>
+                <li className="list-inline-item bg-white">
+                  <a
+                    href="https://www.threads.net/@precisiongrow_"
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                  >
+                    <ThreadsIcon size={25} bgColor="white" />
+                  </a>
+                </li>
+              </ul>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </footer>
+  );
+};
+
+export default Footernew;
+
+
+
+footer{
+    background-color: #9cb153;
+      position: relative; /* 👈 Required for absolute pseudo-elements to work */
+  overflow: hidden;    /* Optional: Prevent pseudo elements from overflowing */
+  z-index: 0; /* 👈 Make sure footer has a lower z-index */
+
+  }
+  .grow-with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rice-icon {
+  width:auto;
+  height: 50px;
+}
+
+/* Footernew.css */
+.flag-logo {
+  width: 70px;
+  height: auto;
+  padding: 3px;
+  border-radius: 50%;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.33);
+  transition: transform 0.3s ease;
+}
+
+.flag-logo:hover {
+  transform: scale(1.1);
+}
+
+footer:after, footer:before {
+    background-color: #93a84b;
+    content: "";
+    position: absolute;
+    z-index: -1;
+}
+footer:before {
+    height: 257%;
+    left: -18%;
+    top: -134%;
+    transform: rotate(54deg);
+    -webkit-transform: rotate(47deg);
+    -moz-transform: rotate(47deg);
+    -ms-transform: rotate(47deg);
+    -o-transform: rotate(47deg);
+    width: 44%;
+}
+footer:after {
+    height: 264%;
+    right: 4%;
+    top: -24%;
+    transform: rotate(44deg);
+    -webkit-transform: rotate(44deg);
+    -moz-transform: rotate(44deg);
+    -ms-transform: rotate(44deg);
+    -o-transform: rotate(44deg);
+    width: 26%;
+}
+  .copyRightArea a {
+    color: #beff00!important;
+  }
+  .copyRightArea{
+    background-color: #014741;
+    padding: 0 150px;
+  }
+  .copyRightArea h6{
+        font-size: 14px;    
+  }
+  .mobbtn{
+    background-color: #02746a;
+    cursor: pointer;
+  }
+  .heading1 {
+    text-shadow: 1px 1px 0px black;
+    color: white;
+    font-size: 31px;
+  }
+  .explorelist li {
+    line-height: 30px;
+  }
+  /* .address-li p {
+    font-size: 15px;
+  } */
+  .img1 img {
+    width: 100%;
+    height: 100%;
+  }
+  .hover-border-bottom {
+   position: relative;
+    display: inline-block;
+    padding-bottom: 3px;
+    color: #0a5171;
+    /* text-shadow: 1px 1px 0px #212529; */
+    font-weight: 700;
+}
+  
+  .hover-border-bottom::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 0;
+    background-image: linear-gradient(
+      to right,
+      #02746a 80%,
+      white 100%
+    ); /* Bootstrap primary color */
+    transition: width 0.3s ease;
+  }
+  
+  .address-li:hover .hover-border-bottom::after {
+    width: 100%;
+  }
+  .a-hover-border-bottom {
+    position: relative;
+    display: inline-block;
+    /* padding-bottom: 4px; space for border */
+  }
+  
+  .a-hover-border-bottom::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 0;
+    background-image: linear-gradient(to right, #02746a 80%, white 100%);
+    transition: width 0.3s ease;
+  }
+  
+  .a-hover-border-bottom:hover::after {
+    width: 100%;
+  }
+
+  .icon-inner {
+    font-size: 25px;
+    color: #9cb153;
+  }
+  .footer-bottom {
+    background-color: #02746a;
+  }
+  .footer-bottom-p {
+    font-size: 11px;
+    margin-bottom: 0px !important;
+  }
+
+  /* gtranslator responsive  */
+  @media(max-width:600px){
+    .gt_float_switcher .gt-selected .gt-current-lang span.gt-lang-code {
+        position: relative;
+        top: 3px;
+        font-size: 14px;
+    }
+    .heading1{
+      font-size: 22px;
+    }
+  }
+
+ 
+  @media(max-width:768px){
+    .flag-logo {
+  width: 50px;}
+    .copyRightArea {
+        padding: 0px;
+    }
+    .copyRightArea h6{
+        white-space: wrap; 
+  }
+  }
+  @media (max-width: 600px) {
+    .xs-flex-row {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      justify-content: center;
+    }
+    .img1 {
+      width: 58%;
+      height: 80px;
+    }
+    .img2 {
+      width: 32%;
+    }
+    .xs-w-75 {
+      width: 75% !important;
+    }
+  }
+  

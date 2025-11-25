@@ -17,11 +17,11 @@ const PrecisionGrowAi = () => {
   }, []);
 
   const AiFaqs = [
-    { title: 'How does Precision Grow AI work?', content: 'It analyzes satellite data, soil health, and weather patterns to deliver tailored, actionable insights for your farm.', isOpenInitially: false },
-    { title: 'Can Precision Grow AI help with weather forecasts?', content: 'Yes, it integrates weather forecasts to provide precise recommendations for your fields.', isOpenInitially: false },
-    { title: 'How does Precision Grow AI promote sustainability?', content: 'By providing insights to reduce waste, optimize resources, and improve soil health.', isOpenInitially: false },
-    { title: "What data does Precision Grow AI analyze?", content: "Satellite imagery, soil conditions, weather patterns, and crop health data.", isOpenInitially: false },
-    { title: "How do I get started with Precision Grow AI?", content: "Sign up on our platform, input your farm details, and start receiving tailored insights instantly.", isOpenInitially: false }
+    { question: 'How does Precision Grow AI work?', answer: 'It analyzes satellite data, soil health, and weather patterns to deliver tailored, actionable insights for your farm.'},
+    { question: 'Can Precision Grow AI help with weather forecasts?', answer: 'Yes, it integrates weather forecasts to provide precise recommendations for your fields.'},
+    { question: 'How does Precision Grow AI promote sustainability?', answer: 'By providing insights to reduce waste, optimize resources, and improve soil health.'},
+    { question: "What data does Precision Grow AI analyze?", answer: "Satellite imagery, soil conditions, weather patterns, and crop health data."},
+    { question: "How do I get started with Precision Grow AI?", answer: "Sign up on our platform, input your farm details, and start receiving tailored insights instantly."}
   ];
 
   const features = [
@@ -118,7 +118,7 @@ const PrecisionGrowAi = () => {
                 </p>
               </div>
               <div className="col-lg-7 col-md-12 d-flex justify-content-center align-items-center">
-                <img src="https://api.ecrop.co/assets/precisiongrow/Precision Grow AI2.webp" alt="aifarming" className="aifarming" loading="lazy" />
+                <img src="https://api.ecrop.co/assets/precisiongrow/Precision Grow AI2.webp" alt="aifarming" className="aifarming w-100 h-100" loading="lazy" />
               </div>
             </div>
           </section>
@@ -132,7 +132,7 @@ const PrecisionGrowAi = () => {
               </section>
 
         {/* FAQ Section */}
-        <FaqSection data={AiFaqs} variant="lightblue" />
+        <FaqSection data={AiFaqs} />
       </div>
     </div>
   );

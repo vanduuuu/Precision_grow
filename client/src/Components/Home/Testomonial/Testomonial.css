@@ -1,51 +1,88 @@
-.testimonial-row {
- min-height: 400px;}
 
-
-.custom-img {
-  border-radius: 0px 0px 0px 40px;
-  max-height: 400px;
-  object-fit: cover;
+.testimonial-title {
+  font-size: 2.6rem;
+  color: #569e0a;
+  z-index: 2;
+  text-shadow: 1px 2px 2px black;
 }
 
-/* Right gradient background */
-.gradient-bg {
-  /* background: linear-gradient(135deg, #88bb40, #357f82); */
-  padding: 30px;
-  border-radius: 0px 40px 0px 0px;
-  min-height: 100%;
-  text-align: center;
-  position: relative;
-  background-image: url('https://api.ecrop.co/assets/precisiongrow/Testimonials.webp');
-  background-repeat: no-repeat;
-  background-position: left top;
-  background-size: cover;
+/* Blue Circle with Quote Icon */
+.quote-circle {
+  width: 70px;
+  height: 70px;
+  background-color: #17726c;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  top: -10px;
+  left: -7px;
+  z-index: 1;
+  box-shadow: 0 4px 12px rgba(49, 196, 141, 0.3);
+  transform: rotate(-8deg);
+  animation: floatIcon 4s ease-in-out infinite;
 }
 
-/* Testimonial text */
-.carousel h6 {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 15px;
-  color: white;
-  position: relative;
-  padding-left: 25px;
+/* Floating + Rotating Animation */
+@keyframes floatIcon {
+  0% {
+    transform: rotate(-8deg) translateY(0);
+  }
+  50% {
+    transform: rotate(5deg) translateY(-6px);
+  }
+  100% {
+    transform: rotate(-8deg) translateY(0);
+  }
 }
 
-/* Author name */
-.carousel p {
-  color: #e0e0e0;
-  font-weight: 500;
+.testimonial-box {
+  border: 1px solid #9ec657;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  background-color: #fff;
+  height: 100%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-/* Responsive */
-@media (max-width: 991px) {
-  .custom-img {
-    max-height: 300px;
+
+.testimonial-icon {
+  font-size: 50px;
+  color: #17726c;
+}
+
+/* Custom Next Arrow */
+.swiper-button-next-custom {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #17726c;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next-custom:hover {
+  background-color: #25aea5;
+  transform: translateX(3px);
+}
+
+@media (max-width: 768px) {
+  .testimonial-title {
+    font-size: 1.8rem;
   }
 
-  .gradient-bg {
-    border-radius: 10px;
-    padding: 20px;
+  .swiper-button-next-custom {
+    width: 40px;
+    height: 40px;
   }
 }
